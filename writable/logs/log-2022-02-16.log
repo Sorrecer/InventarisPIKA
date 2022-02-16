@@ -1,0 +1,6 @@
+CRITICAL - 2022-02-16 01:42:25 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 D:\xampp\htdocs\InventarisPIKA\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 D:\xampp\htdocs\InventarisPIKA\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 D:\xampp\htdocs\InventarisPIKA\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 D:\xampp\htdocs\InventarisPIKA\spark(45): require('D:\\xampp\\htdocs...')
+#4 {main}
