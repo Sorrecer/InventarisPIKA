@@ -43,4 +43,9 @@ class Home extends BaseController
     {
         return view('templates/akun-staff');
     }
+
+    public function login()
+    {
+        return view('templates/login');
+    }
 }
