@@ -67,22 +67,22 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Jenis data:</h6>
-                        <a class="collapse-item" href="Home/kategori">Kategori</a>
-                        <a class="collapse-item" href="data-barang.php">Barang</a>
+                        <a class="collapse-item" href="<?php echo base_url('kategori');?>">Kategori</a>
+                        <a class="collapse-item" href="<?php echo base_url('barang');?>">Barang</a>
                     </div>
                 </div>
             </li>
 
             <!-- Barang Masuk -->
             <li class="nav-item">
-                <a class="nav-link" href="barang-masuk.php">
+                <a class="nav-link" href="<?php echo base_url('barang-masuk');?>">
                 <i class="fas fa-fw fa-check"></i>
                     <span>Barang Masuk</span></a>
             </li>
 
             <!-- Barang Keluar -->
             <li class="nav-item">
-                <a class="nav-link" href="barang-keluar.php">
+                <a class="nav-link" href="<?php echo base_url('barang-keluar');?>">
                 <i class="fas fa-fw fa-times"></i>
                     <span>Barang Keluar</span></a>
             </li>
@@ -96,7 +96,7 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="rekap-data-barang.php">
+                <a class="nav-link" href="<?php echo base_url('rekap-data-barang');?>">
                     <i class="fas fa-fw fa-clipboard-list"></i>
                     <span>Rekap Data Barang</span></a>
             </li>
@@ -110,15 +110,15 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="pengaturan-akun.php">
+            <a class="nav-link" href="<?php echo base_url('pengaturan-akun');?>">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Pengaturan Akun</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="akun-staff.php">
+            <a class="nav-link" href="<?php echo base_url('akun-staff');?>">
                     <i class="fas fa-fw fa-users"></i>
-                    <span>Akun Staf</span></a>
+                    <span>Akun Staff</span></a>
             </li>
 
             <!-- Divider -->
@@ -147,45 +147,9 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
 
                         
 
@@ -237,7 +201,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; Inventaris PIKA 2022</span>
                     </div>
                 </div>
             </footer>
@@ -260,14 +224,14 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Keluar dari Akun?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Pilih "Logout" dibawah untuk keluar dari sesi.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
                     <a class="btn btn-primary" href="login.html">Logout</a>
                 </div>
             </div>
