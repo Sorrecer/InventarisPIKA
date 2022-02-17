@@ -40,6 +40,7 @@ $routes->get('rekap-data-barang', 'Home::rekap');
 $routes->get('pengaturan-akun', 'Home::pengaturan'); 
 $routes->get('akun-staff', 'Home::akunStaff');
 $routes->get('login', 'Home::login');
+$routes->get('buat-akun-staff', 'Home::buatAkun');
 
 /*
  * --------------------------------------------------------------------

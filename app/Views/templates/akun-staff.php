@@ -117,7 +117,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="akun-staff.html">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Akun Staf</span></a>
+                    <span>Akun Staff</span></a>
             </li>
 
             <!-- Divider -->
@@ -346,7 +346,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Akun Staf</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Akun Staff</h1>
                     </div>
 
                 </div>

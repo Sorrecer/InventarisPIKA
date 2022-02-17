@@ -48,4 +48,9 @@ class Home extends BaseController
     {
         return view('templates/login');
     }
+
+    public function buatAkun()
+    {
+        return view('templates/buat-akun-staff');
+    }
 }

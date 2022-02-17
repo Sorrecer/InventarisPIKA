@@ -43,10 +43,7 @@
                                     <img src="<?php echo base_url('/logo.png'); ?>" style="width:60px;height:60px;margin-bottom:20px">
                                     </div>
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4 \">Login</h1>
-                                    </div>
-                                    <div class="text-center">
-                                        <h2 class="h6 text-gray-900 mb-4">untuk melanjutkan</h2>
+                                        <h1 class="h4 text-gray-900 mb-4 \">Buat Akun Staff</h1>
                                     </div>
 
                                     <!-- Divider -->
@@ -56,11 +53,26 @@
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Nama Lengkap">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control form-control-user"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
                                                 placeholder="Username">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control form-control-user"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Telepon">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control form-control-user"
+                                                id="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Konfirmasi Password">
                                         </div>
                                         <div class="form-group">
                                         </div>
@@ -71,7 +83,7 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="<?php echo base_url('buat-akun-staff');?>">Buat Akun Staff</a>
+                                        <a class="small" href="register.html">Buat Akun Staff</a>
                                     </div>
                                 </div>
                             </div>
