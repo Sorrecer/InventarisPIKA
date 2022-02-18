@@ -349,6 +349,64 @@
                         <h1 class="h3 mb-0 text-gray-800">Pengaturan Akun</h1>
                     </div>
 
+                    <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="h2 mb-0 font-weight-bold text-gray-800">Admin</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-user fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                    <hr class="sidebar-divider">
+                                    <table>
+                                        <thead>
+                                            <td class="row no-gutters align-items-center my-3" style="width:150px">
+                                                 <div class="h8 mb-0 font-weight-bold text-gray-800">Username</div>
+                                            </td>
+                                            <td> : Username Admin </td>
+                                        <thead>
+                                            <td class="row no-gutters align-items-center my-3">
+                                                 <div class="h8 mb-0 font-weight-bold text-gray-800">Nama</div>
+                                            </td>
+                                            <td> : Nama Admin</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="row no-gutters align-items-center my-3">
+                                                 <div class="h8 mb-0 font-weight-bold text-gray-800">No. Telp</div>
+                                            </td>
+                                            <td> : No. Telp Admin</td>
+                                        </tr>
+                                    </table>
+                                    <hr class="sidebar-divider">
+                                    <div class="row" style="justify-content: flex-end">
+                                        <div style="padding:10px">
+                                            <a href="#" class="btn btn-warning btn-icon-split">
+                                            <span class="icon text-white-50">
+                                                <i class="fas fa-cog"></i>
+                                            </span>
+                                            <span class="text">Edit Profil</span>
+                                            </a>
+                                        </div>
+                                        <div style="padding:10px">
+                                            <a href="#" class="btn btn-secondary btn-icon-split">
+                                            <span class="icon text-white-50">
+                                                <i class="fas fa-key"></i>
+                                            </span>
+                                            <span class="text">Ubah Password</span>
+                                            </a>
+                                        </div>
+                                        <div style="padding:10px">
+                                            <a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#logoutModal">
+                                            <span class="icon text-white-50">
+                                                <i class="fas fa-sign-out-alt"></i>
+                                            </span>
+                                            <span class="text">Logout</span>
+                                            </a>
+                                        </div>
+                                </div>
+                            </div>
                 </div>
 
             </div>
@@ -381,15 +439,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Keluar dari Akun?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Pilih "Logout" dibawah untuk keluar dari sesi.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <a class="btn btn-primary" href="<?php echo base_url('login');?>">Logout</a>
                 </div>
             </div>
         </div>

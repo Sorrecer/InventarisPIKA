@@ -31,7 +31,7 @@
 
             <div class="col-xl-4 col-lg-0 col-md-0">
 
-                <div class="card o-hidden border-0 shadow-lg my-5" style:="width:200px;">
+                <div class="card o-hidden border-0 shadow-lg my-3" style:="width:200px;">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->    
                         <div class="row justify-content-center">
@@ -79,12 +79,10 @@
                                         <a href="<?php echo base_url('/');?>" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a>
-                                        <hr>
+                                        <a href="<?php echo base_url('/');?>" class="btn btn-danger btn-user btn-block">
+                                            Batal
+                                        </a>
                                     </form>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="register.html">Buat Akun Staff</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
