@@ -109,7 +109,7 @@
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
@@ -118,10 +118,10 @@
                                         <td>4.</td>
                                         <td>alat elektronik</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning">
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
@@ -130,10 +130,10 @@
                                         <td>5.</td>
                                         <td>ATK</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning">
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
@@ -142,10 +142,10 @@
                                         <td>6.</td>
                                         <td>Alat Kebersihan</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning">
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
@@ -154,10 +154,10 @@
                                         <td>7.</td>
                                         <td>Perlengkapan UKS</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning">
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>

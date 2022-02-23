@@ -86,10 +86,10 @@
                                         <td>Ronny</td>
                                         <td>081234567890</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning">
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editStaffModal">
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
@@ -99,10 +99,10 @@
                                         <td>Kenny</td>
                                         <td>081234567890</td>
                                         <td>
-                                            <a href="#" class="btn btn-secondary">
+                                            <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#editStaffModal">
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger"  data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
@@ -139,6 +139,40 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
+        <!-- Edit Profil-->
+        <div class="modal fade" id="editStaffModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Profil Staff</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Username:</label>
+                        <input type="text" class="form-control" id="recipient-name" placeholder="Username Staff">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Nama:</label>
+                        <input type="text" class="form-control" id="recipient-name" placeholder="Nama Staff">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">No. Telp:</label>
+                        <input type="text" class="form-control" id="recipient-name" placeholder="No. Telp Staff">
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary">Tambah</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Delete Data Modal-->
     <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

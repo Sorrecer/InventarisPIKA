@@ -103,7 +103,7 @@
                                         <td>Perabotan</td>
                                         <td>512</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning">
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
                                             </a>
                                             <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
@@ -118,7 +118,7 @@
                                         <td>Alat Furnitur</td>
                                         <td>40</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning">
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
                                             </a>
                                             <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
@@ -133,7 +133,7 @@
                                         <td>Alat Kebersihan</td>
                                         <td>16</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning">
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
                                             </a>
                                             <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
@@ -148,7 +148,7 @@
                                         <td>ATK</td>
                                         <td>80</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning">
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
                                             </a>
                                             <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
@@ -163,7 +163,7 @@
                                         <td>Perabotan</td>
                                         <td>18</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning">
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
                                             </a>
                                             <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
@@ -178,7 +178,7 @@
                                         <td>Alat Elektronik</td>
                                         <td>12</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning">
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
                                             </a>
                                             <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
@@ -221,78 +221,79 @@
 
     <!-- Tambah Data Modal-->
     <div class="modal fade" id="tambahBarangModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Tambah Jenis Barang</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <form>
-            <div class="form-group">
-                <label for="recipient-name" class="col-form-label">ID Barang:</label>
-            <input type="text" class="form-control" id="recipient-name" placeholder="B00001" disabled>   
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Jenis Barang</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Nama Barang:</label>
-                <input type="text" class="form-control" id="recipient-name">
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">ID Barang:</label>
+                    <input type="text" class="form-control" id="recipient-name" placeholder="B00001" disabled>   
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Nama Barang:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Kategori:</label>
+                        <select name="Kategori" class="form-control" id="kategori">
+                        <option selected="selected">--Pilih kategori--</option>
+                        <option value="Perabotan">Perabotan</option>
+                        <option value="Buku">Buku</option>
+                        <option value="Buku">Alat furniture</option>
+                        <option value="Buku">Alat elektronik</option>
+                        <option value="ATK">ATK</option>
+                        <option value="Buku">Alat kebersihan</option>
+                        <option value="Buku">Perlengkapan UKS</option>
+                        <option value="Peralatan Furnitur">Peralatan Furnitur</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary">Tambah</button>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Kategori:</label>
-                <select name="Kategori" class="form-control" id="kategori">
-                <option selected="selected">--Pilih kategori--</option>
-                <option value="Perabotan">Perabotan</option>
-                <option value="Buku">Buku</option>
-                <option value="Buku">Alat furniture</option>
-                <option value="Buku">Alat elektronik</option>
-                <option value="ATK">ATK</option>
-                <option value="Buku">Alat kebersihan</option>
-                <option value="Buku">Perlengkapan UKS</option>
-                <option value="Peralatan Furnitur">Peralatan Furnitur</option>
-                </select>
-            </div>
-            </form>
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-            <button type="button" class="btn btn-primary">Tambah</button>
-        </div>
-    </div>
     </div>
 
     <!-- edit barang modal-->
     <div class="modal fade" id="editBarangModal" tabindex="0" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="editBarangModal">Tambah Jenis Barang</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <form>
-            <div class="form-group">
-                <label for="recipient-name" class="col-form-label">ID Barang:</label>
-            <input type="text" class="form-control" id="recipient-name" placeholder="B00001" disabled>   
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editBarangModal">Tambah Jenis Barang</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">ID Barang:</label>
+                        <input type="text" class="form-control" id="recipient-name" placeholder="B00001" disabled>   
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Nama Barang:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Kategori:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary">Tambah</button>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Nama Barang:</label>
-                <input type="text" class="form-control" id="recipient-name">
-            </div>
-            <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Kategori:</label>
-                <input type="text" class="form-control" id="recipient-name">
-            </div>
-            </form>
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-            <button type="button" class="btn btn-primary">Tambah</button>
-        </div>
-    </div>
     </div>
 
     <!-- Delete Data Modal-->

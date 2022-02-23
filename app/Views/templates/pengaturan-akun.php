@@ -82,7 +82,7 @@
                                     <hr class="sidebar-divider">
                                     <div class="row" style="justify-content: flex-end">
                                         <div style="padding:10px">
-                                            <a href="#" class="btn btn-warning btn-icon-split">
+                                            <a href="#" class="btn btn-warning btn-icon-split" data-toggle="modal" data-target="#editProfilModal">
                                             <span class="icon text-white-50">
                                                 <i class="fas fa-cog"></i>
                                             </span>
@@ -90,7 +90,7 @@
                                             </a>
                                         </div>
                                         <div style="padding:10px">
-                                            <a href="#" class="btn btn-secondary btn-icon-split">
+                                            <a href="#" class="btn btn-secondary btn-icon-split" data-toggle="modal" data-target="#ubahPasswordModal">
                                             <span class="icon text-white-50">
                                                 <i class="fas fa-key"></i>
                                             </span>
@@ -132,6 +132,74 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
+    <!-- Edit Profil-->
+    <div class="modal fade" id="editProfilModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Profil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Username:</label>
+                        <input type="text" class="form-control" id="recipient-name" placeholder="Username Admin">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Nama:</label>
+                        <input type="text" class="form-control" id="recipient-name" placeholder="Nama Admin">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">No. Telp:</label>
+                        <input type="text" class="form-control" id="recipient-name" placeholder="No. Telp Admin">
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary">Tambah</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ganti Passowrd Modul-->
+    <div class="modal fade" id="ubahPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ubah Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Password lama:</label>
+                        <input type="password" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Password baru:</label>
+                        <input type="password" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Konfirmasi password:</label>
+                        <input type="password" class="form-control" id="recipient-name">
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary">Tambah</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
