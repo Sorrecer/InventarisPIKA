@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Tables</title>
+    <title>Inventaris PIKA</title>
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -58,7 +58,7 @@
                                 <h6 class="m-0 font-weight-bold text-primary">Kelola Data Kategori</h6>
                             </div>
                             <div class="col text-right">
-                                <a href="#" class="btn btn-primary btn-icon-split">
+                                <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal" data-target="#tambahKategoriModal">
                                     <span class="icon text-white-50">
                                         <i class="fas fa-plus-circle"></i>
                                     </span>
@@ -194,6 +194,32 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
+    <!-- Tambah Kategori Modal-->
+    <div class="modal fade" id="tambahKategoriModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Tambah Kategori</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Nama Kategori:</label>
+                <input type="text" class="form-control" id="recipient-name">
+            </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+        </div>
+    </div>
+    </div>
 
     <!-- Delete Data Modal-->
     <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
