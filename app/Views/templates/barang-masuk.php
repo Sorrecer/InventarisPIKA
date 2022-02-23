@@ -63,7 +63,7 @@
                                     <span class="icon text-white-50">
                                         <i class="fas fa-plus-circle"></i>
                                     </span>
-                                    <span class="text">Tambah Barang Masuk</span>
+                                    <span class="text" data-toggle="modal" data-target="#barangMasukModal">Tambah Barang Masuk</span>
                                 </a>
                             </div>
                         </div>
@@ -107,7 +107,7 @@
                                         <td>Rp. 3.000.000</td>
                                         <td>Admin</td>
                                         <td>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
@@ -214,6 +214,41 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
+    <!-- Tambah barang masuk Modal-->
+    <div class="modal fade" id="barangMasukModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Input Barang Masuk</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form>
+            <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+            <input placeholder="Select date" type="text" id="example" class="form-control">
+            <label for="example">Try me...</label>
+            <i class="fas fa-calendar input-prefix" tabindex=0></i>
+            </div>
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Nama Barang:</label>
+                <input type="text" class="form-control" id="recipient-name">
+            </div>
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Jumlah Barang:</label>
+                <input type="text" class="form-control" id="recipient-name">
+            </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+            <button type="button" class="btn btn-primary">Tambah</button>
+        </div>
+        </div>
+    </div>
+    </div>
 
     <!-- Delete Data Modal-->
     <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

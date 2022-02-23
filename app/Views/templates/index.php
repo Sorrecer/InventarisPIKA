@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="icon" href="<?=base_url()?>/favicon.ico" type="image/ico">
     <title>Inventaris PIKA</title>
 
     <!-- Custom fonts for this template-->
