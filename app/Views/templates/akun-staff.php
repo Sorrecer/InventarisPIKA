@@ -23,6 +23,16 @@
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+    <style>
+        #aktif.active{
+            background-color: #ffe100
+        }
+
+        #aktif2.active{
+            background-color: #ffe100
+        }   
+    </style>
+
 </head>
 
 <body id="page-top">
@@ -86,9 +96,9 @@
                                         <td>Ronny</td>
                                         <td>081234567890</td>
                                         <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editStaffModal">
-                                            <span class="text">Edit</span>
-                                            </a>
+                                            <button id="aktif" class="btn btn-secondary" data-toggle="button" aria-pressed="false">
+                                            <span class="text">Aktif</span>
+                                            </button>
                                             <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
@@ -99,9 +109,9 @@
                                         <td>Kenny</td>
                                         <td>081234567890</td>
                                         <td>
-                                            <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#editStaffModal">
-                                            <span class="text">Edit</span>
-                                            </a>
+                                            <button id ="aktif2" class="btn btn-secondary" data-toggle="button" aria-pressed="false">
+                                            <span class="text">Aktif</span>
+                                            </button>
                                             <a href="#" class="btn btn-danger"  data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
