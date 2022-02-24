@@ -20,9 +20,22 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
+    <style>
+    body {
+    background-image: url("bg1.jpeg");
+      /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    </style>
+
 </head>
 
-<body class="bg-gradient-primary">
+<body>
 
     <div class="container">
 
