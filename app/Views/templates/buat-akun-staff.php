@@ -65,12 +65,12 @@
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Nama Lengkap">
+                                                placeholder="Username">
                                         </div>
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Username">
+                                                placeholder="Email">
                                         </div>
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"

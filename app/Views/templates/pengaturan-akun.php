@@ -150,7 +150,7 @@
                         <input type="text" class="form-control" id="recipient-name" placeholder="Username Admin">
                     </div>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Nama:</label>
+                        <label for="recipient-name" class="col-form-label">Email:</label>
                         <input type="text" class="form-control" id="recipient-name" placeholder="Nama Admin">
                     </div>
                     <div class="form-group">
