@@ -74,9 +74,10 @@
                                     <tr>
                                         <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 40px;" aria-sort="ascending" aria-label="No.: activate to sort column descending">No.</th>
                                         <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 100px;" aria-sort="ascending" aria-label="ID Barang: activate to sort column descending">ID Barang</th>
-                                        <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 500px;" aria-sort="ascending" aria-label="Nama Barang: activate to sort column descending">Nama Barang</th>
-                                        <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Kategori: activate to sort column descending">Kategori</th>
+                                        <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 400px;" aria-sort="ascending" aria-label="Nama Barang: activate to sort column descending">Nama Barang</th>
+                                        <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Kategori: activate to sort column descending">Kategori</th>
                                         <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 80px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Stok</th>
+                                        <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 80px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Ruang</th>
                                         <th class="sorting sorting_asc" tabindex="5" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="Pengaturan: activate to sort column descending">Pengaturan</th>
                                     </tr>
                                 </thead>
@@ -87,11 +88,12 @@
                                         <td>Meja</td>
                                         <td>Perabotan</td>
                                         <td>256</td>
+                                        <td>RuangA1</td>
                                         <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
@@ -102,11 +104,12 @@
                                         <td>Kursi</td>
                                         <td>Perabotan</td>
                                         <td>512</td>
+                                        <td>RuangB1</td>
                                         <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
@@ -117,11 +120,12 @@
                                         <td>Alat Ketam Kayu</td>
                                         <td>Alat Furnitur</td>
                                         <td>40</td>
+                                        <td>RuangB1</td>
                                         <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
@@ -132,11 +136,12 @@
                                         <td>Sapu</td>
                                         <td>Alat Kebersihan</td>
                                         <td>16</td>
+                                        <td>GudangC3</td>
                                         <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
@@ -147,11 +152,12 @@
                                         <td>Spidol</td>
                                         <td>ATK</td>
                                         <td>80</td>
+                                        <td>GudangB1</td>
                                         <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
@@ -161,12 +167,13 @@
                                         <td>P0006</td>
                                         <td>Lemari Buku</td>
                                         <td>Perabotan</td>
-                                        <td>18</td>
+                                        <td>3</td>
+                                        <td>RuangE5</td>
                                         <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
@@ -177,11 +184,12 @@
                                         <td>Laptop DELL</td>
                                         <td>Alat Elektronik</td>
                                         <td>12</td>
+                                        <td>GudangA5</td>
                                         <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
@@ -268,7 +276,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="editBarangModal">Tambah Jenis Barang</h5>
+                    <h5 class="modal-title" id="editBarangModal">Edit Barang</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -281,11 +289,25 @@
                         </div>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Nama Barang:</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Nama Barang">
                         </div>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Kategori:</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <select name="Kategori" class="form-control" id="kategori">
+                            <option selected="selected">--Pilih kategori--</option>
+                            <option value="Perabotan">Perabotan</option>
+                            <option value="Buku">Buku</option>
+                            <option value="Buku">Alat furniture</option>
+                            <option value="Buku">Alat elektronik</option>
+                            <option value="ATK">ATK</option>
+                            <option value="Buku">Alat kebersihan</option>
+                            <option value="Buku">Perlengkapan UKS</option>
+                            <option value="Peralatan Furnitur">Peralatan Furnitur</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Stok</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Jumlah Stok">
                         </div>
                     </form>
                 </div>

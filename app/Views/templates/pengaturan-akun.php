@@ -68,15 +68,15 @@
                                             <td> : Username Admin </td>
                                         <thead>
                                             <td class="row no-gutters align-items-center my-3">
-                                                 <div class="h8 mb-0 font-weight-bold text-gray-800">Nama</div>
+                                                 <div class="h8 mb-0 font-weight-bold text-gray-800">Email</div>
                                             </td>
-                                            <td> : Nama Admin</td>
+                                            <td> : Admin@gmail.com</td>
                                         </tr>
                                         <tr>
                                             <td class="row no-gutters align-items-center my-3">
                                                  <div class="h8 mb-0 font-weight-bold text-gray-800">No. Telp</div>
                                             </td>
-                                            <td> : No. Telp Admin</td>
+                                            <td> : 08112233445566</td>
                                         </tr>
                                     </table>
                                     <hr class="sidebar-divider">

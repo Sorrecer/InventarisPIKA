@@ -79,7 +79,7 @@
                                         <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 400px;" aria-sort="ascending" aria-label="Kategori: activate to sort column descending">Nama Barang</th>
                                         <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 180px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Jumlah Barang</th>
                                         <th class="sorting sorting_asc" tabindex="5" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Jumlah Harga</th>
-                                        <th class="sorting sorting_asc" tabindex="6" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 80px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Pencatat</th>
+                                        <th class="sorting sorting_asc" tabindex="6" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 80px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Ruang</th>
                                         <th class="sorting sorting_asc" tabindex="7" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="Pengaturan: activate to sort column descending">Pengaturan</th>
                                     </tr>
                                 </thead>
@@ -91,7 +91,7 @@
                                         <td>Meja</td>
                                         <td>7</td>
                                         <td>Rp. 3.500.000</td>
-                                        <td>Admin</td>
+                                        <td>RuangA3</td>
                                         <td>
                                             <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
@@ -105,7 +105,7 @@
                                         <td>Kursi</td>
                                         <td>25  </td>
                                         <td>Rp. 3.000.000</td>
-                                        <td>Admin</td>
+                                        <td>RuangB2</td>
                                         <td>
                                             <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
@@ -119,7 +119,7 @@
                                         <td>Alat Ketam Kayu</td>
                                         <td>20</td>
                                         <td>Rp. 800.000</td>
-                                        <td>Admin</td>
+                                        <td>GudangC2</td>
                                         <td>
                                             <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
@@ -133,7 +133,7 @@
                                         <td>Sapu</td>
                                         <td>5</td>
                                         <td>Rp. 150.000</td>
-                                        <td>Staff1</td>
+                                        <td>GudangB4</td>
                                         <td>
                                             <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
@@ -147,7 +147,7 @@
                                         <td>Spidol</td>
                                         <td>12</td>
                                         <td>Rp. 60.000</td>
-                                        <td>Staff1</td>
+                                        <td>RuangA2</td>
                                         <td>
                                             <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
@@ -161,7 +161,7 @@
                                         <td>Lemari</td>
                                         <td>2</td>
                                         <td>Rp. 4.000.000</td>
-                                        <td>Staff2</td>
+                                        <td>RuangA2</td>
                                         <td>
                                             <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
@@ -175,7 +175,7 @@
                                         <td>Laptop DELL</td>
                                         <td>2</td>
                                         <td>Rp. 10.000.000</td>
-                                        <td>Staff2</td>
+                                        <td>GudangB1</td>
                                         <td>
                                             <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
@@ -232,8 +232,17 @@
                         <input type="text" class="form-control" id="recipient-name">
                     </div>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Nama Barang:</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                            <label for="recipient-name" class="col-form-label">Nama Barang:</label>
+                            <select name="Kategori" class="form-control" id="kategori">
+                            <option selected="selected">--Pilih barang--</option>
+                            <option value="Perabotan">Meja</option>
+                            <option value="Buku">Kursi</option>
+                            <option value="Buku">Alat Ketam Kayu</option>
+                            <option value="Buku">Sapu</option>
+                            <option value="ATK">Spidol</option>
+                            <option value="Buku">Lemari Buku</option>
+                            <option value="Buku">Laptop DELL</option>
+                            </select>
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Jumlah Barang:</label>
