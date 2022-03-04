@@ -48,21 +48,21 @@
                 <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <h1 class="h3 mb-2 text-gray-800">Data Barang</h1>
+                <h1 class="h3 mb-2 text-gray-800">Jenis Barang</h1>
 
                 <!-- DataTales Example -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <div class="row">
                             <div class="col my-2">
-                                <h6 class="m-0 font-weight-bold text-primary">Kelola Data Barang</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Kelola Jenis Barang</h6>
                             </div>
                             <div class="col text-right">
                                 <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal" data-target="#tambahBarangModal">
                                     <span class="icon text-white-50">
                                         <i class="fas fa-plus-circle"></i>
                                     </span>
-                                    <span class="text">Tambah Data Barang</span>
+                                    <span class="text">Tambah Jenis Barang</span>
                                 </a>
                             </div>
                         </div>
@@ -73,20 +73,18 @@
                                 <thead class="thead-dark">
                                     <tr>
                                         <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 40px;" aria-sort="ascending" aria-label="No.: activate to sort column descending">No.</th>
+                                        <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 100px;" aria-sort="ascending" aria-label="ID Barang: activate to sort column descending">ID Barang</th>
                                         <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 400px;" aria-sort="ascending" aria-label="Nama Barang: activate to sort column descending">Nama Barang</th>
                                         <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Kategori: activate to sort column descending">Kategori</th>
-                                        <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 80px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Stok</th>
-                                        <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 80px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Ruang</th>
-                                        <th class="sorting sorting_asc" tabindex="5" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="Pengaturan: activate to sort column descending">Pengaturan</th>
+                                        <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Pengaturan: activate to sort column descending">Pengaturan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1.</td>
+                                        <td>P0001</td>
                                         <td>Meja</td>
                                         <td>Perabotan</td>
-                                        <td>256</td>
-                                        <td>RuangA1</td>
                                         <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
@@ -98,10 +96,9 @@
                                     </tr>
                                     <tr>
                                         <td>2.</td>
+                                        <td>P0002</td>
                                         <td>Kursi</td>
                                         <td>Perabotan</td>
-                                        <td>512</td>
-                                        <td>RuangB1</td>
                                         <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
@@ -113,10 +110,9 @@
                                     </tr>
                                     <tr>
                                         <td>3.</td>
+                                        <td>P0003</td>
                                         <td>Alat Ketam Kayu</td>
                                         <td>Alat Furnitur</td>
-                                        <td>40</td>
-                                        <td>RuangB1</td>
                                         <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
@@ -128,10 +124,9 @@
                                     </tr>
                                     <tr>
                                         <td>4.</td>
+                                        <td>P0004</td>
                                         <td>Sapu</td>
                                         <td>Alat Kebersihan</td>
-                                        <td>16</td>
-                                        <td>GudangC3</td>
                                         <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
@@ -143,10 +138,9 @@
                                     </tr>
                                     <tr>
                                         <td>5.</td>
+                                        <td>P0005</td>
                                         <td>Spidol</td>
                                         <td>ATK</td>
-                                        <td>80</td>
-                                        <td>GudangB1</td>
                                         <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
@@ -158,10 +152,9 @@
                                     </tr>
                                     <tr>
                                         <td>6.</td>
+                                        <td>P0006</td>
                                         <td>Lemari Buku</td>
                                         <td>Perabotan</td>
-                                        <td>3</td>
-                                        <td>RuangE5</td>
                                         <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
@@ -173,10 +166,9 @@
                                     </tr>
                                     <tr>
                                         <td>7.</td>
+                                        <td>P0005</td>
                                         <td>Laptop DELL</td>
                                         <td>Alat Elektronik</td>
-                                        <td>12</td>
-                                        <td>GudangA5</td>
                                         <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
                                             <span class="text">Edit</span>
@@ -224,14 +216,10 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Barang</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Tambah Jenis Barang</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
-                <div>
-                    <h5 class="mx-3 my-2" style="color:red">Peringatan :</h5>
-                    <h5 class="mx-3"> penambahan barang melalui form ini tidak akan tercatat pada data barang masuk</h5>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -256,14 +244,6 @@
                             <option value="Buku">Perlengkapan UKS</option>
                             <option value="Peralatan Furnitur">Peralatan Furnitur</option>
                             </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Stok</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="Jumlah Stok">
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Ruang</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="Nama ruang">
                         </div>
                     </form>
                     <div class="modal-footer">
@@ -308,10 +288,6 @@
                             <option value="Buku">Perlengkapan UKS</option>
                             <option value="Peralatan Furnitur">Peralatan Furnitur</option>
                             </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Stok</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="Jumlah Stok">
                         </div>
                     </form>
                 </div>

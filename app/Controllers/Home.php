@@ -14,9 +14,19 @@ class Home extends BaseController
         return view('templates/kategori');
     }
 
+    public function jenisBarang()
+    {
+        return view('templates/jenis-barang');
+    }
+
     public function barang()
     {
         return view('templates/data-barang');
+    }
+
+    public function ruang()
+    {
+        return view('templates/ruang');
     }
 
     public function barangMasuk()

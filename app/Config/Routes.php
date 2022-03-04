@@ -34,6 +34,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('kategori', 'Home::kategori');
 $routes->get('barang', 'Home::barang');
+$routes->get('jenisBarang', 'Home::jenisBarang');
+$routes->get('ruang', 'Home::ruang');
 $routes->get('barang-masuk', 'Home::barangMasuk');
 $routes->get('barang-keluar', 'Home::barangKeluar');
 $routes->get('rekap-data-barang', 'Home::rekap');
