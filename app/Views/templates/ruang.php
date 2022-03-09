@@ -78,7 +78,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php if($ruang): ?>
+                                    <?php foreach($ruang as $rowruang): ?>
                                     <tr>
+                                        <td><?php echo $rowruang['id_ruang']; ?></td>
+                                        <td><?php echo $rowruang['nama_ruang']; ?></td>
+                                        <td>
+                                        <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal"    >
+                                        <span class="text">Edit</span>
+                                        </a>
+                                        <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
+                                        <span class="text">Hapus</span>
+                                        </a>
+                                        </td>
+                                    </tr>
+                                    <?php endforeach; ?>
+                                    <?php endif; ?>
+                                    <!-- <tr>
                                         <td>1.</td>
                                         <td>Ruang A1</td>
                                         <td>
@@ -161,7 +177,7 @@
                                             <span class="text">Hapus</span>
                                             </a>
                                         </td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>

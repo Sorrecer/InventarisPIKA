@@ -78,90 +78,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1.</td>
-                                        <td>Perabotan</td>
-                                        <td>
+                                    <?php if($kategori): ?>
+                                        <?php foreach($kategori as $rowkategori): ?>
+                                        <tr>
+                                            <td><?php echo $rowkategori['id_kategori']; ?></td>
+                                            <td><?php echo $rowkategori['nama_kategori']; ?></td>
+                                            <td>
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal"    >
                                             <span class="text">Edit</span>
                                             </a>
                                             <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2.</td>
-                                        <td>Buku</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3.</td>
-                                        <td>Alat furniture</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4.</td>
-                                        <td>alat elektronik</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5.</td>
-                                        <td>ATK</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6.</td>
-                                        <td>Alat Kebersihan</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>7.</td>
-                                        <td>Perlengkapan UKS</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                        </tr>
+                                        <?php endforeach; ?>
+                                        <?php endif; ?>
                                 </tbody>
                             </table>
                         </div>
