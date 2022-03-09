@@ -25,11 +25,11 @@
 
     <style>
         #aktif.active{
-            background-color: #ffe100
+            background-color: #ffb700
         }
 
         #aktif2.active{
-            background-color: #ffe100
+            background-color: #ffb700
         }   
     </style>
 
