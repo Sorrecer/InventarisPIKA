@@ -88,8 +88,8 @@
                                         </div>
                                         <div class="form-group">
                                         </div>
-                                        <a href="<?php echo base_url('/');?>" class="btn btn-primary btn-user btn-block">
-                                            Login
+                                        <a href="<?php echo base_url('login');?>" class="btn btn-primary btn-user btn-block">
+                                            Daftar
                                         </a>
                                         <a href="<?php echo base_url('login');?>" class="btn btn-danger btn-user btn-block">
                                             Batal

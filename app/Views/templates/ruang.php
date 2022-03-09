@@ -126,6 +126,42 @@
                                             </a>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td>5.</td>
+                                        <td>Tanah E1</td>
+                                        <td>
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
+                                            <span class="text">Edit</span>
+                                            </a>
+                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
+                                            <span class="text">Hapus</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.</td>
+                                        <td>Tanah A2</td>
+                                        <td>
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
+                                            <span class="text">Edit</span>
+                                            </a>
+                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
+                                            <span class="text">Hapus</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7.</td>
+                                        <td>Tanah B2</td>
+                                        <td>
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
+                                            <span class="text">Edit</span>
+                                            </a>
+                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
+                                            <span class="text">Hapus</span>
+                                            </a>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

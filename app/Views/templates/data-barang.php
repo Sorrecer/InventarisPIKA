@@ -241,29 +241,33 @@
                         </div>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Nama Barang:</label>
-                            <input type="text" class="form-control" id="recipient-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Kategori:</label>
                             <select name="Kategori" class="form-control" id="kategori">
-                            <option selected="selected">--Pilih kategori--</option>
-                            <option value="Perabotan">Perabotan</option>
-                            <option value="Buku">Buku</option>
-                            <option value="Buku">Alat furniture</option>
-                            <option value="Buku">Alat elektronik</option>
-                            <option value="ATK">ATK</option>
-                            <option value="Buku">Alat kebersihan</option>
-                            <option value="Buku">Perlengkapan UKS</option>
-                            <option value="Peralatan Furnitur">Peralatan Furnitur</option>
+                            <option selected="selected">--Pilih barang--</option>
+                            <option value="Perabotan">Meja</option>
+                            <option value="Buku">Kursi</option>
+                            <option value="Buku">Alat Ketam Kayu</option>
+                            <option value="Buku">Sapu</option>
+                            <option value="ATK">Spidol</option>
+                            <option value="Buku">Lemari Buku</option>
+                            <option value="Buku">Laptop DELL</option>
                             </select>
-                        </div>
+                    </div>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Stok</label>
                             <input type="text" class="form-control" id="recipient-name" placeholder="Jumlah Stok">
                         </div>
                         <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Ruang</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="Nama ruang">
+                            <label for="recipient-name" class="col-form-label">Ruang:</label>
+                            <select name="Kategori" class="form-control" id="kategori">
+                            <option selected="selected">--Pilih Ruang--</option>
+                            <option value="Perabotan">Ruang A1</option>
+                            <option value="Buku">Ruang A2</option>
+                            <option value="Buku">Ruang B1</option>
+                            <option value="Buku">Ruang B2</option>
+                            <option value="ATK">Ruang C1</option>
+                            <option value="Buku">Ruang C2</option>
+                            <option value="Buku">Gudang D1</option>
+                            </select>
                         </div>
                     </form>
                     <div class="modal-footer">

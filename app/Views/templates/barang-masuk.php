@@ -229,7 +229,7 @@
                     <form>
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Tanggal Masuk:</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                        <input type="date" class="form-control" id="recipient-name">
                     </div>
                     <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Nama Barang:</label>
@@ -251,6 +251,19 @@
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Jumlah Harga:</label>
                         <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Ruang:</label>
+                            <select name="Kategori" class="form-control" id="kategori">
+                            <option selected="selected">--Pilih Ruang--</option>
+                            <option value="Perabotan">Ruang A1</option>
+                            <option value="Buku">Ruang A2</option>
+                            <option value="Buku">Ruang B1</option>
+                            <option value="Buku">Ruang B2</option>
+                            <option value="ATK">Ruang C1</option>
+                            <option value="Buku">Ruang C2</option>
+                            <option value="Buku">Gudang D1</option>
+                            </select>
                     </div>
                     </form>
                 </div>
