@@ -11,4 +11,10 @@ class Kategori extends BaseController
         $data['kategori'] = $KategoriModel->orderBy('id_kategori', 'nama_kategori')->findAll();
         return view('templates/kategori', $data);
     }
+
+    public function delete($id_kategori = null){
+        $KategoriModel = new KategoriModel();
+        $data['kategori'] = $KategoriModel->where('id_kategori', $id_kategori)->delete($id_kategori);
+        return $this->response->redirect(site_url('/kategori'));
+    }    
 }

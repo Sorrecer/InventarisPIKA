@@ -85,38 +85,29 @@
                                 <thead class="thead-dark">
                                     <tr>
                                         <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Username: activate to sort column descending">Username</th>
-                                        <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Nama: activate to sort column descending">Nama</th>
+                                        <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Nama: activate to sort column descending">Email</th>
                                         <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Telepon: activate to sort column descending">Telepon</th>
                                         <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Pengaturan: activate to sort column descending">Pengaturan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Ronny</td>
-                                        <td>Ronny</td>
-                                        <td>081234567890</td>
-                                        <td>
-                                            <button id="aktif" class="btn btn-secondary" data-toggle="button" aria-pressed="false">
-                                            <span class="text">Aktif</span>
-                                            </button>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
+                                    <?php if($staff): ?>
+                                        <?php foreach($staff as $rowstaff): ?>
+                                        <tr>
+                                            <td><?php echo $rowstaff['username']; ?></td>
+                                            <td><?php echo $rowstaff['email']; ?></td>
+                                            <td><?php echo $rowstaff['telepon']; ?></td>
+                                            <td>
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal"    >
+                                            <span class="text">Edit</span>
+                                            </a>
+                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Kenny</td>
-                                        <td>Kenny</td>
-                                        <td>081234567890</td>
-                                        <td>
-                                            <button id ="aktif2" class="btn btn-secondary" data-toggle="button" aria-pressed="false">
-                                            <span class="text">Aktif</span>
-                                            </button>
-                                            <a href="#" class="btn btn-danger"  data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                        </tr>
+                                        <?php endforeach; ?>
+                                        <?php endif; ?>
                                 </tbody>
                             </table>
                         </div>

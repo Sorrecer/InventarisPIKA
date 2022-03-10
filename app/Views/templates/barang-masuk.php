@@ -74,7 +74,7 @@
                                 <thead class="thead-dark">
                                     <tr>
                                         <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 40px;" aria-sort="ascending" aria-label="No.: activate to sort column descending">No.</th>
-                                        <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="ID Barang: activate to sort column descending">ID Transaksi</th>
+                                        <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="ID Barang: activate to sort column descending">ID Transaksi</th>
                                         <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Nama Barang: activate to sort column descending">Tanggal Masuk</th>
                                         <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 400px;" aria-sort="ascending" aria-label="Kategori: activate to sort column descending">Nama Barang</th>
                                         <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 180px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Jumlah Barang</th>
@@ -83,105 +83,28 @@
                                         <th class="sorting sorting_asc" tabindex="7" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="Pengaturan: activate to sort column descending">Pengaturan</th>
                                     </tr>
                                 </thead>
-                                <tbody style="font-size:14px">
-                                    <tr>
-                                        <td>1.</td>
-                                        <td>TR0001</td>
-                                        <td>21/08/2022</td>
-                                        <td>Meja</td>
-                                        <td>7</td>
-                                        <td>Rp. 3.500.000</td>
-                                        <td>RuangA3</td>
-                                        <td>
+                                <tbody>
+                                <?php if($barang_masuk): ?>
+                                        <?php foreach($barang_masuk as $rowmasuk): ?>
+                                        <tr>
+                                            <td><?php echo $rowmasuk['id_transaksi']; ?></td>
+                                            <td><?php echo $rowmasuk['id_transaksi']; ?></td>
+                                            <td><?php echo $rowmasuk['tanggal_masuk']; ?></td>
+                                            <td><?php echo $rowmasuk['nama_barang']; ?></td>
+                                            <td><?php echo $rowmasuk['jumlah_barang']; ?></td>
+                                            <td><?php echo $rowmasuk['jumlah_harga']; ?></td>
+                                            <td><?php echo $rowmasuk['nama_ruang']; ?></td>
+                                            <td>
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal"    >
+                                            <span class="text">Edit</span>
+                                            </a>
                                             <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2.</td>
-                                        <td>TR0002</td>
-                                        <td>15/08/2022</td>
-                                        <td>Kursi</td>
-                                        <td>25  </td>
-                                        <td>Rp. 3.000.000</td>
-                                        <td>RuangB2</td>
-                                        <td>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3.</td>
-                                        <td>TR0003</td>
-                                        <td>05/07/2022</td>
-                                        <td>Alat Ketam Kayu</td>
-                                        <td>20</td>
-                                        <td>Rp. 800.000</td>
-                                        <td>GudangC2</td>
-                                        <td>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4.</td>
-                                        <td>TR0004</td>
-                                        <td>06/05/2022</td>
-                                        <td>Sapu</td>
-                                        <td>5</td>
-                                        <td>Rp. 150.000</td>
-                                        <td>GudangB4</td>
-                                        <td>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5.</td>
-                                        <td>TR0005</td>
-                                        <td>11/03/2022</td>
-                                        <td>Spidol</td>
-                                        <td>12</td>
-                                        <td>Rp. 60.000</td>
-                                        <td>RuangA2</td>
-                                        <td>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6.</td>
-                                        <td>TR0006</td>
-                                        <td>10/03/2022</td>
-                                        <td>Lemari</td>
-                                        <td>2</td>
-                                        <td>Rp. 4.000.000</td>
-                                        <td>RuangA2</td>
-                                        <td>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>7.</td>
-                                        <td>TR0007</td>
-                                        <td>05/03/2022</td>
-                                        <td>Laptop DELL</td>
-                                        <td>2</td>
-                                        <td>Rp. 10.000.000</td>
-                                        <td>GudangB1</td>
-                                        <td>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                        </tr>
+                                        <?php endforeach; ?>
+                                        <?php endif; ?>
                                 </tbody>
                             </table>
                         </div>

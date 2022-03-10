@@ -87,7 +87,7 @@
                                             <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal"    >
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
                                             </td>
@@ -181,6 +181,7 @@
     </div>
 
     <!-- Delete Data Modal-->
+    
     <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -194,7 +195,7 @@
                 <div class="modal-body">Pilih "Hapus" untuk konfirmasi hapus data.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a class="btn btn-danger" data-dismiss="modal">Hapus</a>
+                    <a class="btn btn-danger" href="<?php echo base_url('delete-kategori/'.$rowkategori['id_kategori']);?>" data-dismiss="modal">Hapus</a>
                 </div>
             </div>
         </div>

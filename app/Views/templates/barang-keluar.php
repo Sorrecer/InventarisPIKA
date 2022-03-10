@@ -86,48 +86,27 @@
                                     </tr>
                                 </thead>
                                 <tbody style="font-size:14px">
-                                    <tr>
-                                        <td>1.</td>
-                                        <td>TR0001</td>
-                                        <td>02/08/2022</td>
-                                        <td>Meja</td>
-                                        <td>7</td>
-                                        <td>Rusak</td>
-                                        <td>RuangB4</td>
-                                        <td>
+                                <?php if($barang_keluar): ?>
+                                        <?php foreach($barang_keluar as $rowkeluar): ?>
+                                        <tr>
+                                            <td><?php echo $rowkeluar['id_transaksi']; ?></td>
+                                            <td><?php echo $rowkeluar['id_transaksi']; ?></td>
+                                            <td><?php echo $rowkeluar['tanggal_keluar']; ?></td>
+                                            <td><?php echo $rowkeluar['nama_barang']; ?></td>
+                                            <td><?php echo $rowkeluar['jumlah_barang']; ?></td>
+                                            <td><?php echo $rowkeluar['keterangan']; ?></td>
+                                            <td><?php echo $rowkeluar['nama_ruang']; ?></td>
+                                            <td>
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal"    >
+                                            <span class="text">Edit</span>
+                                            </a>
                                             <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2.</td>
-                                        <td>TR0002</td>
-                                        <td>27/07/2022</td>
-                                        <td>Kursi</td>
-                                        <td>25  </td>
-                                        <td>Rusak</td>
-                                        <td>GudangA3</td>
-                                        <td>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3.</td>
-                                        <td>TR0003</td>
-                                        <td>05/07/2022</td>
-                                        <td>Spidol</td>
-                                        <td>20</td>
-                                        <td>Hilang</td>
-                                        <td>RuangB1</td>
-                                        <td>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                        </tr>
+                                        <?php endforeach; ?>
+                                        <?php endif; ?>
                                 </tbody>
                             </table>
                         </div>

@@ -62,22 +62,27 @@
                                     <hr class="sidebar-divider">
                                     <table>
                                         <thead>
+                                        <?php if($admin): ?>
+                                        <?php foreach($admin as $rowadmin): ?>
                                             <td class="row no-gutters align-items-center my-3" style="width:150px">
                                                  <div class="h8 mb-0 font-weight-bold text-gray-800">Username</div>
                                             </td>
-                                            <td> : Username Admin </td>
-                                        <thead>
+                                            <td><?php echo ": ".$rowadmin['username']; ?></td>
+                                        </thead>
+                                        <tr>
                                             <td class="row no-gutters align-items-center my-3">
                                                  <div class="h8 mb-0 font-weight-bold text-gray-800">Email</div>
                                             </td>
-                                            <td> : Admin@gmail.com</td>
+                                            <td><?php echo ": ".$rowadmin['email']; ?></td>
                                         </tr>
                                         <tr>
                                             <td class="row no-gutters align-items-center my-3">
                                                  <div class="h8 mb-0 font-weight-bold text-gray-800">No. Telp</div>
                                             </td>
-                                            <td> : 08112233445566</td>
+                                            <td><?php echo ": ".$rowadmin['telepon']; ?></td>
                                         </tr>
+                                        <?php endforeach; ?>
+                                        <?php endif; ?>
                                     </table>
                                     <hr class="sidebar-divider">
                                     <div class="row" style="justify-content: flex-end">

@@ -80,104 +80,24 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1.</td>
-                                        <td>P0001</td>
-                                        <td>Meja</td>
-                                        <td>Perabotan</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
+                                <?php if($barang): ?>
+                                        <?php foreach($barang as $rowbarang): ?>
+                                        <tr>
+                                            <td><?php echo $rowbarang['id_barang']; ?></td>
+                                            <td><?php echo $rowbarang['id_barang']; ?></td>
+                                            <td><?php echo $rowbarang['nama_barang']; ?></td>
+                                            <td><?php echo $rowbarang['nama_kategori']; ?></td>
+                                            <td>
+                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal"    >
                                             <span class="text">Edit</span>
                                             </a>
-                                            <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
+                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2.</td>
-                                        <td>P0002</td>
-                                        <td>Kursi</td>
-                                        <td>Perabotan</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3.</td>
-                                        <td>P0003</td>
-                                        <td>Alat Ketam Kayu</td>
-                                        <td>Alat Furnitur</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4.</td>
-                                        <td>P0004</td>
-                                        <td>Sapu</td>
-                                        <td>Alat Kebersihan</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5.</td>
-                                        <td>P0005</td>
-                                        <td>Spidol</td>
-                                        <td>ATK</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6.</td>
-                                        <td>P0006</td>
-                                        <td>Lemari Buku</td>
-                                        <td>Perabotan</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>7.</td>
-                                        <td>P0005</td>
-                                        <td>Laptop DELL</td>
-                                        <td>Alat Elektronik</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                            </td>
+                                        </tr>
+                                        <?php endforeach; ?>
+                                        <?php endif; ?>
                                 </tbody>
                             </table>
                         </div>

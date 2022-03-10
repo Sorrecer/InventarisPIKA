@@ -61,7 +61,32 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-body">
+                        <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <p>Jenis Laporan :</p>
+                                <input type="radio" id="barang-masuk" name="jenis-laporan" value="barang-masuk">
+                                <label for="barang-masuk">Barang masuk</label><br>
+                                <input type="radio" id="barang-keluar" name="jenis-laporan" value="barang-keluar">
+                                <label for="barang-keluar">Barang keluar</label><br>
+                                <input type="radio" id="selisih" name="jenis-laporan" value="selisih">
+                                <label for="selisih">Selisih masuk - keluar</label>
+                            </div>
+                            <div class="col">
+                                <p>Rentang Tanggal :</p>
+                                <input type="date" class="form-control" id="tanggal-awal">
+                                <p class="my-2">Sampai dengan<p>
+                                <input type="date" class="form-control" id="tanggal-akhir">
+                            </div>
+                            <div class="col text-center my-5">
+                                <a href="#" class="btn btn-primary btn-icon-split" style="padding: 30px">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-print"></i>
+                                    </span>
+                                    <span class="text" data-toggle="modal" data-target="#barangMasukModal">CETAK</span>
+                                </a>
+                            </div>
+                        </div>
                         <div class="table-responsive" style="font-size:12px">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead class="thead-dark">
@@ -72,7 +97,7 @@
                                         <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 400px;" aria-sort="ascending" aria-label="Kategori: activate to sort column descending">Nama Barang</th>
                                         <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 180px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Jumlah Barang</th>
                                         <th class="sorting sorting_asc" tabindex="5" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Jumlah Harga</th>
-                                        <th class="sorting sorting_asc" tabindex="6" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 80px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Pencatat</th>
+                                        <th class="sorting sorting_asc" tabindex="6" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 80px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Ruang</th>
                                     </tr>
                                 </thead>
                                 <tbody style="font-size:14px">
@@ -83,7 +108,7 @@
                                         <td>Meja</td>
                                         <td>7</td>
                                         <td>Rp. 3.500.000</td>
-                                        <td>Admin</td>
+                                        <td>A1</td>
                                     </tr>
                                     <tr>
                                         <td>2.</td>
@@ -92,7 +117,7 @@
                                         <td>Kursi</td>
                                         <td>25  </td>
                                         <td>Rp. 3.000.000</td>
-                                        <td>Admin</td>
+                                        <td>A3</td>
                                     </tr>
                                     <tr>
                                         <td>3.</td>
@@ -101,7 +126,7 @@
                                         <td>Alat Ketam Kayu</td>
                                         <td>20</td>
                                         <td>Rp. 800.000</td>
-                                        <td>Admin</td>
+                                        <td>B3</td>
                                     </tr>
                                     <tr>
                                         <td>4.</td>
@@ -110,7 +135,7 @@
                                         <td>Sapu</td>
                                         <td>5</td>
                                         <td>Rp. 150.000</td>
-                                        <td>Staff1</td>
+                                        <td>A2</td>
                                     </tr>
                                     <tr>
                                         <td>5.</td>
@@ -119,7 +144,7 @@
                                         <td>Spidol</td>
                                         <td>12</td>
                                         <td>Rp. 60.000</td>
-                                        <td>Staff1</td>
+                                        <td>B1</td>
                                     </tr>
                                     <tr>
                                         <td>6.</td>
@@ -128,7 +153,7 @@
                                         <td>Lemari</td>
                                         <td>2</td>
                                         <td>Rp. 4.000.000</td>
-                                        <td>Staff2</td>
+                                        <td>D1</td>
                                     </tr>
                                     <tr>
                                         <td>7.</td>
@@ -137,7 +162,7 @@
                                         <td>Laptop DELL</td>
                                         <td>2</td>
                                         <td>Rp. 10.000.000</td>
-                                        <td>Staff2</td>
+                                        <td>C2</td>
                                     </tr>
                                 </tbody>
                             </table>

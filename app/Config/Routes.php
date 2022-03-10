@@ -43,6 +43,7 @@ $routes->get('/pengaturan-akun', 'PengaturanAkun::index');
 $routes->get('/akun-staff', 'AkunStaff::index');
 $routes->get('/login', 'Login::index');
 $routes->get('/buat-akun-staff', 'BuatAkun::index');
+$routes->get('/delete-kategori/(:num)', 'Kategori::delete/$1');
 
 /*
  * --------------------------------------------------------------------
