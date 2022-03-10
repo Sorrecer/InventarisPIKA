@@ -16,5 +16,5 @@ class Kategori extends BaseController
         $KategoriModel = new KategoriModel();
         $data['kategori'] = $KategoriModel->where('id_kategori', $id_kategori)->delete($id_kategori);
         return $this->response->redirect(site_url('/kategori'));
-    }    
+    }
 }

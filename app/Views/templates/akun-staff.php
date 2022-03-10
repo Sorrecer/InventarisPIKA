@@ -13,9 +13,7 @@
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -24,13 +22,13 @@
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <style>
-        #aktif.active{
+        #aktif.active {
             background-color: #ffb700
         }
 
-        #aktif2.active{
+        #aktif2.active {
             background-color: #ffb700
-        }   
+        }
     </style>
 
 </head>
@@ -40,8 +38,8 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <?php 
-            include('sidebar.php');
+        <?php
+        include('sidebar.php');
         ?>
 
         <!-- Content Wrapper -->
@@ -50,9 +48,9 @@
             <!-- Main Content -->
             <div id="content">
 
-            <?php 
+                <?php
                 include('topbar.php');
-            ?>
+                ?>
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -62,69 +60,70 @@
                         <h1 class="h3 mb-0 text-gray-800">Akun Staff</h1>
                     </div>
 
-                                    <!-- DataTales Example -->
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <div class="row">
-                            <div class="col my-2">
-                                <h6 class="m-0 font-weight-bold text-primary">Kelola Akun Staff</h6>
-                            </div>
-                            <div class="col text-right">
-                                <a href="<?php echo base_url('buat-akun-staff');?>" class="btn btn-primary btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-plus-circle"></i>
-                                    </span>
-                                    <span class="text">Tambah Akun Staff</span>
-                                </a>
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <div class="row">
+                                <div class="col my-2">
+                                    <h6 class="m-0 font-weight-bold text-primary">Kelola Akun Staff</h6>
+                                </div>
+                                <div class="col text-right">
+                                    <a href="<?php echo base_url('buat-akun-staff'); ?>" class="btn btn-primary btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-plus-circle"></i>
+                                        </span>
+                                        <span class="text">Tambah Akun Staff</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Username: activate to sort column descending">Username</th>
-                                        <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Nama: activate to sort column descending">Email</th>
-                                        <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Telepon: activate to sort column descending">Telepon</th>
-                                        <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Pengaturan: activate to sort column descending">Pengaturan</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php if($staff): ?>
-                                        <?php foreach($staff as $rowstaff): ?>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead class="thead-dark">
                                         <tr>
-                                            <td><?php echo $rowstaff['username']; ?></td>
-                                            <td><?php echo $rowstaff['email']; ?></td>
-                                            <td><?php echo $rowstaff['telepon']; ?></td>
-                                            <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal"    >
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                            </td>
+                                            <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Username: activate to sort column descending">Username</th>
+                                            <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Nama: activate to sort column descending">Email</th>
+                                            <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Telepon: activate to sort column descending">Telepon</th>
+                                            <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Pengaturan: activate to sort column descending">Pengaturan</th>
                                         </tr>
-                                        <?php endforeach; ?>
+                                    </thead>
+                                    <tbody>
+                                        <?php if ($staff) : ?>
+                                            <?php foreach ($staff as $rowstaff) : ?>
+                                                <tr>
+                                                    <td><?php echo $rowstaff['username']; ?></td>
+                                                    <td><?php echo $rowstaff['email']; ?></td>
+                                                    <td><?php echo $rowstaff['telepon']; ?></td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
+                                                            <span class="text">Edit</span>
+                                                        </a>
+                                                        <a href="<?php echo base_url("hapus-staff/" . $rowstaff['id_staff']) ?>" class="btn btn-danger"> Hapus </a>
+                                                        <!-- <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
+                                            <span class="text">Hapus</span>
+                                            </a> -->
+                                                    </td>
+                                                </tr>
+                                            <?php endforeach; ?>
                                         <?php endif; ?>
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                 </div>
                 <!-- /.container-fluid -->
 
-                </div>
-                <!-- End of Main Content -->
+            </div>
+            <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Inventaris PIKA 2022</span>
+                        <span>Copyright &copy; Inventaris PIKA 2022</span>
                     </div>
                 </div>
             </footer>
@@ -141,30 +140,30 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-        <!-- Edit Profil-->
-        <div class="modal fade" id="editStaffModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Edit Profil-->
+    <div class="modal fade" id="editStaffModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Edit Profil Staff</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <form>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Username:</label>
-                        <input type="text" class="form-control" id="recipient-name" placeholder="Username Staff">
-                    </div>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Nama:</label>
-                        <input type="text" class="form-control" id="recipient-name" placeholder="Nama Staff">
-                    </div>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">No. Telp:</label>
-                        <input type="text" class="form-control" id="recipient-name" placeholder="No. Telp Staff">
-                    </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Username:</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Username Staff">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Nama:</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Nama Staff">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">No. Telp:</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="No. Telp Staff">
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -176,8 +175,7 @@
     </div>
 
     <!-- Delete Data Modal-->
-    <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -193,11 +191,10 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -209,7 +206,7 @@
                 <div class="modal-body">Pilih "Logout" dibawah untuk keluar dari sesi.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a class="btn btn-primary" href="<?php echo base_url('login');?>">Logout</a>
+                    <a class="btn btn-primary" href="<?php echo base_url('login'); ?>">Logout</a>
                 </div>
             </div>
         </div>
