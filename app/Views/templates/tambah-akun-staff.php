@@ -88,8 +88,8 @@
                                     <input type="password" class="form-control" id="password" name="password">
                                 </div>
                                 <div class="form-group">
-                                    <label for="password2" class="col-form-label">Konfirmasi Password</label>
-                                    <input type="password" class="form-control" id="password2" name="password2">
+                                    <label for="konfpassword" class="col-form-label">Konfirmasi Password</label>
+                                    <input type="password" class="form-control" id="konfpassword" name="konfpassword2">
                                 </div>
                             <div class="text-center">
                                 <a href="<?php echo base_url('akunstaff')?>" class="btn btn-secondary btn-lg mx-3">Batal</a>

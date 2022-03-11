@@ -381,3 +381,43 @@ CRITICAL - 2022-03-10 22:01:51 --> There is no data to insert.
 #6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
 #8 {main}
+CRITICAL - 2022-03-10 22:37:32 --> There is no data to insert.
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#2 D:\xampp\htdocs\InventarisPIKA\app\Controllers\AkunStaff.php(29): CodeIgniter\Model->insert(Array)
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\AkunStaff->store()
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AkunStaff))
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-10 22:39:33 --> There is no data to insert.
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#2 D:\xampp\htdocs\InventarisPIKA\app\Controllers\AkunStaff.php(29): CodeIgniter\Model->insert(Array)
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\AkunStaff->store()
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AkunStaff))
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-10 22:52:35 --> There is no data to insert.
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#2 D:\xampp\htdocs\InventarisPIKA\app\Controllers\AkunStaff.php(29): CodeIgniter\Model->insert(Array)
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\AkunStaff->store()
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AkunStaff))
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-10 22:57:31 --> There is no data to insert.
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#2 D:\xampp\htdocs\InventarisPIKA\app\Controllers\AkunStaff.php(33): CodeIgniter\Model->insert(Array)
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\AkunStaff->store()
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AkunStaff))
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}

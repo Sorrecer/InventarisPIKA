@@ -26,6 +26,7 @@ class AkunStaff extends BaseController
             'telepon' => $this->request->getVar('telepon'),
             'password' => $this->request->getVar('password')
         ];
+
         $StaffModel->insert($data);
         return $this->response->redirect(base_url('/akunstaff'));
     }
