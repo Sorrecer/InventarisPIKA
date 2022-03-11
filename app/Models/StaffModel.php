@@ -9,4 +9,5 @@ class StaffModel extends Model
     protected $primaryKey = 'id_staff';
     
     protected $allowedFields = ['username, email, telepon, password'];
+    
 }

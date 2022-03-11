@@ -16,10 +16,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>/css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="<?php echo base_url()?>/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <style>
         #aktif.active {
@@ -56,67 +56,38 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Akun Staff</h1>
+                    <div class="align-items-center text-center mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Edit Akun Staff</h1>
                     </div>
 
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
+                    <!-- Form Edit -->
+                    <div class="card shadow mb-4 mx-auto" style="width:50%">
                         <div class="card-header py-3">
                             <div class="row">
                                 <div class="col my-2">
-                                    <h6 class="m-0 font-weight-bold text-primary">Kelola Akun Staff</h6>
-                                </div>
-                                <div class="col text-right">
-                                    <a href="<?php echo base_url('akunstaff/tambah'); ?>" class="btn btn-primary btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-plus-circle"></i>
-                                        </span>
-                                        <span class="text">Tambah Akun Staff</span>
-                                    </a>
+                                    <h6 class="m-0 font-weight-bold text-primary">Form pengeditan akun staff</h6>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead class="thead-dark">
-                                        <tr>
-                                            <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Username: activate to sort column descending">Username</th>
-                                            <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Nama: activate to sort column descending">Email</th>
-                                            <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Telepon: activate to sort column descending">Telepon</th>
-                                            <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Pengaturan: activate to sort column descending">Pengaturan</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php if ($staff) : ?>
-                                            <?php foreach ($staff as $rowstaff) : ?>
-                                                <tr>
-                                                    <td><?php echo $rowstaff['username']; ?></td>
-                                                    <td><?php echo $rowstaff['email']; ?></td>
-                                                    <td><?php echo $rowstaff['telepon']; ?></td>
-                                                    <td>
-                                                        <a href="<?php echo base_url('akunstaff/edit'); ?>" class="btn btn-warning">
-                                                            <span class="text">Edit</span>
-                                                        </a>
-                                                        <a href="<?php echo base_url("hapus-staff/" . $rowstaff['id_staff']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data Ini?')" class="btn btn-danger">Hapus</a>
-                                                        <!-- <button onclick="openConfirmDialog()" class="btn btn-danger"> Hapus </button> -->
-                                                        <!-- <script>
-                                                        function openConfirmDialog(){
-                                                            let hapus = confirm("Apakah anda yakin akan menghapus data Ini?");
-                                                            if(hapus){
-                                                                alert("Data Berhasil Dihapus");
-                                                            }else{
-                                                                alert("Data Batal Dih   apus");
-                                                            }
-                                                        }
-                                                        </script> -->
-                                                    </td>
-                                                </tr>
-                                            <?php endforeach; ?>
-                                        <?php endif; ?>
-                                    </tbody>
-                                </table>
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Username</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Email</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Telepon</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                            </form>
+                            <hr class="sidebar-divider" style="margin-top:40px">
+                            <div class="text-right">
+                                <a href="<?php echo base_url('akunstaff')?>" class="btn btn-secondary btn-lg">Batal</a>
+                                <a class="btn btn-primary btn-lg" style="padding-left:25px;padding-right:25px">Edit</a>
                             </div>
                         </div>
                     </div>
@@ -174,9 +145,9 @@
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary">Tambah</button>
+                <div class="footer">
+                    <button type="button" class="btn btn-secondary">Batal</button>
+                    <button type="button" class="btn btn-primary">Edit</button>
                 </div>
             </div>
         </div>
@@ -222,21 +193,21 @@
 
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo base_url()?>/vendor/jquery/jquery.min.js"></script>
+    <script src="<?php echo base_url()?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="<?php echo base_url()?>/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="<?php echo base_url()?>/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="<?php echo base_url()?>/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?php echo base_url()?>/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+    <script src="<?php echo base_url()?>/js/demo/datatables-demo.js"></script>
 
 
 </body>
