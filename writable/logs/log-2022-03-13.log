@@ -1,0 +1,124 @@
+ERROR - 2022-03-13 00:57:38 --> Cannot delete or update a parent row: a foreign key constraint fails (`inventarispikadb`.`barang`, CONSTRAINT `barang_ibfk_1` FOREIGN KEY (`nama_kategori`) REFERENCES `kategori` (`nama_kategori`))
+CRITICAL - 2022-03-13 00:57:38 --> Cannot delete or update a parent row: a foreign key constraint fails (`inventarispikadb`.`barang`, CONSTRAINT `barang_ibfk_1` FOREIGN KEY (`nama_kategori`) REFERENCES `kategori` (`nama_kategori`))
+#0 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `ka...', 0)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ka...')
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ka...')
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ka...', Array, false)
+#4 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Model.php(359): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\BaseModel.php(963): CodeIgniter\Model->doDelete(Array, false)
+#6 D:\xampp\InventarisPIKA\app\Controllers\Kategori.php(17): CodeIgniter\BaseModel->delete(Array)
+#7 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Kategori->delete('2')
+#8 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+#9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#12 {main}
+CRITICAL - 2022-03-13 01:30:02 --> Undefined property: App\Controllers\Barang::$db
+#0 D:\xampp\InventarisPIKA\app\Controllers\Barang.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\Invent...', 17, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Barang->index()
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#6 {main}
+CRITICAL - 2022-03-13 01:30:57 --> Undefined property: App\Controllers\Barang::$db
+#0 D:\xampp\InventarisPIKA\app\Controllers\Barang.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\Invent...', 17, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Barang->index()
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#6 {main}
+CRITICAL - 2022-03-13 01:31:31 --> Undefined property: App\Controllers\Barang::$db
+#0 D:\xampp\InventarisPIKA\app\Controllers\Barang.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\Invent...', 18, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Barang->index()
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#6 {main}
+CRITICAL - 2022-03-13 01:35:19 --> Undefined property: App\Controllers\Barang::$builder
+#0 D:\xampp\InventarisPIKA\app\Controllers\Barang.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\Invent...', 19, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Barang->index()
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#6 {main}
+CRITICAL - 2022-03-13 01:36:16 --> Undefined property: App\Controllers\Barang::$builder
+#0 D:\xampp\InventarisPIKA\app\Controllers\Barang.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\Invent...', 19, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Barang->index()
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#6 {main}
+CRITICAL - 2022-03-13 01:36:31 --> Undefined property: App\Controllers\Barang::$builder
+#0 D:\xampp\InventarisPIKA\app\Controllers\Barang.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\Invent...', 19, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Barang->index()
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#6 {main}
+CRITICAL - 2022-03-13 01:36:32 --> Undefined property: App\Controllers\Barang::$builder
+#0 D:\xampp\InventarisPIKA\app\Controllers\Barang.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\Invent...', 19, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Barang->index()
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#6 {main}
+CRITICAL - 2022-03-13 01:36:33 --> Undefined property: App\Controllers\Barang::$builder
+#0 D:\xampp\InventarisPIKA\app\Controllers\Barang.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\Invent...', 19, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Barang->index()
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#6 {main}
+ERROR - 2022-03-13 01:46:53 --> Column 'nama_barang' in field list is ambiguous
+CRITICAL - 2022-03-13 01:46:53 --> Column 'nama_barang' in field list is ambiguous
+#0 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `nama_ba...', 0)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nama_ba...')
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nama_ba...')
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `nama_ba...', Array, false)
+#4 D:\xampp\InventarisPIKA\app\Controllers\Barang.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Barang->index()
+#6 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#7 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#10 {main}
+CRITICAL - 2022-03-13 01:54:54 --> Invalid file: templates/barang.php
+#0 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('templates/baran...')
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('templates/baran...', Array, true)
+#2 D:\xampp\InventarisPIKA\app\Controllers\Barang.php(24): view('templates/baran...', Array)
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Barang->index()
+#4 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#8 {main}
+CRITICAL - 2022-03-13 01:56:14 --> Array to string conversion
+#0 D:\xampp\InventarisPIKA\app\Views\templates\data-barang.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'D:\\xampp\\Invent...', 50, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\Invent...')
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('templates/data-...', Array, true)
+#4 D:\xampp\InventarisPIKA\app\Controllers\Barang.php(24): view('templates/data-...', Array)
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Barang->index()
+#6 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#7 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#10 {main}
+CRITICAL - 2022-03-13 03:02:28 --> syntax error, unexpected end of file
+#0 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('templates/data-...', Array, true)
+#2 D:\xampp\InventarisPIKA\app\Controllers\Barang.php(24): view('templates/data-...', Array)
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Barang->index()
+#4 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#8 {main}

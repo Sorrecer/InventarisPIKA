@@ -77,9 +77,9 @@
                                     </thead>
                                     <tbody>
                                         <?php if ($kategori) : ?>
-                                            <?php foreach ($kategori as $rowkategori) : ?>
+                                            <?php foreach ($kategori as $i => $rowkategori) : ?>
                                                 <tr>
-                                                    <td><?php echo $rowkategori['id_kategori']; ?></td>
+                                                    <td><?php echo $i + 1 . '.'; ?></td>
                                                     <td><?php echo $rowkategori['nama_kategori']; ?></td>
                                                     <td>
                                                         <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
