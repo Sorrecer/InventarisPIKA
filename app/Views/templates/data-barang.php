@@ -77,7 +77,7 @@
                                                     <td><?php echo $i + 1 . '.'; ?></td>
                                                     <td><?php echo $rowbarang['nama_barang']; ?></td>
                                                     <td><?php echo $rowbarang['nama_kategori']; ?></td>
-                                                    <td><?php echo $rowbarang['Stok']; ?></td>
+                                                    <td><?php echo $rowbarang['Jumlah']; ?></td>
                                                     <td><?php echo $rowbarang['nama_ruang']; ?></td>
                                                     <td>
                                                         <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
