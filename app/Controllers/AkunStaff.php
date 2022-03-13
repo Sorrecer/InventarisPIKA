@@ -13,12 +13,15 @@ class AkunStaff extends BaseController
         return view('templates/akun-staff', $data);
     }
 
+    // tambah
+
     public function tambah()
     {
         return view('templates/tambah-akun-staff');
     }
 
-    public function store(){
+    public function store()
+    {
         $StaffModel = new StaffModel();
         $data = [
             'username' => $this->request->getVar('username'),
@@ -31,9 +34,26 @@ class AkunStaff extends BaseController
         return $this->response->redirect(base_url('/akunstaff'));
     }
 
-    public function edit()
+    // edit
+
+    public function edit($id_staff)
     {
-        return view('templates/edit-akun-staff');
+        $StaffModel = new StaffModel();
+        $data['staff'] = $StaffModel->where('id_staff', $id_staff)->first();
+        return view('templates/edit-akun-staff', $data);
+    }
+
+    public function update()
+    {
+        $StaffModel = new StaffModel();
+        $id = $this->request->getVar('id_staff');
+        $data = [
+            'username' => $this->request->getVar('username'),
+            'email' => $this->request->getVar('email'),
+            'telepon' => $this->request->getVar('telepon')
+        ];
+        $StaffModel->update($id, $data);
+        return $this->response->redirect(base_url('/akunstaff'));
     }
 
     public function delete($id_staff = null)
@@ -42,6 +62,4 @@ class AkunStaff extends BaseController
         $data['staff'] = $StaffModel->where('id_staff', $id_staff)->delete($id_staff);
         return $this->response->redirect(base_url('/akunstaff'));
     }
-
-
 }

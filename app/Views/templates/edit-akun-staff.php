@@ -12,14 +12,14 @@
     <title>Inventaris PIKA</title>
 
     <!-- Custom fonts for this template -->
-    <link href="<?php echo base_url()?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url() ?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo base_url()?>/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>/css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="<?php echo base_url()?>/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <style>
         #aktif.active {
@@ -70,25 +70,27 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="recipient-name" class="col-form-label">Username</label>
-                                    <input type="text" class="form-control" id="recipient-name">
+                            <form action="/akunstaff/update" method="POST">
+
+                                <input type="hidden" name="id_staff" id="id_staff" value="<?php echo $staff['id_staff']; ?>">
+                                <div class=" form-group">
+                                    <label for="username" class="col-form-label">Username</label>
+                                    <input type="text" class="form-control" id="username" name="username" value="<?php echo $staff['username']; ?>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="recipient-name" class="col-form-label">Email</label>
-                                    <input type="text" class="form-control" id="recipient-name">
+                                    <label for="email" class="col-form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" value="<?php echo $staff['email']; ?>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="recipient-name" class="col-form-label">Telepon</label>
-                                    <input type="text" class="form-control" id="recipient-name">
+                                    <label for="telepon" class="col-form-label">Telepon</label>
+                                    <input type="text" class="form-control" id="telepon" name="telepon" value="<?php echo $staff['telepon']; ?>">
+                                </div>
+                                <hr class="sidebar-divider" style="margin-top:40px">
+                                <div class="text-right">
+                                    <a href="<?php echo base_url('akunstaff') ?>" class="btn btn-secondary btn-lg">Batal</a>
+                                    <button type="submit" class="btn btn-primary btn-lg mx-3">Edit</button>
                                 </div>
                             </form>
-                            <hr class="sidebar-divider" style="margin-top:40px">
-                            <div class="text-right">
-                                <a href="<?php echo base_url('akunstaff')?>" class="btn btn-secondary btn-lg">Batal</a>
-                                <a class="btn btn-primary btn-lg" style="padding-left:25px;padding-right:25px">Edit</a>
-                            </div>
                         </div>
                     </div>
 
@@ -193,21 +195,21 @@
 
 
     <!-- Bootstrap core JavaScript-->
-    <script src="<?php echo base_url()?>/vendor/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url()?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo base_url() ?>/vendor/jquery/jquery.min.js"></script>
+    <script src="<?php echo base_url() ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="<?php echo base_url()?>/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="<?php echo base_url() ?>/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="<?php echo base_url()?>/js/sb-admin-2.min.js"></script>
+    <script src="<?php echo base_url() ?>/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="<?php echo base_url()?>/vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="<?php echo base_url()?>/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="<?php echo base_url() ?>/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?php echo base_url() ?>/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="<?php echo base_url()?>/js/demo/datatables-demo.js"></script>
+    <script src="<?php echo base_url() ?>/js/demo/datatables-demo.js"></script>
 
 
 </body>

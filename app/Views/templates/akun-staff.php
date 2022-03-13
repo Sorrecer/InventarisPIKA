@@ -12,7 +12,7 @@
     <title>Inventaris PIKA</title>
 
     <!-- Custom fonts for this template -->
-    <link href="<?php echo base_url()?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url() ?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
@@ -96,7 +96,7 @@
                                                     <td><?php echo $rowstaff['email']; ?></td>
                                                     <td><?php echo $rowstaff['telepon']; ?></td>
                                                     <td>
-                                                        <a href="<?php echo base_url('akunstaff/edit'); ?>" class="btn btn-warning">
+                                                        <a href="<?php echo base_url('akunstaff/edit/' . $rowstaff['id_staff']); ?>" class="btn btn-warning">
                                                             <span class="text">Edit</span>
                                                         </a>
                                                         <a href="<?php echo base_url("hapus-staff/" . $rowstaff['id_staff']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data Ini?')" class="btn btn-danger">Hapus</a>
