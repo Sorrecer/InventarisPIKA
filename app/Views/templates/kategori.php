@@ -56,11 +56,11 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Kelola Data Kategori</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal" data-target="#tambahKategoriModal">
+                                    <a href="<?php echo base_url('kategori/tambah'); ?>" class="btn btn-primary btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-plus-circle"></i>
                                         </span>
-                                        <span class="text">Tambah Kategori</span>
+                                        <span class="text">Tambah Akun Staff</span>
                                     </a>
                                 </div>
                             </div>
@@ -82,10 +82,10 @@
                                                     <td><?php echo $i + 1 . '.'; ?></td>
                                                     <td><?php echo $rowkategori['nama_kategori']; ?></td>
                                                     <td>
-                                                        <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
+                                                        <a href="<?php echo base_url('kategori/edit/' . $rowkategori['id_kategori']); ?>" class="btn btn-warning">
                                                             <span class="text">Edit</span>
                                                         </a>
-                                                        <a href="<?php echo base_url("kategori/delete/" . $rowkategori['id_kategori']) ?>" class="btn btn-danger"> Hapus </a>
+                                                        <a href="<?php echo base_url("hapus-kategori/" . $rowkategori['id_kategori']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data Ini?')" class="btn btn-danger">Hapus</a>
                                                         <!-- <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a> -->

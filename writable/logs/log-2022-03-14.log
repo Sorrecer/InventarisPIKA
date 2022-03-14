@@ -96,3 +96,49 @@ CRITICAL - 2022-03-14 05:55:09 --> Undefined variable: barang_keluar
 #8 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
 #10 {main}
+ERROR - 2022-03-14 10:31:56 --> Column 'nama_kategori' cannot be null
+CRITICAL - 2022-03-14 10:31:56 --> Column 'nama_kategori' cannot be null
+#0 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ka...', 0)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ka...')
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ka...')
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ka...', Array, false)
+#4 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\xampp\InventarisPIKA\app\Controllers\Kategori.php(28): CodeIgniter\Model->insert(Array)
+#8 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Kategori->store()
+#9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+#10 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#13 {main}
+ERROR - 2022-03-14 10:38:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IF(K.jum IS NULL, M.jum, M.jum-K.jum) AS Jumlah,
+        R.nama_ruang
+
+   ...' at line 3
+CRITICAL - 2022-03-14 10:38:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IF(K.jum IS NULL, M.jum, M.jum-K.jum) AS Jumlah,
+        R.nama_ruang
+
+   ...' at line 3
+#0 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT B.nama_b...', 0)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT B.nama_b...')
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT B.nama_b...')
+#3 D:\xampp\InventarisPIKA\app\Controllers\Barang.php(39): CodeIgniter\Database\BaseConnection->query('SELECT B.nama_b...')
+#4 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Barang->index()
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#6 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#9 {main}
+CRITICAL - 2022-03-14 10:38:33 --> Undefined index: nama_kategori
+#0 D:\xampp\InventarisPIKA\app\Views\templates\data-barang.php(79): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\xampp\\Invent...', 79, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\Invent...')
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('templates/data-...', Array, true)
+#4 D:\xampp\InventarisPIKA\app\Controllers\Barang.php(43): view('templates/data-...', Array)
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Barang->index()
+#6 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#7 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#10 {main}

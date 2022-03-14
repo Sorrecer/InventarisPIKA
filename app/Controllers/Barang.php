@@ -11,7 +11,8 @@ class Barang extends BaseController
     public function index()
     {
         $db = \Config\Database::connect();
-        $sql = "SELECT B.nama_barang, kat.nama_kategori,
+        $sql = "SELECT B.nama_barang,
+        IF(kat.nama_kategori IS NULL, 'Tidak ada', kat.nama_kategori) as nama_kategori,
         IF(K.jum IS NULL, M.jum, M.jum-K.jum) AS Jumlah,
         R.nama_ruang
 
@@ -29,10 +30,12 @@ class Barang extends BaseController
         ON M.id_barang = K.id_barang
         AND M.id_ruang = K.id_ruang
 
-        JOIN barang B, kategori kat, ruang R
-        WHERE M.id_barang = B.id_barang
-        AND B.id_kategori = kat.id_kategori
-        AND M.id_ruang = R.id_ruang
+        LEFT JOIN barang B
+        ON M.id_barang = B.id_barang
+        LEFT JOIN kategori kat
+        ON B.id_kategori = kat.id_kategori
+        LEFT JOIN ruang R
+        ON M.id_ruang = R.id_ruang
         GROUP BY M.id_barang, M.id_ruang;
         ";
         $q = $db->query($sql);
