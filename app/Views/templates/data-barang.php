@@ -71,8 +71,8 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php if ($barang) : ?>
-                                            <?php foreach ($barang as $i => $rowbarang) : ?>
+                                        <?php if ($databarang) : ?>
+                                            <?php foreach ($databarang as $i => $rowbarang) : ?>
                                                 <tr>
                                                     <td><?php echo $i + 1 . '.'; ?></td>
                                                     <td><?php echo $rowbarang['nama_barang']; ?></td>

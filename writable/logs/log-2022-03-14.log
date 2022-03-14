@@ -48,3 +48,51 @@ CRITICAL - 2022-03-14 04:12:05 --> Undefined index: nama_barang
 #8 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
 #10 {main}
+CRITICAL - 2022-03-14 05:37:24 --> Undefined index: nama_kategori
+#0 D:\xampp\InventarisPIKA\app\Views\templates\jenis-barang.php(87): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\xampp\\Invent...', 87, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\Invent...')
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('templates/jenis...', Array, true)
+#4 D:\xampp\InventarisPIKA\app\Controllers\JenisBarang.php(12): view('templates/jenis...', Array)
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\JenisBarang->index()
+#6 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisBarang))
+#7 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#10 {main}
+CRITICAL - 2022-03-14 05:40:47 --> Undefined index: Jumlah
+#0 D:\xampp\InventarisPIKA\app\Views\templates\data-barang.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\xampp\\Invent...', 80, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\Invent...')
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('templates/data-...', Array, true)
+#4 D:\xampp\InventarisPIKA\app\Controllers\JenisBarang.php(20): view('templates/data-...', Array)
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\JenisBarang->index()
+#6 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisBarang))
+#7 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#10 {main}
+CRITICAL - 2022-03-14 05:43:02 --> Undefined index: nama_barang
+#0 D:\xampp\InventarisPIKA\app\Views\templates\barang-masuk.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'D:\\xampp\\Invent...', 91, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\Invent...')
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('templates/baran...', Array, true)
+#4 D:\xampp\InventarisPIKA\app\Controllers\BarangMasuk.php(12): view('templates/baran...', Array)
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\BarangMasuk->index()
+#6 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#7 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#10 {main}
+CRITICAL - 2022-03-14 05:55:09 --> Undefined variable: barang_keluar
+#0 D:\xampp\InventarisPIKA\app\Views\templates\barang-keluar.php(87): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\Invent...', 87, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\Invent...')
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('templates/baran...', Array, true)
+#4 D:\xampp\InventarisPIKA\app\Controllers\BarangKeluar.php(22): view('templates/baran...', Array)
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\BarangKeluar->index()
+#6 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangKeluar))
+#7 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#10 {main}

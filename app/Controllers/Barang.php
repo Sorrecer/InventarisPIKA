@@ -38,7 +38,7 @@ class Barang extends BaseController
         $q = $db->query($sql);
         $hasil = $q->getResultArray();
 
-        $data['barang'] = $hasil;
+        $data['databarang'] = $hasil;
         return view('templates/data-barang', $data);
     }
 }
