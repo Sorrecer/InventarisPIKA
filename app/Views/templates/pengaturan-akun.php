@@ -13,9 +13,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -27,8 +25,8 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <?php 
-            include('sidebar.php');
+        <?php
+        include('sidebar.php');
         ?>
 
         <!-- Content Wrapper -->
@@ -37,9 +35,9 @@
             <!-- Main Content -->
             <div id="content">
 
-            <?php 
+                <?php
                 include('topbar.php');
-            ?>
+                ?>
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -50,198 +48,129 @@
                     </div>
 
                     <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="h2 mb-0 font-weight-bold text-gray-800">Admin</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-user fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                    <hr class="sidebar-divider">
-                                    <table>
-                                        <thead>
-                                        <?php if($admin): ?>
-                                        <?php foreach($admin as $rowadmin): ?>
-                                            <td class="row no-gutters align-items-center my-3" style="width:150px">
-                                                 <div class="h8 mb-0 font-weight-bold text-gray-800">Username</div>
-                                            </td>
-                                            <td><?php echo ": ".$rowadmin['username']; ?></td>
-                                        </thead>
-                                        <tr>
-                                            <td class="row no-gutters align-items-center my-3">
-                                                 <div class="h8 mb-0 font-weight-bold text-gray-800">Email</div>
-                                            </td>
-                                            <td><?php echo ": ".$rowadmin['email']; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="row no-gutters align-items-center my-3">
-                                                 <div class="h8 mb-0 font-weight-bold text-gray-800">No. Telp</div>
-                                            </td>
-                                            <td><?php echo ": ".$rowadmin['telepon']; ?></td>
-                                        </tr>
-                                        <?php endforeach; ?>
-                                        <?php endif; ?>
-                                    </table>
-                                    <hr class="sidebar-divider">
-                                    <div class="row" style="justify-content: flex-end">
-                                        <div style="padding:10px">
-                                            <a href="#" class="btn btn-warning btn-icon-split" data-toggle="modal" data-target="#editProfilModal">
-                                            <span class="icon text-white-50">
-                                                <i class="fas fa-cog"></i>
-                                            </span>
-                                            <span class="text">Edit Profil</span>
-                                            </a>
-                                        </div>
-                                        <div style="padding:10px">
-                                            <a href="#" class="btn btn-secondary btn-icon-split" data-toggle="modal" data-target="#ubahPasswordModal">
-                                            <span class="icon text-white-50">
-                                                <i class="fas fa-key"></i>
-                                            </span>
-                                            <span class="text">Ubah Password</span>
-                                            </a>
-                                        </div>
-                                        <div style="padding:10px">
-                                            <a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#logoutModal">
-                                            <span class="icon text-white-50">
-                                                <i class="fas fa-sign-out-alt"></i>
-                                            </span>
-                                            <span class="text">Logout</span>
-                                            </a>
-                                        </div>
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="h2 mb-0 font-weight-bold text-gray-800">Admin</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-user fa-2x text-gray-300"></i>
                                 </div>
                             </div>
+                            <hr class="sidebar-divider">
+                            <table>
+                                <thead>
+                                    <?php if ($admin) : ?>
+                                        <?php foreach ($admin as $rowadmin) : ?>
+                                            <td class="row no-gutters align-items-center my-3" style="width:150px">
+                                                <div class="h8 mb-0 font-weight-bold text-gray-800">Username</div>
+                                            </td>
+                                            <td><?php echo ": " . $rowadmin['username']; ?></td>
+                                </thead>
+                                <tr>
+                                    <td class="row no-gutters align-items-center my-3">
+                                        <div class="h8 mb-0 font-weight-bold text-gray-800">Email</div>
+                                    </td>
+                                    <td><?php echo ": " . $rowadmin['email']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td class="row no-gutters align-items-center my-3">
+                                        <div class="h8 mb-0 font-weight-bold text-gray-800">No. Telp</div>
+                                    </td>
+                                    <td><?php echo ": " . $rowadmin['telepon']; ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                            </table>
+                            <hr class="sidebar-divider">
+                            <div class="row" style="justify-content: flex-end">
+                                <div style="padding:10px">
+                                    <a href="<?php echo base_url('PengaturanAkun/edit/' . $rowadmin['id_admin']); ?>" class="btn btn-warning btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-cog"></i>
+                                        </span>
+                                        <span class="text">Edit Profil</span>
+                                    </a>
+                                </div>
+                                <div style="padding:10px">
+                                    <a href="#" class="btn btn-secondary btn-icon-split" data-toggle="modal" data-target="#ubahPasswordModal">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-key"></i>
+                                        </span>
+                                        <span class="text">Ubah Password</span>
+                                    </a>
+                                </div>
+                                <div style="padding:10px">
+                                    <a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#logoutModal">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-sign-out-alt"></i>
+                                        </span>
+                                        <span class="text">Logout</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white" style="margin-top:50px">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Inventaris PIKA 2022</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
 
             </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white" style="margin-top:50px">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Inventaris PIKA 2022</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+            <!-- End of Content Wrapper -->
 
         </div>
-        <!-- End of Content Wrapper -->
+        <!-- End of Page Wrapper -->
 
-    </div>
-    <!-- End of Page Wrapper -->
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Edit Profil-->
-    <div class="modal fade" id="editProfilModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Profil</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Username:</label>
-                        <input type="text" class="form-control" id="recipient-name" placeholder="Username Admin">
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Keluar dari Akun?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
                     </div>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Email:</label>
-                        <input type="text" class="form-control" id="recipient-name" placeholder="Nama Admin">
+                    <div class="modal-body">Pilih "Logout" dibawah untuk keluar dari sesi.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                        <a class="btn btn-primary" href="<?php echo base_url('login'); ?>">Logout</a>
                     </div>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">No. Telp:</label>
-                        <input type="text" class="form-control" id="recipient-name" placeholder="No. Telp Admin">
-                    </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary">Tambah</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Ganti Passowrd Modul-->
-    <div class="modal fade" id="ubahPasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ubah Password</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Password lama:</label>
-                        <input type="password" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Password baru:</label>
-                        <input type="password" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Konfirmasi password:</label>
-                        <input type="password" class="form-control" id="recipient-name">
-                    </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary">Tambah</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Keluar dari Akun?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Logout" dibawah untuk keluar dari sesi.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a class="btn btn-primary" href="<?php echo base_url('login');?>">Logout</a>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+        <!-- Page level plugins -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+        <!-- Page level custom scripts -->
+        <script src="js/demo/chart-area-demo.js"></script>
+        <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 
