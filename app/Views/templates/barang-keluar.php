@@ -59,16 +59,16 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Kelola Data Barang Keluar</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                    <a href="<?php echo base_url('barangkeluar/tambah'); ?>" class="btn btn-primary btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-plus-circle"></i>
                                         </span>
-                                        <span class="text" data-toggle="modal" data-target="#barangKeluarModal">Tambah Barang Keluar</span>
+                                        <span class="text">Tambah Barang Keluar</span>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">
+                        <div class=" card-body">
                             <div class="table-responsive" style="font-size:12px">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead class="thead-dark">

@@ -42,11 +42,18 @@ class BarangMasuk extends BaseController
             'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
             'id_barang' => $this->request->getVar('id_barang'),
             'jumlah_barang' => $this->request->getVar('jumlah_barang'),
-            'jumlah_harga' => $this->request->getVar('tanggal_masuk'),
+            'jumlah_harga' => $this->request->getVar('jumlah_harga'),
             'id_ruang' => $this->request->getVar('id_ruang')
         ];
 
         $BarangMasukModel->insert($data);
+        return $this->response->redirect(base_url('/BarangMasuk'));
+    }
+
+    public function delete($id_transaksi = null)
+    {
+        $BarangMasukModel = new BarangMasukModel();
+        $data['barang_masuk'] = $BarangMasukModel->where('id_transaksi', $id_transaksi)->delete($id_transaksi);
         return $this->response->redirect(base_url('/BarangMasuk'));
     }
 }
