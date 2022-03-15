@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/hapus-staff/(:num)', 'AkunStaff::delete/$1');
 $routes->get('/hapus-kategori/(:num)', 'Kategori::delete/$1');
+$routes->get('/hapus-ruang/(:num)', 'Ruang::delete/$1');
 $routes->get('/kategori', 'Kategori::index');
 $routes->get('/barang', 'Barang::index');
 $routes->get('/jenisBarang', 'JenisBarang::index');
