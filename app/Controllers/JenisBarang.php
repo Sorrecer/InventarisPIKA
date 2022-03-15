@@ -48,4 +48,11 @@ class JenisBarang extends BaseController
         $BarangModel->insert($data);
         return $this->response->redirect(base_url('/jenisbarang'));
     }
+
+    public function delete($id_barang = null)
+    {
+        $BarangModel = new BarangModel();
+        $data['barang'] = $BarangModel->where('id_barang', $id_barang)->delete($id_barang);
+        return $this->response->redirect(base_url('/JenisBarang'));
+    }
 }

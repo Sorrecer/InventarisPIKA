@@ -89,8 +89,8 @@
                                                         <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
                                                             <span class="text">Edit</span>
                                                         </a>
-                                                        <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
-                                                            <span class="text">Hapus</span>
+                                                        <a href="<?php echo base_url("hapus-jenis-barang/" . $rowbarang['id_barang']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="btn btn-danger">
+                                                            Hapus
                                                         </a>
                                                     </td>
                                                 </tr>

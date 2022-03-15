@@ -35,6 +35,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/hapus-staff/(:num)', 'AkunStaff::delete/$1');
 $routes->get('/hapus-kategori/(:num)', 'Kategori::delete/$1');
 $routes->get('/hapus-ruang/(:num)', 'Ruang::delete/$1');
+$routes->get('/hapus-jenis-barang/(:num)', 'JenisBarang::delete/$1');
 $routes->get('/kategori', 'Kategori::index');
 $routes->get('/barang', 'Barang::index');
 $routes->get('/jenisBarang', 'JenisBarang::index');
@@ -46,7 +47,6 @@ $routes->get('/pengaturan-akun', 'PengaturanAkun::index');
 $routes->get('/akun-staff', 'AkunStaff::index');
 $routes->get('/login', 'Login::index');
 $routes->get('/buat-akun-staff', 'BuatAkun::index');
-$routes->get('/delete-kategori/(:num)', 'Kategori::delete/$1');
 
 /*
  * --------------------------------------------------------------------

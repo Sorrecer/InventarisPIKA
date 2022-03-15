@@ -85,7 +85,7 @@
                                                         <a href="<?php echo base_url('kategori/edit/' . $rowkategori['id_kategori']); ?>" class="btn btn-warning">
                                                             <span class="text">Edit</span>
                                                         </a>
-                                                        <a href="<?php echo base_url("hapus-kategori/" . $rowkategori['id_kategori']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data Ini?')" class="btn btn-danger">Hapus</a>
+                                                        <a href="<?php echo base_url("hapus-kategori/" . $rowkategori['id_kategori']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="btn btn-danger">Hapus</a>
                                                         <!-- <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
                                             <span class="text">Hapus</span>
                                             </a> -->
