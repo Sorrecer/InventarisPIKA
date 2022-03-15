@@ -56,7 +56,7 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Kelola Jenis Barang</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal" data-target="#tambahBarangModal">
+                                    <a href="<?php echo base_url('jenisbarang/tambah'); ?>" class="btn btn-primary btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-plus-circle"></i>
                                         </span>
