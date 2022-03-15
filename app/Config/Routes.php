@@ -37,6 +37,7 @@ $routes->get('/hapus-kategori/(:num)', 'Kategori::delete/$1');
 $routes->get('/hapus-ruang/(:num)', 'Ruang::delete/$1');
 $routes->get('/hapus-jenis-barang/(:num)', 'JenisBarang::delete/$1');
 $routes->get('/hapus-barang-masuk/(:num)', 'BarangMasuk::delete/$1');
+$routes->get('/hapus-barang-keluar/(:num)', 'BarangKeluar::delete/$1');
 $routes->get('/kategori', 'Kategori::index');
 $routes->get('/barang', 'Barang::index');
 $routes->get('/jenisBarang', 'JenisBarang::index');
