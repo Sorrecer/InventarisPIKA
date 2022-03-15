@@ -82,7 +82,7 @@
                                                     <td><?php echo $i + 1 . '.'; ?></td>
                                                     <td><?php echo $rowruang['nama_ruang']; ?></td>
                                                     <td>
-                                                        <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
+                                                        <a href="<?php echo base_url("ruang/edit/" . $rowruang['id_ruang']) ?>" class="btn btn-warning">
                                                             <span class="text">Edit</span>
                                                         </a>
                                                         <a href="<?php echo base_url("hapus-ruang/" . $rowruang['id_ruang']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="btn btn-danger">Hapus</a>

@@ -32,6 +32,26 @@ class Ruang extends BaseController
         return $this->response->redirect(base_url('/ruang'));
     }
 
+    // edit
+
+    public function edit($id_ruang)
+    {
+        $RuangModel = new RuangModel();
+        $data['ruang'] = $RuangModel->where('id_ruang', $id_ruang)->first();
+        return view('templates/edit-ruang', $data);
+    }
+
+    public function update()
+    {
+        $RuangModel = new RuangModel();
+        $id = $this->request->getVar('id_ruang');
+        $data = [
+            'nama_ruang' => $this->request->getVar('nama_ruang'),
+        ];
+        $RuangModel->update($id, $data);
+        return $this->response->redirect(base_url('/ruang'));
+    }
+
     //delete
 
     public function delete($id_ruang = null)
