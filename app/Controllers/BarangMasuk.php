@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\BarangMasukModel;
+use App\Models\BarangModel;
+use App\Models\RuangModel;
 
 class BarangMasuk extends BaseController
 {
@@ -20,5 +22,31 @@ class BarangMasuk extends BaseController
 
         $data['barang_masuk'] = $hasil;
         return view('templates/barang-masuk', $data);
+    }
+
+    //tambah
+
+    public function tambah()
+    {
+        $BarangModel = new BarangModel();
+        $RuangModel = new RuangModel();
+        $data['barang'] = $BarangModel->orderBy('id_barang', 'nama_barang')->findAll();
+        $data['ruang'] = $RuangModel->orderBy('id_ruang', 'nama_ruang')->findAll();
+        return view('templates/tambah-barang-masuk', $data);
+    }
+
+    public function store()
+    {
+        $BarangMasukModel = new BarangMasukModel();
+        $data = [
+            'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
+            'id_barang' => $this->request->getVar('id_barang'),
+            'jumlah_barang' => $this->request->getVar('jumlah_barang'),
+            'jumlah_harga' => $this->request->getVar('tanggal_masuk'),
+            'id_ruang' => $this->request->getVar('id_ruang')
+        ];
+
+        $BarangMasukModel->insert($data);
+        return $this->response->redirect(base_url('/BarangMasuk'));
     }
 }

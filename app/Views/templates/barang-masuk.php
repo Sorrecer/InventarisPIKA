@@ -57,11 +57,11 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Kelola Data Barang Masuk</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                    <a href="<?php echo base_url('barangmasuk/tambah'); ?>" class="btn btn-primary btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-plus-circle"></i>
                                         </span>
-                                        <span class="text" data-toggle="modal" data-target="#barangMasukModal">Tambah Barang Masuk</span>
+                                        <span class="text">Tambah Barang Masuk</span>
                                     </a>
                                 </div>
                             </div>

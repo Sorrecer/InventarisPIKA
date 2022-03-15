@@ -53,7 +53,7 @@
                         <div class="card-header py-3">
                             <div class="row">
                                 <div class="col my-2">
-                                    <h6 class="m-0 font-weight-bold text-primary">Kelola Data Barang</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Lihat Data Barang</h6>
                                 </div>
                             </div>
                         </div>
