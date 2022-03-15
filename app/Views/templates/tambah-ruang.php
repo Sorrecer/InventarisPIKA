@@ -57,30 +57,28 @@
 
                     <!-- Page Heading -->
                     <div class="align-items-center text-center mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Edit kategori</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Tambah Ruang</h1>
                     </div>
 
-                    <!-- Form Edit -->
+                    <!-- Form tambah -->
                     <div class="card shadow mb-4 mx-auto" style="width:50%">
                         <div class="card-header py-3">
                             <div class="row">
                                 <div class="col my-2">
-                                    <h6 class="m-0 font-weight-bold text-primary">Form pengeditan kategori</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Form penambahan ruang</h6>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <form action="/kategori/update" method="POST">
-
-                                <input type="hidden" name="id_kategori" id="id_kategori" value="<?php echo $kategori['id_kategori']; ?>">
+                            <form action="/ruang/store" method="POST">
                                 <div class="form-group">
-                                    <label for="nama_kategori" class="col-form-label">Nama kategori</label>
-                                    <input type="text" class="form-control" id="nama_kategori" name="nama_kategori" value="<?php echo $kategori['nama_kategori']; ?>">
+                                    <label for="nama_ruang" class="col-form-label">Nama ruang</label>
+                                    <input type="text" class="form-control" id="nama_ruang" name="nama_ruang">
                                 </div>
                                 <hr class="sidebar-divider" style="margin-top:40px">
                                 <div class="text-right">
-                                    <a href="<?php echo base_url('kategori') ?>" class="btn btn-secondary btn-lg">Batal</a>
-                                    <button type="submit" class="btn btn-primary btn-lg mx-3">Edit</button>
+                                    <a href="<?php echo base_url('/ruang') ?>" class="btn btn-secondary btn-lg">Batal</a>
+                                    <button type="submit" class="btn btn-primary btn-lg mx-3">Tambah</button>
                                 </div>
                             </form>
                         </div>

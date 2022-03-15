@@ -13,6 +13,8 @@ class Kategori extends BaseController
         return view('templates/kategori', $data);
     }
 
+    //tambah
+
     public function tambah()
     {
         return view('templates/tambah-kategori');
@@ -26,6 +28,26 @@ class Kategori extends BaseController
         ];
 
         $KategoriModel->insert($data);
+        return $this->response->redirect(base_url('/kategori'));
+    }
+
+    // edit
+
+    public function edit($id_kategori)
+    {
+        $KategoriModel = new KategoriModel();
+        $data['kategori'] = $KategoriModel->where('id_kategori', $id_kategori)->first();
+        return view('templates/edit-kategori', $data);
+    }
+
+    public function update()
+    {
+        $KategoriModel = new KategoriModel();
+        $id = $this->request->getVar('id_kategori');
+        $data = [
+            'nama_kategori' => $this->request->getVar('nama_kategori'),
+        ];
+        $KategoriModel->update($id, $data);
         return $this->response->redirect(base_url('/kategori'));
     }
 
