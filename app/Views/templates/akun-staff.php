@@ -96,6 +96,7 @@
                                                     <td><?php echo $rowstaff['email']; ?></td>
                                                     <td><?php echo $rowstaff['telepon']; ?></td>
                                                     <td>
+                                                        <button id="aktif" class="btn btn-secondary">Aktif</button>
                                                         <a href="<?php echo base_url('akunstaff/edit/' . $rowstaff['id_staff']); ?>" class="btn btn-warning">
                                                             <span class="text">Edit</span>
                                                         </a>

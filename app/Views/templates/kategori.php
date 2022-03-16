@@ -60,7 +60,7 @@
                                         <span class="icon text-white-50">
                                             <i class="fas fa-plus-circle"></i>
                                         </span>
-                                        <span class="text">Tambah Akun Staff</span>
+                                        <span class="text">Tambah Kategori</span>
                                     </a>
                                 </div>
                             </div>

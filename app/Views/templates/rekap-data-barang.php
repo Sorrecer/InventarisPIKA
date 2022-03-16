@@ -79,7 +79,7 @@
                                 <input type="date" class="form-control" id="tanggal-akhir">
                             </div>
                             <div class="col text-center my-5">
-                                <a href="#" class="btn btn-primary btn-icon-split" style="padding: 30px">
+                                <a href="#" class="btn btn-primary btn-icon-split" style="padding: 20px">
                                     <span class="icon text-white-50">
                                         <i class="fas fa-print"></i>
                                     </span>

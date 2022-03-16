@@ -144,3 +144,27 @@ CRITICAL - 2022-03-15 12:12:51 --> Column 'nama_barang' cannot be null
 #11 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #12 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
 #13 {main}
+ERROR - 2022-03-15 20:47:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE B.id_kategori = K.id_kategori' at line 4
+CRITICAL - 2022-03-15 20:47:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE B.id_kategori = K.id_kategori' at line 4
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT B.id_bar...', 0)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT B.id_bar...')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT B.id_bar...')
+#3 D:\xampp\htdocs\InventarisPIKA\app\Controllers\JenisBarang.php(17): CodeIgniter\Database\BaseConnection->query('SELECT B.id_bar...')
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\JenisBarang->index()
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisBarang))
+#6 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-15 20:49:22 --> Undefined array key "nama_kategori"
+#0 D:\xampp\htdocs\InventarisPIKA\app\Views\templates\jenis-barang.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 87)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('templates/jenis...', Array, true)
+#4 D:\xampp\htdocs\InventarisPIKA\app\Controllers\JenisBarang.php(26): view('templates/jenis...', Array)
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\JenisBarang->index()
+#6 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JenisBarang))
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
