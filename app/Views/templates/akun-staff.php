@@ -22,68 +22,67 @@
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <style>
-
         /* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
 
-/* Hide default HTML checkbox */
+        /* Hide default HTML checkbox */
         .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
+            opacity: 0;
+            width: 0;
+            height: 0;
         }
 
         /* The slider */
         .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ccc;
-        -webkit-transition: .4s;
-        transition: .4s;
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
         }
 
         .slider:before {
-        position: absolute;
-        content: "";
-        height: 26px;
-        width: 26px;
-        left: 4px;
-        bottom: 4px;
-        background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s;
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
         }
 
-        input:checked + .slider {
-        background-color: #2196F3;
+        input:checked+.slider {
+            background-color: #2196F3;
         }
 
-        input:focus + .slider {
-        box-shadow: 0 0 1px #2196F3;
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
         }
 
-        input:checked + .slider:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
-        transform: translateX(26px);
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
         }
 
         /* Rounded sliders */
         .slider.round {
-        border-radius: 34px;
+            border-radius: 34px;
         }
 
         .slider.round:before {
-        border-radius: 50%;
+            border-radius: 50%;
         }
 
         #aktif.active {
@@ -98,9 +97,9 @@
         #aktif:checked + btnaktif {
             background-color: #1cd400
         } */
-
     </style>
 
+    <script src="vendor/jquery/jquery.min.js"></script>
 </head>
 
 <body id="page-top">
@@ -169,11 +168,11 @@
                                                     <td>
                                                         <!-- <button type="button" class="btn btn-secondary" id="aktif">Aktif</button> -->
                                                         <label class="switch">
-                                                            <input type="checkbox">
+                                                            <input type="checkbox" class="aktif" value="<?= $rowstaff['id_staff'] ?>" <?php echo $rowstaff['aktif'] ? 'checked' : '' ?>>
                                                             <span class="slider round"></span>
                                                         </label>
                                                     </td>
-                                                        <!-- <input type="checkbox" id="aktif"/>
+                                                    <!-- <input type="checkbox" id="aktif"/>
                                                         <btnaktif class="btn btn-secondary" for="aktif">Aktif</btnaktif> -->
                                                     <td>
                                                         <a href="<?php echo base_url('akunstaff/edit/' . $rowstaff['id_staff']); ?>" class="btn btn-warning">
@@ -195,7 +194,18 @@
 
             </div>
             <!-- End of Main Content -->
-
+            <script>
+                $('.aktif').click(function() {
+                    $.post('<?php echo base_url('AkunStaff/aktif') ?>', {
+                            id: $(this).val(),
+                            aktif: $(this).prop('checked') ? 1 : 0
+                        },
+                        // function(data, status) {
+                        //     alert(data);
+                        // }
+                    )
+                })
+            </script>
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -239,7 +249,6 @@
 
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->

@@ -62,4 +62,26 @@ class AkunStaff extends BaseController
         $data['staff'] = $StaffModel->where('id_staff', $id_staff)->delete($id_staff);
         return $this->response->redirect(base_url('/akunstaff'));
     }
+
+    public function aktif()
+    {
+        $aktif = $this->request->getPost('aktif');
+        $id = $this->request->getPost('id');
+        $StaffModel = new StaffModel();
+        // $StaffModel->builder()->update(
+        //     ['aktif' => $aktif],
+        //     "id_staff = $id"
+        // );
+
+        $db = \Config\Database::connect();
+        $sql = "UPDATE staff SET aktif = $aktif
+        WHERE id_staff = $id";
+        $q = $db->query($sql);
+        // $StaffModel->update(
+
+        //     $this->request->getPost('id'),
+        //     ['aktif' => strval($this->request->getPost('aktif'))]
+        // );
+        //     echo $sql;
+    }
 }
