@@ -22,13 +22,83 @@
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <style>
-        #aktif.active {
-            background-color: #ffb700
+
+        /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+        .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
         }
 
-        #aktif2.active {
-            background-color: #ffb700
+        /* The slider */
+        .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
         }
+
+        .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        }
+
+        input:checked + .slider {
+        background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+        border-radius: 34px;
+        }
+
+        .slider.round:before {
+        border-radius: 50%;
+        }
+
+        #aktif.active {
+            background-color: #1cd400
+        }
+
+        /* checkbox tombol aktif */
+        /* btnaktif {
+            background-color: red
+        }
+
+        #aktif:checked + btnaktif {
+            background-color: #1cd400
+        } */
+
     </style>
 
 </head>
@@ -85,6 +155,7 @@
                                             <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Username: activate to sort column descending">Username</th>
                                             <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Nama: activate to sort column descending">Email</th>
                                             <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Telepon: activate to sort column descending">Telepon</th>
+                                            <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 50px;" aria-sort="ascending" aria-label="Aktif: activate to sort column descending">Aktif</th>
                                             <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Pengaturan: activate to sort column descending">Pengaturan</th>
                                         </tr>
                                     </thead>
@@ -96,22 +167,19 @@
                                                     <td><?php echo $rowstaff['email']; ?></td>
                                                     <td><?php echo $rowstaff['telepon']; ?></td>
                                                     <td>
-                                                        <button id="aktif" class="btn btn-secondary">Aktif</button>
+                                                        <!-- <button type="button" class="btn btn-secondary" id="aktif">Aktif</button> -->
+                                                        <label class="switch">
+                                                            <input type="checkbox">
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </td>
+                                                        <!-- <input type="checkbox" id="aktif"/>
+                                                        <btnaktif class="btn btn-secondary" for="aktif">Aktif</btnaktif> -->
+                                                    <td>
                                                         <a href="<?php echo base_url('akunstaff/edit/' . $rowstaff['id_staff']); ?>" class="btn btn-warning">
                                                             <span class="text">Edit</span>
                                                         </a>
                                                         <a href="<?php echo base_url("hapus-staff/" . $rowstaff['id_staff']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data Ini?')" class="btn btn-danger">Hapus</a>
-                                                        <!-- <button onclick="openConfirmDialog()" class="btn btn-danger"> Hapus </button> -->
-                                                        <!-- <script>
-                                                        function openConfirmDialog(){
-                                                            let hapus = confirm("Apakah anda yakin akan menghapus data Ini?");
-                                                            if(hapus){
-                                                                alert("Data Berhasil Dihapus");
-                                                            }else{
-                                                                alert("Data Batal Dih   apus");
-                                                            }
-                                                        }
-                                                        </script> -->
                                                     </td>
                                                 </tr>
                                             <?php endforeach; ?>

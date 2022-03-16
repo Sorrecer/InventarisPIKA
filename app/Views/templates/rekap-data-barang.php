@@ -101,69 +101,7 @@
                                     </tr>
                                 </thead>
                                 <tbody style="font-size:14px">
-                                    <tr>
-                                        <td>1.</td>
-                                        <td>TR0001</td>
-                                        <td>21/08/2022</td>
-                                        <td>Meja</td>
-                                        <td>7</td>
-                                        <td>Rp. 3.500.000</td>
-                                        <td>A1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2.</td>
-                                        <td>TR0002</td>
-                                        <td>15/08/2022</td>
-                                        <td>Kursi</td>
-                                        <td>25  </td>
-                                        <td>Rp. 3.000.000</td>
-                                        <td>A3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3.</td>
-                                        <td>TR0003</td>
-                                        <td>05/07/2022</td>
-                                        <td>Alat Ketam Kayu</td>
-                                        <td>20</td>
-                                        <td>Rp. 800.000</td>
-                                        <td>B3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4.</td>
-                                        <td>TR0004</td>
-                                        <td>06/05/2022</td>
-                                        <td>Sapu</td>
-                                        <td>5</td>
-                                        <td>Rp. 150.000</td>
-                                        <td>A2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5.</td>
-                                        <td>TR0005</td>
-                                        <td>11/03/2022</td>
-                                        <td>Spidol</td>
-                                        <td>12</td>
-                                        <td>Rp. 60.000</td>
-                                        <td>B1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6.</td>
-                                        <td>TR0006</td>
-                                        <td>10/03/2022</td>
-                                        <td>Lemari</td>
-                                        <td>2</td>
-                                        <td>Rp. 4.000.000</td>
-                                        <td>D1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7.</td>
-                                        <td>TR0007</td>
-                                        <td>05/03/2022</td>
-                                        <td>Laptop DELL</td>
-                                        <td>2</td>
-                                        <td>Rp. 10.000.000</td>
-                                        <td>C2</td>
-                                    </tr>
+                                
                                 </tbody>
                             </table>
                         </div>
