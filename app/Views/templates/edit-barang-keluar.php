@@ -57,7 +57,7 @@
 
                     <!-- Page Heading -->
                     <div class="align-items-center text-center mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Edit Barang Masuk</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Edit Barang Keluar</h1>
                     </div>
 
                     <!-- Form Edit -->
@@ -65,44 +65,44 @@
                         <div class="card-header py-3">
                             <div class="row">
                                 <div class="col my-2">
-                                    <h6 class="m-0 font-weight-bold text-primary">Form pengeditan barang masuk</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Form pengeditan barang keluar</h6>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <form action="/barangmasuk/update" method="POST">
+                            <form action="/barangkeluar/update" method="POST">
                                 <?php //dd($barang) 
                                 ?>
 
-                                <input type="hidden" name="id_transaksi" id="id_transaksi" value="<?php echo $barang_masuk['id_transaksi']; ?>">
+                                <input type="hidden" name="id_transaksi" id="id_transaksi" value="<?php echo $barang_keluar['id_transaksi']; ?>">
                                 <div class="form-group">
-                                    <label for="tanggal_masuk" class="col-form-label">Tanggal masuk</label>
-                                    <input type="date" class="form-control" id="tanggal_masuk" name="tanggal_masuk" value="<?php echo $barang_masuk['tanggal_masuk']; ?>">
+                                    <label for="tanggal_keluar" class="col-form-label">Tanggal keluar</label>
+                                    <input type="date" class="form-control" id="tanggal_keluar" name="tanggal_keluar" value="<?php echo $barang_keluar['tanggal_keluar']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="id_barang" class="col-form-label">Nama barang</label>
                                     <select class="form-control" id="id_barang" name="id_barang">
                                         <?php if ($barang) : ?>
                                             <?php foreach ($barang as $rowbarang) : ?>
-                                                <option value="<?php echo $rowbarang['id_barang'] ?>" <?php echo $rowbarang['id_barang'] == $barang_masuk['id_barang'] ? 'selected' : '' ?>><?php echo $rowbarang['nama_barang'] ?></option>
+                                                <option value="<?php echo $rowbarang['id_barang'] ?>" <?php echo $rowbarang['id_barang'] == $barang_keluar['id_barang'] ? 'selected' : '' ?>><?php echo $rowbarang['nama_barang'] ?></option>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="jumlah_barang" class="col-form-label">Jumlah barang</label>
-                                    <input type="text" class="form-control" id="jumlah_barang" name="jumlah_barang" value="<?php echo $barang_masuk['jumlah_barang']; ?>">
+                                    <input type="text" class="form-control" id="jumlah_barang" name="jumlah_barang" value="<?php echo $barang_keluar['jumlah_barang']; ?>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="jumlah_harga" class="col-form-label">Jumlah harga</label>
-                                    <input type="text" class="form-control" id="jumlah_harga" name="jumlah_harga" value="<?php echo $barang_masuk['jumlah_harga']; ?>">
+                                    <label for="keterangan" class="col-form-label">Jumlah harga</label>
+                                    <input type="text" class="form-control" id="keterangan" name="keterangan" value="<?php echo $barang_keluar['keterangan']; ?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="id_ruang" class="col-form-label">Nama ruang</label>
                                     <select class="form-control" id="id_ruang" name="id_ruang">
                                         <?php if ($ruang) : ?>
                                             <?php foreach ($ruang as $rowruang) : ?>
-                                                <option value="<?php echo $rowruang['id_ruang'] ?>" <?php echo $rowruang['id_ruang'] == $barang_masuk['id_ruang'] ? 'selected' : '' ?>><?php echo $rowruang['nama_ruang'] ?></option>
+                                                <option value="<?php echo $rowruang['id_ruang'] ?>" <?php echo $rowruang['id_ruang'] == $barang_keluar['id_ruang'] ? 'selected' : '' ?>><?php echo $rowruang['nama_ruang'] ?></option>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
                                     </select>

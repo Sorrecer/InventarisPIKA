@@ -70,7 +70,7 @@ class BarangMasuk extends BaseController
         $id = $this->request->getVar('id_transaksi');
         $data = [
             'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
-            'id_ruang' => $this->request->getVar('id_barang'),
+            'id_barang' => $this->request->getVar('id_barang'),
             'jumlah_barang' => $this->request->getVar('jumlah_barang'),
             'jumlah_harga' => $this->request->getVar('jumlah_harga'),
             'id_ruang' => $this->request->getVar('id_ruang')

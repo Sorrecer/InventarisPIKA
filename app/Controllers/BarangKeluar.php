@@ -50,6 +50,34 @@ class BarangKeluar extends BaseController
         return $this->response->redirect(base_url('/BarangKeluar'));
     }
 
+    // edit
+
+    public function edit($id_transaksi)
+    {
+        $BarangKeluarModel = new BarangKeluarModel();
+        $BarangModel = new BarangModel();
+        $RuangModel = new RuangModel();
+        $data['barang_keluar'] = $BarangKeluarModel->find($id_transaksi);
+        $data['barang'] = $BarangModel->orderBy('id_barang', 'nama_barang', 'id_kategori')->findAll();
+        $data['ruang'] = $RuangModel->orderBy('id_ruang', 'nama_ruang')->findAll();
+        return view('templates/edit-barang-keluar', $data);
+    }
+
+    public function update()
+    {
+        $BarangKeluarModel = new BarangKeluarModel();
+        $id = $this->request->getVar('id_transaksi');
+        $data = [
+            'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
+            'id_barang' => $this->request->getVar('id_barang'),
+            'jumlah_barang' => $this->request->getVar('jumlah_barang'),
+            'keterangan' => $this->request->getVar('keterangan'),
+            'id_ruang' => $this->request->getVar('id_ruang')
+        ];
+        $BarangKeluarModel->update($id, $data);
+        return $this->response->redirect(base_url('/BarangKeluar'));
+    }
+
     public function delete($id_transaksi = null)
     {
         $BarangKeluarModel = new BarangKeluarModel();

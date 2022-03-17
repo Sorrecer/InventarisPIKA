@@ -95,7 +95,7 @@
                                                     <td><?php echo $rowkeluar['keterangan']; ?></td>
                                                     <td><?php echo $rowkeluar['nama_ruang']; ?></td>
                                                     <td>
-                                                        <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
+                                                        <a href="<?php echo base_url("barangkeluar/edit/" . $rowkeluar['id_transaksi']) ?>" class="btn btn-warning">
                                                             <span class="text">Edit</span>
                                                         </a>
                                                         <a href="<?php echo base_url("hapus-barang-keluar/" . $rowkeluar['id_transaksi']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="btn btn-danger">Hapus</a>
