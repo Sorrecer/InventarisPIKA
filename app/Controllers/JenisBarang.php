@@ -49,6 +49,29 @@ class JenisBarang extends BaseController
         return $this->response->redirect(base_url('/jenisbarang'));
     }
 
+    // edit
+
+    public function edit($id_barang)
+    {
+        $BarangModel = new BarangModel();
+        $KategoriModel = new KategoriModel();
+        $data['barang'] = $BarangModel->find($id_barang);
+        $data['kategori'] = $KategoriModel->orderBy('id_kategori', 'nama_kategori')->findAll();
+        return view('templates/edit-barang', $data);
+    }
+
+    public function update()
+    {
+        $BarangModel = new BarangModel();
+        $id = $this->request->getVar('id_barang');
+        $data = [
+            'nama_barang' => $this->request->getVar('nama_barang'),
+            'id_kategori' => $this->request->getVar('id_kategori')
+        ];
+        $BarangModel->update($id, $data);
+        return $this->response->redirect(base_url('/JenisBarang'));
+    }
+
     public function delete($id_barang = null)
     {
         $BarangModel = new BarangModel();

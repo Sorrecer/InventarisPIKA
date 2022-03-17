@@ -63,11 +63,10 @@
                                     <thead class="thead-dark">
                                         <tr>
                                             <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 40px;" aria-sort="ascending" aria-label="No.: activate to sort column descending">No.</th>
-                                            <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 400px;" aria-sort="ascending" aria-label="Nama Barang: activate to sort column descending">Nama Barang</th>
+                                            <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Nama Barang: activate to sort column descending">Nama Barang</th>
                                             <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Kategori: activate to sort column descending">Kategori</th>
                                             <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 80px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Stok</th>
-                                            <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 80px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Ruang</th>
-                                            <th class="sorting sorting_asc" tabindex="5" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="Pengaturan: activate to sort column descending">Pengaturan</th>
+                                            <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Ruang</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -79,14 +78,6 @@
                                                     <td><?php echo $rowbarang['nama_kategori']; ?></td>
                                                     <td><?php echo $rowbarang['Jumlah']; ?></td>
                                                     <td><?php echo $rowbarang['nama_ruang']; ?></td>
-                                                    <td>
-                                                        <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBarangModal">
-                                                            <span class="text">Edit</span>
-                                                        </a>
-                                                        <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#DeleteModal">
-                                                            <span class="text">Hapus</span>
-                                                        </a>
-                                                    </td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         <?php endif; ?>

@@ -86,7 +86,7 @@
                                                     <td><?php echo $rowbarang['nama_barang']; ?></td>
                                                     <td><?php echo $rowbarang['nama_kategori']; ?></td>
                                                     <td>
-                                                        <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
+                                                        <a href="<?php echo base_url("JenisBarang/edit/" . $rowbarang['id_barang']) ?>" class="btn btn-warning">
                                                             <span class="text">Edit</span>
                                                         </a>
                                                         <a href="<?php echo base_url("hapus-jenis-barang/" . $rowbarang['id_barang']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="btn btn-danger">

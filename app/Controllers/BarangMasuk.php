@@ -42,6 +42,7 @@ class BarangMasuk extends BaseController
             'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
             'id_barang' => $this->request->getVar('id_barang'),
             'jumlah_barang' => $this->request->getVar('jumlah_barang'),
+            'jumlah_minimal' => $this->request->getVar('jumlah_minimal'),
             'jumlah_harga' => $this->request->getVar('jumlah_harga'),
             'id_ruang' => $this->request->getVar('id_ruang')
         ];
@@ -49,6 +50,35 @@ class BarangMasuk extends BaseController
         $BarangMasukModel->insert($data);
         return $this->response->redirect(base_url('/BarangMasuk'));
     }
+
+    // edit
+
+    public function edit($id_transaksi)
+    {
+        $BarangMasukModel = new BarangMasukModel();
+        $BarangModel = new BarangModel();
+        $RuangModel = new RuangModel();
+        $data['barang_masuk'] = $BarangMasukModel->find($id_transaksi);
+        $data['barang'] = $BarangModel->orderBy('id_barang', 'nama_barang', 'id_kategori')->findAll();
+        $data['ruang'] = $RuangModel->orderBy('id_ruang', 'nama_ruang')->findAll();
+        return view('templates/edit-barang-masuk', $data);
+    }
+
+    public function update()
+    {
+        $BarangMasukModel = new BarangMasukModel();
+        $id = $this->request->getVar('id_transaksi');
+        $data = [
+            'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
+            'id_ruang' => $this->request->getVar('id_barang'),
+            'jumlah_barang' => $this->request->getVar('jumlah_barang'),
+            'jumlah_harga' => $this->request->getVar('jumlah_harga'),
+            'id_ruang' => $this->request->getVar('id_ruang')
+        ];
+        $BarangMasukModel->update($id, $data);
+        return $this->response->redirect(base_url('/BarangMasuk'));
+    }
+
 
     public function delete($id_transaksi = null)
     {

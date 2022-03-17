@@ -10,5 +10,5 @@ class BarangMasukModel extends Model
 
     protected $primaryKey = 'id_transaksi';
 
-    protected $allowedFields = ['tanggal_masuk', 'id_barang', 'jumlah_barang', 'jumlah_harga', 'id_ruang'];
+    protected $allowedFields = ['tanggal_masuk', 'id_barang', 'jumlah_barang', 'jumlah_harga', 'id_ruang', 'jumlah_minimal'];
 }
