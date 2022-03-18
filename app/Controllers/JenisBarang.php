@@ -30,6 +30,7 @@ class JenisBarang extends BaseController
     public function tambah()
     {
         $KategoriModel = new KategoriModel();
+        $data['validation'] = \Config\Services::validation();
         $data['kategori'] = $KategoriModel->orderBy('id_kategori', 'nama_kategori')->findAll();
         return view('templates/tambah-jenis-barang', $data);
     }
@@ -39,7 +40,18 @@ class JenisBarang extends BaseController
 
     public function store()
     {
-        // dd($_POST);
+        // validasi input
+        if (!$this->validate([
+            'nama_barang' => ['label' => 'nama barang', 'rules' => 'required'],
+            'id_kategori' => ['label' => 'nama kategori', 'rules' => 'required']
+        ])) {
+            // $validation = $this->validator;
+            $KategoriModel = new KategoriModel();
+            $data['kategori'] = $KategoriModel->orderBy('id_kategori', 'nama_kategori')->findAll();
+            $data['validation'] = $this->validator;
+            return view('templates/tambah-jenis-barang', $data);
+        }
+
         $BarangModel = new BarangModel();
         $data = [
             'nama_barang' => $this->request->getVar('nama_barang'),

@@ -73,11 +73,16 @@
                             <form action="/jenisbarang/store" method="POST">
                                 <div class="form-group">
                                     <label for="nama_barang" class="col-form-label">Nama barang</label>
-                                    <input type="text" class="form-control" id="nama_barang" name="nama_barang">
+                                    <input type="text" class="form-control <?= ($validation->hasError('nama_barang')) ?
+                                                                                'is-invalid' : '' ?>" id="nama_barang" name="nama_barang">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('nama_barang'); ?>
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="id_kategori" class="col-form-label">Kategori:</label>
-                                    <select class="form-control" id="id_kategori" name="id_kategori">
+                                    <label for="id_kategori" class="col-form-label">Kategori</label>
+                                    <select class="form-control <?= ($validation->hasError('id_kategori')) ?
+                                                                    'is-invalid' : '' ?>" id="id_kategori" name="id_kategori">
                                         <option value="" selected="selected">--Pilih kategori--</option>
                                         <?php if ($kategori) : ?>
                                             <?php foreach ($kategori as $rowkategori) : ?>
@@ -85,6 +90,9 @@
                                             <?php endforeach; ?>
                                         <?php endif; ?>
                                     </select>
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('id_kategori'); ?>
+                                    </div>
                                 </div>
                                 <hr class="sidebar-divider" style="margin-top:40px">
                                 <div class="text-right">
