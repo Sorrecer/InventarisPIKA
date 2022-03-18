@@ -51,12 +51,26 @@ class Ruang extends BaseController
     public function edit($id_ruang)
     {
         $RuangModel = new RuangModel();
+        $data['validation'] = \Config\Services::validation();
         $data['ruang'] = $RuangModel->where('id_ruang', $id_ruang)->first();
+        $data['id_ruang'] = $id_ruang;
         return view('templates/edit-ruang', $data);
     }
 
-    public function update()
+    public function update($id_ruang)
     {
+        // validasi input
+        if (!$this->validate([
+            'nama_ruang' => ['label' => 'nama ruang', 'rules' => 'required']
+        ])) {
+            // $validation = $this->validator;
+            $RuangModel = new RuangModel();
+            $data['validation'] = \Config\Services::validation();
+            $data['ruang'] = $RuangModel->where('id_ruang', $id_ruang)->first();
+            $data['id_ruang'] = $id_ruang;
+            return view('templates/edit-ruang', $data);
+        }
+
         $RuangModel = new RuangModel();
         $id = $this->request->getVar('id_ruang');
         $data = [

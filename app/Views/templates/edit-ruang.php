@@ -70,12 +70,16 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form action="/ruang/update" method="POST">
+                            <form action="<?php echo base_url("ruang/update/" . $id_ruang) ?>" method="POST">
 
                                 <input type="hidden" name="id_ruang" id="id_ruang" value="<?php echo $ruang['id_ruang']; ?>">
                                 <div class="form-group">
                                     <label for="nama_ruang" class="col-form-label">Nama ruang</label>
-                                    <input type="text" class="form-control" id="nama_ruang" name="nama_ruang" value="<?php echo $ruang['nama_ruang']; ?>">
+                                    <input type="text" class="form-control <?= ($validation->hasError('nama_ruang')) ?
+                                                                                'is-invalid' : '' ?>" id="nama_ruang" name="nama_ruang" value="<?php echo $ruang['nama_ruang']; ?>">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('nama_ruang'); ?>
+                                    </div>
                                 </div>
                                 <hr class="sidebar-divider" style="margin-top:40px">
                                 <div class="text-right">
