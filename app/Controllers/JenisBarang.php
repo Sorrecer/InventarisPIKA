@@ -10,7 +10,8 @@ class JenisBarang extends BaseController
     public function index()
     {
         $db = \Config\Database::connect();
-        $sql = "SELECT B.id_barang, B.nama_barang, IF(K.nama_kategori IS NULL, 'Tidak ada', K.nama_kategori) as nama_kategori
+        $sql = "SELECT B.id_barang, B.nama_barang, IF(K.nama_kategori IS NULL, 'Tidak ada', K.nama_kategori) as nama_kategori,
+        B.jumlah_minimal
         FROM barang B
         LEFT JOIN kategori K
         ON B.id_kategori = K.id_kategori;";

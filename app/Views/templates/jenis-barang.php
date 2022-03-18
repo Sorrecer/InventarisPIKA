@@ -46,21 +46,21 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Jenis Barang</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Nama Barang</h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <div class="row">
                                 <div class="col my-2">
-                                    <h6 class="m-0 font-weight-bold text-primary">Kelola Jenis Barang</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Kelola Nama Barang</h6>
                                 </div>
                                 <div class="col text-right">
                                     <a href="<?php echo base_url('jenisbarang/tambah'); ?>" class="btn btn-primary btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-plus-circle"></i>
                                         </span>
-                                        <span class="text">Tambah Jenis Barang</span>
+                                        <span class="text">Tambah Nama Barang</span>
                                     </a>
                                 </div>
                             </div>
@@ -74,6 +74,7 @@
                                             <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 100px;" aria-sort="ascending" aria-label="ID Barang: activate to sort column descending">ID Barang</th>
                                             <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 400px;" aria-sort="ascending" aria-label="Nama Barang: activate to sort column descending">Nama Barang</th>
                                             <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Kategori: activate to sort column descending">Kategori</th>
+                                            <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Kategori: activate to sort column descending">Stok Minimal</th>
                                             <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Pengaturan: activate to sort column descending">Pengaturan</th>
                                         </tr>
                                     </thead>
@@ -85,6 +86,7 @@
                                                     <td><?php echo $rowbarang['id_barang']; ?></td>
                                                     <td><?php echo $rowbarang['nama_barang']; ?></td>
                                                     <td><?php echo $rowbarang['nama_kategori']; ?></td>
+                                                    <td><?php echo $rowbarang['jumlah_minimal']; ?></td>
                                                     <td>
                                                         <a href="<?php echo base_url("JenisBarang/edit/" . $rowbarang['id_barang']) ?>" class="btn btn-warning">
                                                             <span class="text">Edit</span>

@@ -18,11 +18,25 @@ class Ruang extends BaseController
 
     public function tambah()
     {
-        return view('templates/tambah-ruang');
+        $data['validation'] = \Config\Services::validation();
+        return view('templates/tambah-ruang', $data);
     }
 
     public function store()
     {
+
+        // validasi input
+        if (!$this->validate([
+            'nama_ruang' => ['label' => 'nama ruang', 'rules' => 'required']
+        ])) {
+            // $validation = $this->validator;
+            return view('templates/tambah-ruang', [
+                'validation' => $this->validator
+            ]);
+        }
+
+        //proses insert data
+
         $RuangModel = new RuangModel();
         $data = [
             'nama_ruang' => $this->request->getVar('nama_ruang'),

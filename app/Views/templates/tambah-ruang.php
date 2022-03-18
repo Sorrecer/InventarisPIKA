@@ -73,7 +73,11 @@
                             <form action="/ruang/store" method="POST">
                                 <div class="form-group">
                                     <label for="nama_ruang" class="col-form-label">Nama ruang</label>
-                                    <input type="text" class="form-control" id="nama_ruang" name="nama_ruang">
+                                    <input type="text" class="form-control <?= ($validation->hasError('nama_ruang')) ?
+                                                                                'is-invalid' : '' ?>" id="nama_ruang" name="nama_ruang">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('nama_ruang'); ?>
+                                    </div>
                                 </div>
                                 <hr class="sidebar-divider" style="margin-top:40px">
                                 <div class="text-right">

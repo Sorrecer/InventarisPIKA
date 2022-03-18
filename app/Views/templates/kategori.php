@@ -46,14 +46,14 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Data Kategori</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Nama Kategori</h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <div class="row">
                                 <div class="col my-2">
-                                    <h6 class="m-0 font-weight-bold text-primary">Kelola Data Kategori</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Kelola Nama Kategori</h6>
                                 </div>
                                 <div class="col text-right">
                                     <a href="<?php echo base_url('kategori/tambah'); ?>" class="btn btn-primary btn-icon-split">
