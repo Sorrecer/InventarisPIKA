@@ -47,12 +47,26 @@ class Kategori extends BaseController
     public function edit($id_kategori)
     {
         $KategoriModel = new KategoriModel();
+        $data['validation'] = \Config\Services::validation();
         $data['kategori'] = $KategoriModel->where('id_kategori', $id_kategori)->first();
+        $data['id_kategori'] = $id_kategori;
         return view('templates/edit-kategori', $data);
     }
 
-    public function update()
+    public function update($id_kategori)
     {
+        // validasi input
+        if (!$this->validate([
+            'nama_kategori' => ['label' => 'nama kategori', 'rules' => 'required']
+        ])) {
+            // $validation = $this->validator;
+            $KategoriModel = new KategoriModel();
+            $data['validation'] = \Config\Services::validation();
+            $data['kategori'] = $KategoriModel->where('id_kategori', $id_kategori)->first();
+            $data['id_kategori'] = $id_kategori;
+            return view('templates/edit-kategori', $data);
+        }
+
         $KategoriModel = new KategoriModel();
         $id = $this->request->getVar('id_kategori');
         $data = [

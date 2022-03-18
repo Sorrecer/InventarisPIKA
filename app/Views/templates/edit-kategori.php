@@ -70,12 +70,16 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form action="/kategori/update" method="POST">
+                            <form action="<?php echo base_url("kategori/update/" . $id_kategori) ?>" method="POST">
 
                                 <input type="hidden" name="id_kategori" id="id_kategori" value="<?php echo $kategori['id_kategori']; ?>">
                                 <div class="form-group">
                                     <label for="nama_kategori" class="col-form-label">Nama kategori</label>
-                                    <input type="text" class="form-control" id="nama_kategori" name="nama_kategori" value="<?php echo $kategori['nama_kategori']; ?>">
+                                    <input type="text" class="form-control <?= ($validation->hasError('nama_kategori')) ?
+                                                                                'is-invalid' : '' ?>" id="nama_kategori" name="nama_kategori" value="<?php echo $kategori['nama_kategori']; ?>">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('nama_kategori'); ?>
+                                    </div>
                                 </div>
                                 <hr class="sidebar-divider" style="margin-top:40px">
                                 <div class="text-right">

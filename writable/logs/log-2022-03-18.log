@@ -270,3 +270,27 @@ CRITICAL - 2022-03-18 08:51:38 --> Undefined variable: ruang
 #8 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
 #10 {main}
+CRITICAL - 2022-03-18 13:17:07 --> Undefined variable: id_kategori
+#0 D:\xampp\InventarisPIKA\app\Views\templates\edit-kategori.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\Invent...', 73, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\Invent...')
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('templates/edit-...', Array, true)
+#4 D:\xampp\InventarisPIKA\app\Controllers\Kategori.php(52): view('templates/edit-...', Array)
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Kategori->edit('22')
+#6 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+#7 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#10 {main}
+CRITICAL - 2022-03-18 13:18:08 --> Undefined variable: id_ruang
+#0 D:\xampp\InventarisPIKA\app\Views\templates\edit-ruang.php(73): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\Invent...', 73, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\Invent...')
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('templates/edit-...', Array, true)
+#4 D:\xampp\InventarisPIKA\app\Controllers\Kategori.php(67): view('templates/edit-...', Array)
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Kategori->update('22')
+#6 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori))
+#7 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#10 {main}
