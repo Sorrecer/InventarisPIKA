@@ -68,13 +68,30 @@ class JenisBarang extends BaseController
     {
         $BarangModel = new BarangModel();
         $KategoriModel = new KategoriModel();
+        $data['validation'] = \Config\Services::validation();
+        $data['id_barang'] = $id_barang;
         $data['barang'] = $BarangModel->find($id_barang);
         $data['kategori'] = $KategoriModel->orderBy('id_kategori', 'nama_kategori')->findAll();
         return view('templates/edit-barang', $data);
     }
 
-    public function update()
+    public function update($id_barang)
     {
+        // validasi input
+        if (!$this->validate([
+            'nama_barang' => ['label' => 'nama barang', 'rules' => 'required'],
+            'nama_kategori' => ['label' => 'nama kategori', 'rules' => 'required']
+        ])) {
+            // $validation = $this->validator;
+            $BarangModel = new BarangModel();
+            $KategoriModel = new KategoriModel();
+            $data['validation'] = \Config\Services::validation();
+            $data['kategori'] = $KategoriModel->orderBy('id_kategori', 'nama_kategori')->findAll();
+            $data['barang'] = $BarangModel->find($id_barang);
+            $data['id_barang'] = $id_barang;
+            return view('templates/edit-barang', $data);
+        }
+
         $BarangModel = new BarangModel();
         $id = $this->request->getVar('id_barang');
         $data = [

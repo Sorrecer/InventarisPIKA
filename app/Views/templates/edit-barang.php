@@ -70,24 +70,32 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form action="/JenisBarang/update" method="POST">
+                            <form action="<?php echo base_url("JenisBarang/update/" . $id_barang) ?>" method="POST">
                                 <?php //dd($barang) 
                                 ?>
 
                                 <input type="hidden" name="id_barang" id="id_barang" value="<?php echo $barang['id_barang']; ?>">
                                 <div class="form-group">
                                     <label for="nama_barang" class="col-form-label">Nama Barang</label>
-                                    <input type="text" class="form-control" id="nama_barang" name="nama_barang" value="<?php echo $barang['nama_barang']; ?>">
+                                    <input type="text" class="form-control  <?= ($validation->hasError('nama_barang')) ?
+                                                                                'is-invalid' : '' ?>" id="nama_barang" name="nama_barang" value="<?php echo $barang['nama_barang']; ?>">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('nama_barang'); ?>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="id_kategori" class="col-form-label">Nama Kategori</label>
-                                    <select class="form-control" id="id_kategori" name="id_kategori">
+                                    <select class="form-control  <?= ($validation->hasError('id_kategori')) ?
+                                                                        'is-invalid' : '' ?>" id="id_kategori" name="id_kategori">
                                         <?php if ($kategori) : ?>
                                             <?php foreach ($kategori as $rowkategori) : ?>
                                                 <option value="<?php echo $rowkategori['id_kategori'] ?>" <?php echo $rowkategori['id_kategori'] == $barang['id_kategori'] ? 'selected' : '' ?>><?php echo $rowkategori['nama_kategori'] ?></option>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
                                     </select>
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('nama_kategori'); ?>
+                                    </div>
                                 </div>
                                 <hr class="sidebar-divider" style="margin-top:40px">
                                 <div class="text-right">
