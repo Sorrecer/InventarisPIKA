@@ -73,11 +73,16 @@
                             <form action="/barangmasuk/store" method="POST">
                                 <div class="form-group">
                                     <label for="tanggal_masuk" class="col-form-label">Tanggal masuk</label>
-                                    <input type="date" class="form-control" id="tanggal_masuk" name="tanggal_masuk">
+                                    <input type="date" class="form-control <?= ($validation->hasError('tanggal_masuk')) ?
+                                                                                'is-invalid' : '' ?>" id="tanggal_masuk" name="tanggal_masuk">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('tanggal_masuk'); ?>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="id_barang" class="col-form-label">Nama barang</label>
-                                    <select class="form-control" id="id_barang" name="id_barang">
+                                    <select class="form-control <?= ($validation->hasError('id_barang')) ?
+                                                                    'is-invalid' : '' ?>" id="id_barang" name="id_barang">
                                         <option value="" selected="selected">--Pilih barang--</option>
                                         <?php if ($barang) : ?>
                                             <?php foreach ($barang as $rowbarang) : ?>
@@ -85,22 +90,30 @@
                                             <?php endforeach; ?>
                                         <?php endif; ?>
                                     </select>
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('id_barang'); ?>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="jumlah_barang" class="col-form-label">Jumlah barang</label>
-                                    <input type="number" class="form-control" id="jumlah_barang" name="jumlah_barang">
-                                </div>
-                                <div class="form-group">
-                                    <label for="jumlah_minimal" class="col-form-label">Jumlah Minimal</label>
-                                    <input type="number" class="form-control" id="jumlah_minimal" name="jumlah_minimal">
+                                    <input type="number" class="form-control <?= ($validation->hasError('jumlah_barang')) ?
+                                                                                    'is-invalid' : '' ?>" id="jumlah_barang" name="jumlah_barang">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('jumlah_barang'); ?>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="jumlah_harga" class="col-form-label">Jumlah harga</label>
-                                    <input type="number" class="form-control" id="jumlah_harga" name="jumlah_harga">
+                                    <input type="number" class="form-control <?= ($validation->hasError('jumlah_harga')) ?
+                                                                                    'is-invalid' : '' ?>" id="jumlah_harga" name="jumlah_harga">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('jumlah_harga'); ?>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="id_ruang" class="col-form-label">Nama ruang</label>
-                                    <select class="form-control" id="id_ruang" name="id_ruang">
+                                    <select class="form-control <?= ($validation->hasError('id_ruang')) ?
+                                                                    'is-invalid' : '' ?>" id="id_ruang" name="id_ruang">
                                         <option value="" selected="selected">--Pilih ruang--</option>
                                         <?php if ($ruang) : ?>
                                             <?php foreach ($ruang as $rowruang) : ?>
@@ -108,6 +121,9 @@
                                             <?php endforeach; ?>
                                         <?php endif; ?>
                                     </select>
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('id_ruang'); ?>
+                                    </div>
                                 </div>
                                 <hr class="sidebar-divider" style="margin-top:40px">
                                 <div class="text-right">

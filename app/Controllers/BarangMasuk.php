@@ -30,6 +30,7 @@ class BarangMasuk extends BaseController
     {
         $BarangModel = new BarangModel();
         $RuangModel = new RuangModel();
+        $data['validation'] = \Config\Services::validation();
         $data['barang'] = $BarangModel->orderBy('id_barang', 'nama_barang')->findAll();
         $data['ruang'] = $RuangModel->orderBy('id_ruang', 'nama_ruang')->findAll();
         return view('templates/tambah-barang-masuk', $data);
@@ -37,12 +38,28 @@ class BarangMasuk extends BaseController
 
     public function store()
     {
+        // validasi input
+        if (!$this->validate([
+            'tanggal_masuk' => ['label' => 'tanggal masuk', 'rules' => 'required'],
+            'id_barang' => ['label' => 'nama barang', 'rules' => 'required'],
+            'jumlah_barang' => ['label' => 'jumlah barang', 'rules' => 'required'],
+            'jumlah_harga' => ['label' => 'jumlah harga', 'rules' => 'required'],
+            'id_ruang' => ['label' => 'nama ruang', 'rules' => 'required'],
+        ])) {
+            // $validation = $this->validator;
+            $BarangModel = new BarangModel();
+            $RuangModel = new RuangModel();
+            $data['validation'] = $this->validator;
+            $data['barang'] = $BarangModel->orderBy('id_barang', 'nama_barang')->findAll();
+            $data['ruang'] = $RuangModel->orderBy('id_ruang', 'nama_ruang')->findAll();
+            return view('templates/tambah-barang-masuk', $data);
+        }
+
         $BarangMasukModel = new BarangMasukModel();
         $data = [
             'tanggal_masuk' => $this->request->getVar('tanggal_masuk'),
             'id_barang' => $this->request->getVar('id_barang'),
             'jumlah_barang' => $this->request->getVar('jumlah_barang'),
-            'jumlah_minimal' => $this->request->getVar('jumlah_minimal'),
             'jumlah_harga' => $this->request->getVar('jumlah_harga'),
             'id_ruang' => $this->request->getVar('id_ruang')
         ];
