@@ -17,11 +17,22 @@ class Kategori extends BaseController
 
     public function tambah()
     {
-        return view('templates/tambah-kategori');
+        $data['validation'] = \Config\Services::validation();
+        return view('templates/tambah-kategori', $data);
     }
 
     public function store()
     {
+        // validasi input
+        if (!$this->validate([
+            'nama_kategori' => ['label' => 'nama kategori', 'rules' => 'required']
+        ])) {
+            // $validation = $this->validator;
+            return view('templates/tambah-kategori', [
+                'validation' => $this->validator
+            ]);
+        }
+
         $KategoriModel = new KategoriModel();
         $data = [
             'nama_kategori' => $this->request->getVar('nama_kategori'),

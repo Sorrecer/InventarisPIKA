@@ -73,7 +73,11 @@
                             <form action="/kategori/store" method="POST">
                                 <div class="form-group">
                                     <label for="nama_kategori" class="col-form-label">Nama Kategori</label>
-                                    <input type="text" class="form-control" id="nama_kategori" name="nama_kategori">
+                                    <input type="text" class="form-control  <?= ($validation->hasError('nama_kategori')) ?
+                                                                                'is-invalid' : '' ?>" id="nama_kategori" name="nama_kategori">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('nama_kategori'); ?>
+                                    </div>
                                 </div>
                                 <hr class="sidebar-divider" style="margin-top:40px">
                                 <div class="text-right">
