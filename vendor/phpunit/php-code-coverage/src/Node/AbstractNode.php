@@ -14,7 +14,7 @@ use function array_merge;
 use function str_replace;
 use function substr;
 use Countable;
-use SebastianBergmann\CodeCoverage\Util\Percentage;
+use SebastianBergmann\CodeCoverage\Percentage;
 
 /**
  * @internal This class is not covered by the backward compatibility promise for phpunit/php-code-coverage
