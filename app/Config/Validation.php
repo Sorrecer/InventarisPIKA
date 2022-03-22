@@ -20,14 +20,10 @@ class Validation
      * @var string[]
      */
     public $ruleSets = [
-
         Rules::class,
         FormatRules::class,
         FileRules::class,
         CreditCardRules::class,
-        \Myth\Auth\Authentication\Passwords\ValidationRules::class
-
-
     ];
 
     /**
