@@ -15,25 +15,40 @@ class Login extends BaseController
 
     public function cekUser()
     {
+        $validation = \Config\Services::validation();
+        //menerima data login
         $data = [
             'username' => $this->request->getVar('username'),
             'password' => $this->request->getVar('password')
         ];
 
+
+        //validasi kosong
         if (!$this->validate(
             [
                 'username' => ['label' => 'username', 'rules' => 'required'],
                 'password' => ['label' => 'password', 'rules' => 'required']
             ]
         )) {
-            $data['validation'] = $this->validator;
-            return view('templates/login', $data);
+            $sessError = [
+                'errIdUser' => $validation->getError('username'),
+                'errPassword' => $validation->getError('password')
+            ];
+
+            session()->setFlashdata($sessError);
+            return redirect()->to(base_url('login/index'));
+
+            //validasi username
         } else {
             $ModelLogin = new ModelLogin();
-            $cekUserLogin = $ModelLogin->find('username');
+            $cekUserLogin = $ModelLogin->find($data['username']);
+            // dd($data['username']);
             if ($cekUserLogin == null) {
-                $data['validation'] = $this->validator;
-                return view('templates/login', $data);
+                $sessError = [
+                    'errIdUser' => 'Maaf, user tidak ditemukan'
+                ];
+                session()->setFlashdata($sessError);
+                return redirect()->to(base_url('login/index'));
             }
             return view('templates/index');
         }

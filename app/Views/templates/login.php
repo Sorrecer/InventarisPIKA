@@ -65,18 +65,30 @@
 
                                     <form class="user" action="/login/cekUser" method="POST">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user <?= ($validation->hasError('username')) ?
+                                            <input type="text" class="form-control form-control-user <?= (session()->getFlashdata('errIdUser')) ?
                                                                                                             'is-invalid' : '' ?>" id="username" name="username" placeholder="Username">
-                                            <div class="invalid-feedback">
-                                                <?= $validation->getError('username'); ?>
-                                            </div>
+                                            <?php
+                                            if (session()->getFlashdata('errIdUser')) {
+
+                                                echo '<div class="invalid-feedback">'
+                                                    . session()->getFlashdata('errIdUser') .
+
+                                                    '</div>';
+                                            }
+                                            ?>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user <?= ($validation->hasError('password')) ?
+                                            <input type="password" class="form-control form-control-user <?= (session()->getFlashdata('errPassword')) ?
                                                                                                                 'is-invalid' : '' ?>" id="password" name="password" placeholder="Password">
-                                            <div class="invalid-feedback">
-                                                <?= $validation->getError('password'); ?>
-                                            </div>
+                                            <?php
+                                            if (session()->getFlashdata('errPassword')) {
+
+                                                echo '<div class="invalid-feedback">'
+                                                    . session()->getFlashdata('errPassword') .
+
+                                                    '</div>';
+                                            }
+                                            ?>
                                         </div>
                                         <hr>
                                         <div class="form-group">

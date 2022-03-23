@@ -19,6 +19,11 @@ use InvalidArgumentException;
  */
 class Rules
 {
+
+    public function username_check($str)
+    {
+        return $str == null;
+    }
     /**
      * The value does not match another field in $data.
      *
@@ -97,7 +102,7 @@ class Rules
             ->where($field, $str)
             ->limit(1);
 
-        if (! empty($whereField) && ! empty($whereValue) && ! preg_match('/^\{(\w+)\}$/', $whereValue)) {
+        if (!empty($whereField) && !empty($whereValue) && !preg_match('/^\{(\w+)\}$/', $whereValue)) {
             $row = $row->where($whereField, $whereValue);
         }
 
@@ -135,7 +140,7 @@ class Rules
             ->where($field, $str)
             ->limit(1);
 
-        if (! empty($ignoreField) && ! empty($ignoreValue) && ! preg_match('/^\{(\w+)\}$/', $ignoreValue)) {
+        if (!empty($ignoreField) && !empty($ignoreValue) && !preg_match('/^\{(\w+)\}$/', $ignoreValue)) {
             $row = $row->where("{$ignoreField} !=", $ignoreValue);
         }
 
@@ -205,7 +210,7 @@ class Rules
      */
     public function not_in_list(?string $value, string $list): bool
     {
-        return ! $this->in_list($value, $list);
+        return !$this->in_list($value, $list);
     }
 
     /**
@@ -262,7 +267,7 @@ class Rules
         $requiredFields = [];
 
         foreach ($fields as $field) {
-            if ((array_key_exists($field, $data) && ! empty($data[$field])) || (strpos($field, '.') !== false && ! empty(dot_array_search($field, $data)))) {
+            if ((array_key_exists($field, $data) && !empty($data[$field])) || (strpos($field, '.') !== false && !empty(dot_array_search($field, $data)))) {
                 $requiredFields[] = $field;
             }
         }
@@ -299,7 +304,7 @@ class Rules
         // Still here? Then we fail this test if
         // any of the fields are not present in $data
         foreach ($fields as $field) {
-            if ((strpos($field, '.') === false && (! array_key_exists($field, $data) || empty($data[$field]))) || (strpos($field, '.') !== false && empty(dot_array_search($field, $data)))) {
+            if ((strpos($field, '.') === false && (!array_key_exists($field, $data) || empty($data[$field]))) || (strpos($field, '.') !== false && empty(dot_array_search($field, $data)))) {
                 return false;
             }
         }

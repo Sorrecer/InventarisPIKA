@@ -10,5 +10,5 @@ class ModelLogin extends Model
 
     protected $primaryKey = 'id_user';
 
-    protected $allowedFields = ['username', 'email', 'telepon', 'password'];
+    protected $allowedFields = ['username', 'email', 'telepon', 'password', 'id_level'];
 }
