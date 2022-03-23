@@ -1,0 +1,60 @@
+CRITICAL - 2022-03-22 18:49:32 --> Class "Myth\Auth\Authentication\Passwords\ValidationRules" not found
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Validation\Validation.php(115): CodeIgniter\Validation\Validation->loadRuleSets()
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#2 D:\xampp\htdocs\InventarisPIKA\app\Controllers\Form.php(14): CodeIgniter\Controller->validate(Array)
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\Form->index()
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Form))
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-22 18:49:48 --> Class "Myth\Auth\Authentication\Passwords\ValidationRules" not found
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Validation\Validation.php(115): CodeIgniter\Validation\Validation->loadRuleSets()
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#2 D:\xampp\htdocs\InventarisPIKA\app\Controllers\BarangMasuk.php(43): CodeIgniter\Controller->validate(Array)
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\BarangMasuk->store()
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-22 18:51:37 --> Class "Myth\Auth\Authentication\Passwords\ValidationRules" not found
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Validation\Validation.php(115): CodeIgniter\Validation\Validation->loadRuleSets()
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#2 D:\xampp\htdocs\InventarisPIKA\app\Controllers\BarangMasuk.php(43): CodeIgniter\Controller->validate(Array)
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\BarangMasuk->store()
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-22 18:52:33 --> Class "Myth\Auth\Authentication\Passwords\ValidationRules" not found
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Validation\Validation.php(115): CodeIgniter\Validation\Validation->loadRuleSets()
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#2 D:\xampp\htdocs\InventarisPIKA\app\Controllers\BarangMasuk.php(43): CodeIgniter\Controller->validate(Array)
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\BarangMasuk->store()
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-22 18:53:45 --> Class "Myth\Auth\Authentication\Passwords\ValidationRules" not found
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Validation\Validation.php(115): CodeIgniter\Validation\Validation->loadRuleSets()
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#2 D:\xampp\htdocs\InventarisPIKA\app\Controllers\BarangMasuk.php(43): CodeIgniter\Controller->validate(Array)
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\BarangMasuk->store()
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-22 18:54:55 --> Class "Myth\Auth\Authentication\Passwords\ValidationRules" not found
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Validation\Validation.php(115): CodeIgniter\Validation\Validation->loadRuleSets()
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Controller.php(160): CodeIgniter\Validation\Validation->run()
+#2 D:\xampp\htdocs\InventarisPIKA\app\Controllers\BarangMasuk.php(43): CodeIgniter\Controller->validate(Array)
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\BarangMasuk->store()
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
