@@ -94,6 +94,14 @@
                                         <?= $validation->getError('id_kategori'); ?>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label for="jumlah_minimal" class="col-form-label">Jumlah minimal</label>
+                                    <input type="text" class="form-control <?= ($validation->hasError('jumlah_minimal')) ?
+                                                                                'is-invalid' : '' ?>" id="jumlah_minimal" name="jumlah_minimal">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('jumlah_minimal'); ?>
+                                    </div>
+                                </div>
                                 <hr class="sidebar-divider" style="margin-top:40px">
                                 <div class="text-right">
                                     <a href="<?php echo base_url('jenisbarang') ?>" class="btn btn-secondary btn-lg">Batal</a>

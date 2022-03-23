@@ -94,7 +94,15 @@
                                         <?php endif; ?>
                                     </select>
                                     <div class="invalid-feedback">
-                                        <?= $validation->getError('nama_kategori'); ?>
+                                        <?= $validation->getError('id_kategori'); ?>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="jumlah_minimal" class="col-form-label">Jumlah Minimal</label>
+                                    <input type="text" class="form-control  <?= ($validation->hasError('jumlah_minimal')) ?
+                                                                                'is-invalid' : '' ?>" id="jumlah_minimal" name="jumlah_minimal" value="<?php echo $barang['jumlah_minimal']; ?>">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('jumlah_minimal'); ?>
                                     </div>
                                 </div>
                                 <hr class="sidebar-divider" style="margin-top:40px">

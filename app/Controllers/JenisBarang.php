@@ -41,10 +41,13 @@ class JenisBarang extends BaseController
     public function store()
     {
         // validasi input
-        if (!$this->validate([
-            'nama_barang' => ['label' => 'nama barang', 'rules' => 'required'],
-            'id_kategori' => ['label' => 'nama kategori', 'rules' => 'required']
-        ])) {
+        if (!$this->validate(
+            [
+                'nama_barang' => ['label' => 'nama barang', 'rules' => 'required'],
+                'id_kategori' => ['label' => 'nama kategori', 'rules' => 'required'],
+                'jumlah_minimal' => ['label' => 'jumlah minimal', 'rules' => 'required']
+            ]
+        )) {
             // $validation = $this->validator;
             $KategoriModel = new KategoriModel();
             $data['kategori'] = $KategoriModel->orderBy('id_kategori', 'nama_kategori')->findAll();
@@ -55,7 +58,8 @@ class JenisBarang extends BaseController
         $BarangModel = new BarangModel();
         $data = [
             'nama_barang' => $this->request->getVar('nama_barang'),
-            'id_kategori' => $this->request->getVar('id_kategori')
+            'id_kategori' => $this->request->getVar('id_kategori'),
+            'jumlah_minimal' => $this->request->getVar('jumlah_minimal')
         ];
 
         $BarangModel->insert($data);
@@ -80,7 +84,8 @@ class JenisBarang extends BaseController
         // validasi input
         if (!$this->validate([
             'nama_barang' => ['label' => 'nama barang', 'rules' => 'required'],
-            'nama_kategori' => ['label' => 'nama kategori', 'rules' => 'required']
+            'id_kategori' => ['label' => 'nama kategori', 'rules' => 'required'],
+            'jumlah_minimal' => ['label' => 'jumlah minimal', 'rules' => 'required']
         ])) {
             // $validation = $this->validator;
             $BarangModel = new BarangModel();
@@ -96,7 +101,8 @@ class JenisBarang extends BaseController
         $id = $this->request->getVar('id_barang');
         $data = [
             'nama_barang' => $this->request->getVar('nama_barang'),
-            'id_kategori' => $this->request->getVar('id_kategori')
+            'id_kategori' => $this->request->getVar('id_kategori'),
+            'jumlah_minimal' => $this->request->getVar('jumlah_minimal')
         ];
         $BarangModel->update($id, $data);
         return $this->response->redirect(base_url('/JenisBarang'));
