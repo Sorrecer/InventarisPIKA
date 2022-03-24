@@ -475,3 +475,18 @@ CRITICAL - 2022-03-23 23:10:32 --> Undefined array key "username"
 #4 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
 #6 {main}
+CRITICAL - 2022-03-23 23:52:32 --> Cannot declare class App\Filters\MyFilter, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-03-23 23:52:53 --> Cannot declare class App\Filters\MyFilter, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-03-23 23:52:54 --> Cannot declare class App\Filters\MyFilter, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-03-23 23:52:56 --> Cannot declare class App\Filters\MyFilter, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-03-23 23:52:56 --> Cannot declare class App\Filters\MyFilter, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

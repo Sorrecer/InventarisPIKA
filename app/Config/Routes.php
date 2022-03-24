@@ -31,7 +31,7 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Login::index');
 $routes->get('/hapus-staff/(:num)', 'AkunStaff::delete/$1');
 $routes->get('/hapus-kategori/(:num)', 'Kategori::delete/$1');
 $routes->get('/hapus-ruang/(:num)', 'Ruang::delete/$1');

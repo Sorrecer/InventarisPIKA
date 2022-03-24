@@ -1,0 +1,515 @@
+CRITICAL - 2022-03-24 00:14:50 --> Class "App\Filters\FilterKasir" not found
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login', 'after')
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-03-24 00:15:02 --> filterStaff filter must have a matching alias defined.
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(493): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('filterStaff')
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(244): CodeIgniter\Filters\Filters->processAliasesToClass('after')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(163): CodeIgniter\Filters\Filters->initialize('login')
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(386): CodeIgniter\Filters\Filters->run('login', 'before')
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-03-24 00:15:49 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/cekUser', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:17:03 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('Home', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:17:06 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('pengaturan-akun', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:17:15 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('pengaturan-akun', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:18:15 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('Home', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:18:18 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:18:18 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:21:16 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/cekUser', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:22:15 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/cekUser', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:23:59 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/cekUser', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:02 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/index', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:02 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/index', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:03 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/index', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:06 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:09 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('/', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:11 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:11 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/index', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:12 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/index', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:12 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/index', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:12 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('Home', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:13 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/index', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:13 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('Home', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:14 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('/', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:14 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:15 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('Home', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:15 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/index', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:24:16 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('Home', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:28:09 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/cekUser', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:28:28 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/cekUser', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:28:36 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/index', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:28:37 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('Home', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:28:38 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/index', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:28:39 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('Home', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:28:39 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:28:40 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('ruang', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:28:44 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('/', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:28:58 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/cekUser', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:29:00 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('/', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:32:52 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('/', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:32:55 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('/', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:32:57 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('ruang', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:32:58 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('barang', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:32:58 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('Home', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:32:59 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/index', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:33:02 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/index', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:33:03 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('Home', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:33:03 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('barang', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:33:04 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('ruang', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:33:04 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('/', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-24 00:33:08 --> strpos(): Passing null to parameter #1 ($haystack) of type string is deprecated
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'strpos(): Passi...', 'D:\\xampp\\htdocs...', 413)
+#1 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Debug\Toolbar.php(413): strpos(NULL, '<head>')
+#2 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\DebugToolbar.php(40): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse))
+#3 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Filters\Filters.php(196): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\RedirectResponse), NULL)
+#4 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\Filters\Filters->run('login/cekUser', 'after')
+#5 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
