@@ -8,6 +8,7 @@ use CodeIgniter\Filters\FilterInterface;
 
 class FilterStaff implements FilterInterface
 {
+
     public function before(RequestInterface $request, $arguments = null)
     {
         //jika tidak ada sesi, kembali ke login

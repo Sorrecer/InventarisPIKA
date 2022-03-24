@@ -40,21 +40,20 @@ class Filters extends BaseConfig
             // 'invalidchars',
             'filterAdmin' => [
                 'except' => [
-                    'login/*', 'login', '/', 'BuatAkun/*'
+                    'login/*', 'login', '/', 'BuatAkun', 'BuatAkun/*'
                 ]
             ],
             'filterStaff' => [
                 'except' => [
-                    'login/*', 'login', '/', 'BuatAkun/*'
+                    'login/*', 'login', '/', 'BuatAkun/*', 'BuatAkun'
                 ]
             ]
         ],
         'after' => [
             'filterAdmin' => [
                 'except' => [
-                    // 'Home/*'
-                    //'akunstaff/*', 'barang/*', 'barangMasuk/*', 'barangKeluar/*',
-                    // 'jenisBarang/*', 'kategori/*', 'kengaturanAkun/*', 'rekap/*', 'ruang/*'
+                    // 'Home', 'Home/*', 'akunstaff', 'akunstaff' 'barang', 'BarangMasuk', 'BarangKeluar',
+                    // 'jenisBarang', 'kategori', 'kengaturanAkun', 'rekap', 'ruang', 'ruang/*'
                 ]
             ],
             'filterStaff' => [

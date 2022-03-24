@@ -168,17 +168,17 @@
                                                     <td>
                                                         <!-- <button type="button" class="btn btn-secondary" id="aktif">Aktif</button> -->
                                                         <label class="switch">
-                                                            <input type="checkbox" class="aktif" value="<?= $rowstaff['id_staff'] ?>" <?php echo $rowstaff['aktif'] ? 'checked' : '' ?>>
+                                                            <input type="checkbox" class="aktif" value="<?= $rowstaff['id_user'] ?>" <?php echo $rowstaff['aktif'] ? 'checked' : '' ?>>
                                                             <span class="slider round"></span>
                                                         </label>
                                                     </td>
                                                     <!-- <input type="checkbox" id="aktif"/>
                                                         <btnaktif class="btn btn-secondary" for="aktif">Aktif</btnaktif> -->
                                                     <td>
-                                                        <a href="<?php echo base_url('akunstaff/edit/' . $rowstaff['id_staff']); ?>" class="btn btn-warning">
+                                                        <a href="<?php echo base_url('akunstaff/edit/' . $rowstaff['id_user']); ?>" class="btn btn-warning">
                                                             <span class="text">Edit</span>
                                                         </a>
-                                                        <a href="<?php echo base_url("hapus-staff/" . $rowstaff['id_staff']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data Ini?')" class="btn btn-danger">Hapus</a>
+                                                        <a href="<?php echo base_url("hapus-staff/" . $rowstaff['id_user']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data Ini?')" class="btn btn-danger">Hapus</a>
                                                     </td>
                                                 </tr>
                                             <?php endforeach; ?>

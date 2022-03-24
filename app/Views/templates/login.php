@@ -99,7 +99,7 @@
                                     </form>
                                     <hr>
                                     <div class=" text-center">
-                                        <a class="small" href="<?php echo base_url('buat-akun-staff'); ?>">Buat Akun Staff</a>
+                                        <a class="small" href="<?php echo base_url('BuatAkun'); ?>">Buat Akun Staff</a>
                                     </div>
                                 </div>
                             </div>

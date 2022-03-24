@@ -63,11 +63,20 @@ class Login extends BaseController
                     $simpan_session = [
                         'id_user' => $id_user,
                         'username' => $cekUserLogin[0]['username'],
-                        'id_level' => $id_level
+                        'id_level' => $id_level,
+                        'aktif' => $cekUserLogin[0]['aktif']
                     ];
                     session()->set($simpan_session);
 
-                    return $this->response->redirect(base_url('Home'));
+                    if (session()->aktif == '0') {
+                        $sessError = [
+                            'errIdUser' => 'Silahkan hubungi admin untuk mengaktifkan akun anda'
+                        ];
+                        session()->setFlashdata($sessError);
+                        return redirect()->to(base_url('login/index'));
+                    } else {
+                        return $this->response->redirect(base_url('Home'));
+                    }
 
                     //jika password salah
                 } else {

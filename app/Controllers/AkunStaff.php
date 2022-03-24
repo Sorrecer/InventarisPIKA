@@ -2,15 +2,26 @@
 
 namespace App\Controllers;
 
-use App\Models\StaffModel;
+// use App\Models\StaffModel;
+use App\Models\ModelLogin;
 
 class AkunStaff extends BaseController
 {
     public function index()
     {
-        $StaffModel = new StaffModel();
-        $data['staff'] = $StaffModel->orderBy('id_staff', 'username', 'email', 'telepon', 'password')->findAll();
+        $db = \Config\Database::connect();
+        $sql = "SELECT id_user, username, email, telepon, password, aktif
+        FROM users
+        WHERE id_user != '1'";
+        $q = $db->query($sql);
+        $hasil = $q->getResultArray();
+
+        $data['staff'] = $hasil;
         return view('templates/akun-staff', $data);
+
+        // $StaffModel = new StaffModel();
+        // $data['staff'] = $StaffModel->orderBy('id_staff', 'username', 'email', 'telepon', 'password')->findAll();
+        // return view('templates/akun-staff', $data);
     }
 
     // tambah
@@ -22,7 +33,7 @@ class AkunStaff extends BaseController
 
     public function store()
     {
-        $StaffModel = new StaffModel();
+        $StaffModel = new ModelLogin();
         $data = [
             'username' => $this->request->getVar('username'),
             'email' => $this->request->getVar('email'),
@@ -36,17 +47,17 @@ class AkunStaff extends BaseController
 
     // edit
 
-    public function edit($id_staff)
+    public function edit($id_user)
     {
-        $StaffModel = new StaffModel();
-        $data['staff'] = $StaffModel->where('id_staff', $id_staff)->first();
+        $StaffModel = new ModelLogin();
+        $data['staff'] = $StaffModel->where('id_user', $id_user)->first();
         return view('templates/edit-akun-staff', $data);
     }
 
     public function update()
     {
-        $StaffModel = new StaffModel();
-        $id = $this->request->getVar('id_staff');
+        $StaffModel = new ModelLogin();
+        $id = $this->request->getVar('id_user');
         $data = [
             'username' => $this->request->getVar('username'),
             'email' => $this->request->getVar('email'),
@@ -56,10 +67,10 @@ class AkunStaff extends BaseController
         return $this->response->redirect(base_url('/akunstaff'));
     }
 
-    public function delete($id_staff = null)
+    public function delete($id_user = null)
     {
-        $StaffModel = new StaffModel();
-        $data['staff'] = $StaffModel->where('id_staff', $id_staff)->delete($id_staff);
+        $StaffModel = new ModelLogin();
+        $data['staff'] = $StaffModel->where('id_user', $id_user)->delete($id_user);
         return $this->response->redirect(base_url('/akunstaff'));
     }
 
@@ -67,15 +78,15 @@ class AkunStaff extends BaseController
     {
         $aktif = $this->request->getPost('aktif');
         $id = $this->request->getPost('id');
-        $StaffModel = new StaffModel();
+        $StaffModel = new ModelLogin();
         // $StaffModel->builder()->update(
         //     ['aktif' => $aktif],
         //     "id_staff = $id"
         // );
 
         $db = \Config\Database::connect();
-        $sql = "UPDATE staff SET aktif = $aktif
-        WHERE id_staff = $id";
+        $sql = "UPDATE users SET aktif = $aktif
+        WHERE id_user = $id";
         $q = $db->query($sql);
         // $StaffModel->update(
 
