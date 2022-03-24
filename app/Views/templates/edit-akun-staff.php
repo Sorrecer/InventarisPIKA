@@ -72,7 +72,7 @@
                         <div class="card-body">
                             <form action="/akunstaff/update" method="POST">
 
-                                <input type="hidden" name="id_staff" id="id_staff" value="<?php echo $staff['id_staff']; ?>">
+                                <input type="hidden" name="id_user" id="id_user" value="<?php echo $staff['id_user']; ?>">
                                 <div class=" form-group">
                                     <label for="username" class="col-form-label">Username</label>
                                     <input type="text" class="form-control" id="username" name="username" value="<?php echo $staff['username']; ?>">

@@ -60,46 +60,42 @@
                             <hr class="sidebar-divider">
                             <table>
                                 <thead>
-                                    <?php if ($admin) : ?>
-                                        <?php foreach ($admin as $rowadmin) : ?>
-                                            <td class="row no-gutters align-items-center my-3" style="width:150px">
-                                                <div class="h8 mb-0 font-weight-bold text-gray-800">Username</div>
-                                            </td>
-                                            <td><?php echo ": " . $rowadmin['username']; ?></td>
+                                    <td class="row no-gutters align-items-center my-3" style="width:150px">
+                                        <div class="h8 mb-0 font-weight-bold text-gray-800">Username</div>
+                                    </td>
+                                    <td><?php echo ": " . session()->username ?></td>
                                 </thead>
                                 <tr>
                                     <td class="row no-gutters align-items-center my-3">
                                         <div class="h8 mb-0 font-weight-bold text-gray-800">Email</div>
                                     </td>
-                                    <td><?php echo ": " . $rowadmin['email']; ?></td>
+                                    <td><?php echo ": " . session()->email ?></td>
                                 </tr>
                                 <tr>
                                     <td class="row no-gutters align-items-center my-3">
                                         <div class="h8 mb-0 font-weight-bold text-gray-800">No. Telp</div>
                                     </td>
-                                    <td><?php echo ": " . $rowadmin['telepon']; ?></td>
+                                    <td><?php echo ": " . session()->telepon ?></td>
                                 </tr>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
                             </table>
                             <hr class="sidebar-divider">
                             <div class="row" style="justify-content: flex-end">
                                 <div style="padding:10px">
-                                    <a href="<?php echo base_url('PengaturanAkun/edit/' . $rowadmin['id_admin']); ?>" class="btn btn-warning btn-icon-split">
+                                    <a href="<?php echo base_url('PengaturanAkun/edit/' . $admin[0]['id_user']); ?>" class="btn btn-warning btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-cog"></i>
                                         </span>
                                         <span class="text">Edit Profil</span>
                                     </a>
                                 </div>
-                                <div style="padding:10px">
+                                <!-- <div style="padding:10px">
                                     <a href="#" class="btn btn-secondary btn-icon-split" data-toggle="modal" data-target="#ubahPasswordModal">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-key"></i>
                                         </span>
                                         <span class="text">Ubah Password</span>
                                     </a>
-                                </div>
+                                </div> -->
                                 <div style="padding:10px">
                                     <a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#logoutModal">
                                         <span class="icon text-white-50">

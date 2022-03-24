@@ -24,7 +24,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('/'); ?>">
+            <a class="nav-link" href="<?php echo base_url('Home'); ?>">
                 <i class="fas fa-fw fa-chart-line"></i>
                 <span>Dashboard</span></a>
         </li>

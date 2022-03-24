@@ -13,9 +13,7 @@
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -31,8 +29,8 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <?php 
-            include('sidebar.php');
+        <?php
+        include('sidebar.php');
         ?>
 
         <!-- Content Wrapper -->
@@ -41,9 +39,9 @@
             <!-- Main Content -->
             <div id="content">
 
-            <?php 
+                <?php
                 include('topbar.php');
-            ?>
+                ?>
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -52,67 +50,70 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Rekap Data Barang</h1>
                     </div>
-                <!-- DataTales Example -->
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <div class="row">
-                            <div class="col my-2">
-                                <h6 class="m-0 font-weight-bold text-primary">Melihat data barang masuk atau keluar dalam rentang tanggal tertentu</h6>
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <div class="row">
+                                <div class="col my-2">
+                                    <h6 class="m-0 font-weight-bold text-primary">Melihat data barang masuk atau keluar dalam rentang tanggal tertentu</h6>
+                                </div>
                             </div>
                         </div>
-                    </div>
                         <div class="card-body">
-                        <div class="row">
-                            <div class="col">
-                                <p>Jenis Laporan :</p>
-                                <input type="radio" id="barang-masuk" name="jenis-laporan" value="barang-masuk">
-                                <label for="barang-masuk">Barang masuk</label><br>
-                                <input type="radio" id="barang-keluar" name="jenis-laporan" value="barang-keluar">
-                                <label for="barang-keluar">Barang keluar</label><br>
-                                <input type="radio" id="selisih" name="jenis-laporan" value="selisih">
-                                <label for="selisih">Selisih masuk - keluar</label>
+                            <form action="/rekap/print" method="POST">
+                                <div class="row">
+                                    <div class="col">
+                                        <p>Jenis Laporan :</p>
+                                        <!-- radiobutton untuk jenis laporan -->
+                                        <input type="radio" id="tipe" name="tipe" value="1">
+                                        <label for="barang-masuk">Barang masuk</label><br>
+                                        <input type="radio" id="tipe" name="tipe" value="2">
+                                        <label for="barang-keluar">Barang keluar</label><br>
+                                        <input type="radio" id="tipe" name="tipe" value="3">
+                                        <label for="selisih">Selisih masuk - keluar</label>
+                                    </div>
+                                    <div class="col">
+                                        <p>Rentang Tanggal :</p>
+                                        <input for="tanggal-awal" type="date" class="form-control" id="tanggal-awal" name="tanggal-awal">
+                                        <p class="my-2">Sampai dengan</p>
+                                        <input for="tanggal-akhir" type="date" class="form-control" id="tanggal-akhir" name="tanggal-akhir">
+                                    </div>
+                                    <div class="col text-center my-5">
+                                        <button type="submit" class="btn btn-primary btn-icon-split" style="padding: 20px">
+                                            <span class="icon text-white-50">
+                                                <i class="fas fa-print"></i>
+                                            </span>
+                                            <span class="text">CETAK</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="table-responsive" style="font-size:12px">
+                                <!-- <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 40px;" aria-sort="ascending" aria-label="No.: activate to sort column descending">No.</th>
+                                            <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="ID Barang: activate to sort column descending">ID Transaksi</th>
+                                            <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Nama Barang: activate to sort column descending">Tanggal Masuk</th>
+                                            <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 400px;" aria-sort="ascending" aria-label="Kategori: activate to sort column descending">Nama Barang</th>
+                                            <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 180px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Jumlah Barang</th>
+                                            <th class="sorting sorting_asc" tabindex="5" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Jumlah Harga</th>
+                                            <th class="sorting sorting_asc" tabindex="6" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 80px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Ruang</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="font-size:14px">
+
+                                    </tbody>
+                                </table> -->
                             </div>
-                            <div class="col">
-                                <p>Rentang Tanggal :</p>
-                                <input type="date" class="form-control" id="tanggal-awal">
-                                <p class="my-2">Sampai dengan<p>
-                                <input type="date" class="form-control" id="tanggal-akhir">
-                            </div>
-                            <div class="col text-center my-5">
-                                <a href="#" class="btn btn-primary btn-icon-split" style="padding: 20px">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-print"></i>
-                                    </span>
-                                    <span class="text" data-toggle="modal" data-target="#barangMasukModal">CETAK</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="table-responsive" style="font-size:12px">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 40px;" aria-sort="ascending" aria-label="No.: activate to sort column descending">No.</th>
-                                        <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="ID Barang: activate to sort column descending">ID Transaksi</th>
-                                        <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Nama Barang: activate to sort column descending">Tanggal Masuk</th>
-                                        <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 400px;" aria-sort="ascending" aria-label="Kategori: activate to sort column descending">Nama Barang</th>
-                                        <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 180px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Jumlah Barang</th>
-                                        <th class="sorting sorting_asc" tabindex="5" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Jumlah Harga</th>
-                                        <th class="sorting sorting_asc" tabindex="6" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 80px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Ruang</th>
-                                    </tr>
-                                </thead>
-                                <tbody style="font-size:14px">
-                                
-                                </tbody>
-                            </table>
                         </div>
                     </div>
-                </div>
 
                 </div>
                 <!-- /.container-fluid -->
 
-                </div>
-                <!-- End of Main Content -->
+            </div>
+            <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
@@ -135,29 +136,8 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Delete Data Modal-->
-    <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Hapus Data?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Hapus" untuk konfirmasi hapus data.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a class="btn btn-danger" data-dismiss="modal">Hapus</a>
-                </div>
-            </div>
-        </div>
-    </div>    
-
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -169,7 +149,7 @@
                 <div class="modal-body">Pilih "Logout" dibawah untuk keluar dari sesi.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a class="btn btn-primary" href="<?php echo base_url('login');?>">Logout</a>
+                    <a class="btn btn-primary" href="<?php echo base_url('login'); ?>">Logout</a>
                 </div>
             </div>
         </div>

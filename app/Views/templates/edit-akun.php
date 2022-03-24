@@ -72,18 +72,18 @@
                         <div class="card-body">
                             <form action="/PengaturanAkun/update" method="POST">
 
-                                <input type="hidden" name="id_admin" id="id_admin" value="<?php echo $admin['id_admin']; ?>">
+                                <input type="hidden" name="id_user" id="id_user" value="<?php echo $admin['id_user']; ?>">
                                 <div class=" form-group">
                                     <label for="username" class="col-form-label">Username</label>
-                                    <input type="text" class="form-control" id="username" name="username" value="<?php echo $admin['username']; ?>">
+                                    <input type="text" class="form-control" id="username" name="username" value="<?php echo session()->username; ?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="email" class="col-form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" value="<?php echo $admin['email']; ?>">
+                                    <input type="email" class="form-control" id="email" name="email" value="<?php echo session()->email; ?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="telepon" class="col-form-label">Telepon</label>
-                                    <input type="text" class="form-control" id="telepon" name="telepon" value="<?php echo $admin['telepon']; ?>">
+                                    <input type="text" class="form-control" id="telepon" name="telepon" value="<?php echo session()->telepon; ?>">
                                 </div>
                                 <hr class="sidebar-divider" style="margin-top:40px">
                                 <div class="text-right">
