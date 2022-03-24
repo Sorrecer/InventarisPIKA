@@ -8,4 +8,9 @@ class Rekap extends BaseController
     {
         return view('templates/rekap-data-barang');
     }
+
+    public function print()
+    {
+        return view('templates/print-rekap-data');
+    }
 }

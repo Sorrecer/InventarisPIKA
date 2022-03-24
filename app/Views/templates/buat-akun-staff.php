@@ -59,25 +59,23 @@
                                     <!-- Divider -->
                                     <hr class="sidebar-divider">
 
-                                    <form action="/akunstaff/store" method="POST" class="user">
+                                    <form action="/BuatAkun/store" method="POST" class="user">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="username" name="username">
+                                            <input type="text" class="form-control form-control-user" id="username" name="username" placeholder="Username">
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" id="email" name="email">
+                                            <input type="email" class="form-control form-control-user" id="email" name="email" placeholder="Email">
                                         </div>
                                         <div class="form-group">
-                                            <input type="number" class="form-control" id="telepon" name="telepon">
+                                            <input type="number" class="form-control form-control-user" id="telepon" name="telepon" placeholder="Telepon">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" id="password" name="password">
+                                            <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" id="konfpassword" name="konfpassword2">
+                                            <input type="password" class="form-control form-control-user" id="konfpassword" name="konfpassword2" placeholder="Konfirmasi password">
                                         </div>
-                                        <a href="<?php echo base_url('login'); ?>" class="btn btn-primary btn-user btn-block">
-                                            Daftar
-                                        </a>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">Tambah</button>
                                         <a href="<?php echo base_url('login'); ?>" class="btn btn-danger btn-user btn-block">
                                             Batal
                                         </a>

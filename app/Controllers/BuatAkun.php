@@ -21,6 +21,7 @@ class BuatAkun extends BaseController
             'email' => $this->request->getVar('email'),
             'telepon' => $this->request->getVar('telepon'),
             'password' => $this->request->getVar('password')
+
         ];
 
         $StaffModel->insert($data);
