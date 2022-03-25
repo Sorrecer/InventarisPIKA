@@ -94,7 +94,7 @@
                                     <input type="text" class="form-control" id="jumlah_barang" name="jumlah_barang" value="<?php echo $barang_keluar['jumlah_barang']; ?>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="keterangan" class="col-form-label">Jumlah harga</label>
+                                    <label for="keterangan" class="col-form-label">Keterangan</label>
                                     <input type="text" class="form-control" id="keterangan" name="keterangan" value="<?php echo $barang_keluar['keterangan']; ?>">
                                 </div>
                                 <div class="form-group">

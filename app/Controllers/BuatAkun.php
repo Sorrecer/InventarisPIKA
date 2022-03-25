@@ -20,7 +20,7 @@ class BuatAkun extends BaseController
             'username' => $this->request->getVar('username'),
             'email' => $this->request->getVar('email'),
             'telepon' => $this->request->getVar('telepon'),
-            'password' => $this->request->getVar('password')
+            'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
 
         ];
 

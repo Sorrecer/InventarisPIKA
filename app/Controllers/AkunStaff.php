@@ -12,7 +12,7 @@ class AkunStaff extends BaseController
         $db = \Config\Database::connect();
         $sql = "SELECT id_user, username, email, telepon, password, aktif
         FROM users
-        WHERE id_user != '1'";
+        WHERE username != 'admin'";
         $q = $db->query($sql);
         $hasil = $q->getResultArray();
 

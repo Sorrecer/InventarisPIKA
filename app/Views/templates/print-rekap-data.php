@@ -16,8 +16,8 @@
 <?php if ($tipe == 1) : ?>
     <p style="text-align: center;"><strong>Data Barang Masuk</strong><br /><strong>pada tanggal XX-XX-XXXX sampai tanggal XX-XX-XXXX</strong></p>
     <p style="text-align: center;"><strong>tabel</strong></p>
-    <table style="border-collapse: collapse; width: 100%; height: 74px;" border="1">
-        <thead>
+    <table style="border-collapse: collapse; width: 100%; height: 40px;" border="1">
+        <thead class="justify-content-center my-auto">
             <tr style="height: 18px;">
                 <th style="width: 7.46309%; height: 56px;">
                     <h5>No.</h5>

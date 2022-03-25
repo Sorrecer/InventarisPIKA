@@ -51,7 +51,9 @@
                         <div class="card-body">
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
-                                    <div class="h2 mb-0 font-weight-bold text-gray-800">Admin</div>
+                                    <div class="h2 mb-0 font-weight-bold text-gray-800">
+                                        <?php echo session()->id_level == '1' ? 'Admin' : 'Staff'  ?>
+                                    </div>
                                 </div>
                                 <div class="col-auto">
                                     <i class="fas fa-user fa-2x text-gray-300"></i>

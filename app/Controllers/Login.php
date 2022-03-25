@@ -26,7 +26,7 @@ class Login extends BaseController
         if (!$this->validate(
             [
                 'username' => ['label' => 'username', 'rules' => 'required'],
-                'password' => ['label' => 'passwor  d', 'rules' => 'required']
+                'password' => ['label' => 'password', 'rules' => 'required']
             ]
         )) {
             $sessError = [
@@ -57,6 +57,7 @@ class Login extends BaseController
             } else {
                 $cekUserLogin = $modelLogin->find($id_user);
                 $passCheck = $cekUserLogin[0]['password']; //<----- passwordnya user tergantung username
+                // dd($password, $passCheck);
                 if (password_verify($password, $passCheck)) {
                     //jika password benar, simpan sesi dan masuk home
                     $id_level = $cekUserLogin[0]['id_level'];
