@@ -70,20 +70,32 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form action="/PengaturanAkun/update" method="POST">
+                            <form action="<?php echo base_url("PengaturanAkun/update/" . $id_user) ?>" method="POST">
 
                                 <input type="hidden" name="id_user" id="id_user" value="<?php echo $admin['id_user']; ?>">
                                 <div class=" form-group">
                                     <label for="username" class="col-form-label">Username</label>
-                                    <input type="text" class="form-control" id="username" name="username" value="<?php echo session()->username; ?>">
+                                    <input type="text" class="form-control  <?= ($validation->hasError('username')) ?
+                                                                                'is-invalid' : '' ?>" id="username" name="username" value="<?php echo session()->username; ?>">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('username'); ?>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="email" class="col-form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" value="<?php echo session()->email; ?>">
+                                    <input type="email" class="form-control  <?= ($validation->hasError('email')) ?
+                                                                                    'is-invalid' : '' ?>" id="email" name="email" value="<?php echo session()->email; ?>">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('email'); ?>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="telepon" class="col-form-label">Telepon</label>
-                                    <input type="text" class="form-control" id="telepon" name="telepon" value="<?php echo session()->telepon; ?>">
+                                    <input type="text" class="form-control  <?= ($validation->hasError('telepon')) ?
+                                                                                'is-invalid' : '' ?>" id="telepon" name="telepon" value="<?php echo session()->telepon; ?>">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('telepon'); ?>
+                                    </div>
                                 </div>
                                 <hr class="sidebar-divider" style="margin-top:40px">
                                 <div class="text-right">
