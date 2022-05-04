@@ -26,24 +26,38 @@ class AkunStaff extends BaseController
 
     // tambah
 
-    public function tambah()
-    {
-        return view('templates/tambah-akun-staff');
-    }
+    // public function tambah()
+    // {
+    //     $data['validation'] = \Config\Services::validation();
+    //     return view('templates/tambah-akun-staff', $data);
+    // }
 
-    public function store()
-    {
-        $StaffModel = new ModelLogin();
-        $data = [
-            'username' => $this->request->getVar('username'),
-            'email' => $this->request->getVar('email'),
-            'telepon' => $this->request->getVar('telepon'),
-            'password' => $this->request->getVar('password')
-        ];
+    // public function store()
+    // {
+    //     // validasi input
+    //     if (!$this->validate([
+    //         'username' => ['label' => 'username', 'rules' => 'required'],
+    //         'email' => ['label' => 'email', 'rules' => 'required'],
+    //         'telepon' => ['label' => 'telepon', 'rules' => 'required'],
+    //         'password' => ['label' => 'password', 'rules' => 'required']
+    //     ])) {
+    //         // $validation = $this->validator;
+    //         return view('templates/tambah-kategori', [
+    //             'validation' => $this->validator
+    //         ]);
+    //     }
 
-        $StaffModel->insert($data);
-        return $this->response->redirect(base_url('/akunstaff'));
-    }
+    //     $StaffModel = new ModelLogin();
+    //     $data = [
+    //         'username' => $this->request->getVar('username'),
+    //         'email' => $this->request->getVar('email'),
+    //         'telepon' => $this->request->getVar('telepon'),
+    //         'password' => $this->request->getVar('password')
+    //     ];
+
+    //     $StaffModel->insert($data);
+    //     return $this->response->redirect(base_url('/akunstaff'));
+    // }
 
     // edit
 

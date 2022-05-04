@@ -1,0 +1,12 @@
+CRITICAL - 2022-05-04 08:32:37 --> Undefined variable: validation
+#0 D:\xampp\InventarisPIKA\app\Views\templates\buat-akun-staff.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\Invent...', 64, Array)
+#1 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\Invent...')
+#2 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('templates/buat-...', Array, true)
+#4 D:\xampp\InventarisPIKA\app\Controllers\BuatAkun.php(11): view('templates/buat-...')
+#5 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(825): App\Controllers\BuatAkun->index()
+#6 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BuatAkun))
+#7 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\InventarisPIKA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\InventarisPIKA\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\Invent...')
+#10 {main}
