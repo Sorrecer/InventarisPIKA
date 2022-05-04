@@ -136,14 +136,6 @@
                                 <div class="col my-2">
                                     <h6 class="m-0 font-weight-bold text-primary">Kelola Akun Staff</h6>
                                 </div>
-                                <div class="col text-right">
-                                    <a href="<?php echo base_url('akunstaff/tambah'); ?>" class="btn btn-primary btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-plus-circle"></i>
-                                        </span>
-                                        <span class="text">Tambah Akun Staff</span>
-                                    </a>
-                                </div>
                             </div>
                         </div>
                         <div class="card-body">
