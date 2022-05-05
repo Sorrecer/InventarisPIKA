@@ -64,12 +64,28 @@ class AkunStaff extends BaseController
     public function edit($id_user)
     {
         $StaffModel = new ModelLogin();
+        $data['validation'] = \Config\Services::validation();
         $data['staff'] = $StaffModel->where('id_user', $id_user)->first();
+        $data['id_user'] = $id_user;
         return view('templates/edit-akun-staff', $data);
     }
 
-    public function update()
+    public function update($id_user)
     {
+        //validasi
+        if (!$this->validate([
+            'username' => ['label' => 'username', 'rules' => 'required'],
+            'email' => ['label' => 'email', 'rules' => 'required'],
+            'telepon' => ['label' => 'telepon', 'rules' => 'required']
+        ])) {
+            $validation = $this->validator;
+            $StaffModel = new ModelLogin();
+            $data['validation'] = \Config\Services::validation();
+            $data['staff'] = $StaffModel->where('id_user', $id_user)->first();
+            $data['id_user'] = $id_user;
+            return view('templates/edit-akun-staff', $data);
+        }
+
         $StaffModel = new ModelLogin();
         $id = $this->request->getVar('id_user');
         $data = [
