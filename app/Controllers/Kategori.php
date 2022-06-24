@@ -8,6 +8,7 @@ class Kategori extends BaseController
 {
     public function index()
     {
+
         $KategoriModel = new KategoriModel();
         $data['kategori'] = $KategoriModel->orderBy('id_kategori', 'nama_kategori')->findAll();
         return view('templates/kategori', $data);

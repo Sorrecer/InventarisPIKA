@@ -1,6 +1,15 @@
 <?php
-dd($barmasuk);
+$labels = [];
+$jumlah = [];
+foreach ($barmasuk as $rowbarmasuk) {
+    array_push($labels, $rowbarmasuk['id_barang']);
+    array_push($jumlah, $rowbarmasuk['jum']);
+}
+
+// dd($labels);
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

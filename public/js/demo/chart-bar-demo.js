@@ -27,18 +27,20 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   return s.join(dec);
 }
 
+
+
 // Bar Chart Example
 var ctx = document.getElementById("myBarChart");
 var myBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ["bar1", "bar2", "bar3", "bar4", "bar5", "kertas"],
+    labels: [ <?php echo $labels; ?> ],
     datasets: [{
       label: "Jumlah Barang",
       backgroundColor: "#4e73df",
       hoverBackgroundColor: "#2e59d9",
       borderColor: "#4e73df",
-      data: [5, 25, 45, 50, 100, 70],
+      data: [<?php echo $jum; ?>],
     }],
   },
   options: {

@@ -12,8 +12,7 @@ class Home extends BaseController
         // $jumlah = "";
 
         $BarMasukModel = new BarMasukModel();
-        $data['barmasuk'] = $BarMasukModel->orderBy('id_barang')->findAll();
-        dd($BarMasukModel);
+        $data['barmasuk'] = $BarMasukModel->orderBy('id_barang', 'jum')->findAll();
         return view('templates/index', $data);
     }
 }
