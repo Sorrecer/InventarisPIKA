@@ -1,3 +1,6 @@
+<?php
+dd($barmasuk);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
