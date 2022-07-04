@@ -10,5 +10,5 @@ class BarangModel extends Model
 
     protected $primaryKey = 'id_barang';
 
-    protected $allowedFields = ['nama_barang', 'id_kategori', 'jumlah_minimal'];
+    protected $allowedFields = ['nama_barang', 'id_kategori', 'jumlah_minimal', 'jumlah_total'];
 }

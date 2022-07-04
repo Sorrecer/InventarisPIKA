@@ -14,7 +14,7 @@
 <hr />
 
 <?php if ($tipe == 1) : ?>
-    <p style="text-align: center;"><strong>Data Barang Masuk</strong><br /><strong>pada tanggal XX-XX-XXXX sampai tanggal XX-XX-XXXX</strong></p>
+    <p style="text-align: center;"><strong>Data Barang Masuk</strong><br /><strong>pada tanggal <?= date('d-m-Y', strtotime($tanggalAwal)) ?> sampai tanggal <?= date('d-m-Y', strtotime($tanggalAkhir)) ?></strong></p>
     <p style="text-align: center;"><strong>tabel</strong></p>
     <table style="border-collapse: collapse; width: 100%; height: 40px;" border="1">
         <thead class="justify-content-center my-auto">
@@ -43,8 +43,8 @@
             </tr>
         </thead>
         <tbody>
-            <?php if ($barang_masuk) : ?>
-                <?php foreach ($barang_masuk as $i => $rowmasuk) : ?>
+            <?php if ($databarang) : ?>
+                <?php foreach ($databarang as $i => $rowmasuk) : ?>
                     <tr>
                         <td><?php echo $i + 1 . '.'; ?></td>
                         <td><?php echo $rowmasuk['id_transaksi']; ?></td>
@@ -60,7 +60,7 @@
     </table>
 <?php endif; ?>
 <?php if ($tipe == 2) : ?>
-    <p style="text-align: center;"><strong>Data Barang Keluar</strong><br /><strong>pada tanggal XX-XX-XXXX sampai tanggal XX-XX-XXXX</strong></p>
+    <p style="text-align: center;"><strong>Data Barang Keluar</strong><br /><strong>pada tanggal <?= date('d-m-Y', strtotime($tanggalAwal)) ?> sampai tanggal <?= date('d-m-Y', strtotime($tanggalAkhir)) ?></strong></p>
     <p style="text-align: center;"><strong>tabel</strong></p>
     <table style="border-collapse: collapse; width: 100%; height: 74px;" border="1">
         <thead>
@@ -89,8 +89,8 @@
             </tr>
         </thead>
         <tbody>
-            <?php if ($barang_keluar) : ?>
-                <?php foreach ($barang_keluar as $i => $rowkeluar) : ?>
+            <?php if ($databarang) : ?>
+                <?php foreach ($databarang as $i => $rowkeluar) : ?>
                     <tr>
                         <td><?php echo $i + 1 . '.'; ?></td>
                         <td><?php echo $rowkeluar['id_transaksi']; ?></td>
@@ -106,7 +106,7 @@
     </table>
 <?php endif; ?>
 <?php if ($tipe == 3) : ?>
-    <p style="text-align: center;"><strong>Data Barang Keluar</strong><br /><strong>pada tanggal XX-XX-XXXX sampai tanggal XX-XX-XXXX</strong></p>
+    <p style="text-align: center;"><strong>Data Barang Total</strong><br /><strong>pada tanggal <?= date('d-m-Y', strtotime($tanggalAwal)) ?> sampai tanggal <?= date('d-m-Y', strtotime($tanggalAkhir)) ?></strong></p>
     <p style="text-align: center;"><strong>tabel</strong></p>
     <table style="border-collapse: collapse; width: 100%; height: 74px;" border="1">
         <thead>

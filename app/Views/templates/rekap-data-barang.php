@@ -74,9 +74,17 @@
                                     </div>
                                     <div class="col">
                                         <p>Rentang Tanggal :</p>
-                                        <input for="tanggal-awal" type="date" class="form-control" id="tanggal-awal" name="tanggal-awal">
+                                        <input for="tanggal-awal" type="date" class="form-control  <?= ($validation->hasError('tanggal-awal')) ?
+                                                                                                        'is-invalid' : '' ?>" id="tanggal-awal" name="tanggal-awal">
+                                        <div class="invalid-feedback">
+                                            <?= $validation->getError('tanggal-awal'); ?>
+                                        </div>
                                         <p class="my-2">Sampai dengan</p>
-                                        <input for="tanggal-akhir" type="date" class="form-control" id="tanggal-akhir" name="tanggal-akhir">
+                                        <input for="tanggal-akhir" type="date" class="form-control <?= ($validation->hasError('tanggal-akhir') || isset($tanggalAkhirError)) ?
+                                                                                                        'is-invalid' : '' ?>" id="tanggal-akhir" name="tanggal-akhir">
+                                        <div class="invalid-feedback">
+                                            <?= $validation->getError('tanggal-akhir') . ($tanggalAkhirError ?? '') ?>
+                                        </div>
                                     </div>
                                     <div class="col text-center">
                                         <!-- <a href="<?php echo base_url('Rekap/cari'); ?>" class="btn btn-warning btn-icon-split" style="padding: 20px">
