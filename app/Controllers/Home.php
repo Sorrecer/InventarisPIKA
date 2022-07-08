@@ -11,7 +11,6 @@ class Home extends BaseController
     {
         // $label = "";
         // $jumlah = "";
-
         $BarangMasukModel = new BarangMasukModel();
         $BarangKeluarModel = new BarangKeluarModel();
         $result = $BarangMasukModel->builder()->select('nama_barang, SUM(jumlah_barang) as jumlah')->join('barang', 'barang_masuk.id_barang = barang.id_barang')->groupBy('barang_masuk.id_barang')->orderBy('jumlah', 'DESC')->get(5)->getResultArray();

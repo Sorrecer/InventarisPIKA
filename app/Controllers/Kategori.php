@@ -40,6 +40,7 @@ class Kategori extends BaseController
         ];
 
         $KategoriModel->insert($data);
+        session()->set('notif', $this->notif());
         return $this->response->redirect(base_url('/kategori'));
     }
 
@@ -74,6 +75,7 @@ class Kategori extends BaseController
             'nama_kategori' => $this->request->getVar('nama_kategori'),
         ];
         $KategoriModel->update($id, $data);
+        session()->set('notif', $this->notif());
         return $this->response->redirect(base_url('/kategori'));
     }
 
@@ -84,6 +86,7 @@ class Kategori extends BaseController
         session()->setFlashdata('swal_text', 'Data berhasil dihapus');
         $KategoriModel = new KategoriModel();
         $data['kategori'] = $KategoriModel->where('id_kategori', $id_kategori)->delete($id_kategori);
+        session()->set('notif', $this->notif());
         return $this->response->redirect(base_url('/kategori'));
     }
 }

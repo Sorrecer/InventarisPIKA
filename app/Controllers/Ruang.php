@@ -10,7 +10,7 @@ class Ruang extends BaseController
     {
         // return view('templates/ruang');
         $RuangModel = new RuangModel();
-        $data['ruang'] = $RuangModel->orderBy('id_ruang', 'nama_ruang')->findAll();
+        $data['ruang'] = $RuangModel->orderBy('id_ruang', 'DESC')->findAll();
         return view('templates/ruang', $data);
     }
 
@@ -43,6 +43,7 @@ class Ruang extends BaseController
         ];
 
         $RuangModel->insert($data);
+        session()->set('notif', $this->notif());
         return $this->response->redirect(base_url('/ruang'));
     }
 
@@ -77,6 +78,7 @@ class Ruang extends BaseController
             'nama_ruang' => $this->request->getVar('nama_ruang'),
         ];
         $RuangModel->update($id, $data);
+        session()->set('notif', $this->notif());
         return $this->response->redirect(base_url('/ruang'));
     }
 
@@ -89,6 +91,7 @@ class Ruang extends BaseController
         session()->setFlashdata('swal_text', 'Data berhasil dihapus');
         $RuangModel = new RuangModel();
         $data['ruang'] = $RuangModel->where('id_ruang', $id_ruang)->delete($id_ruang);
+        session()->set('notif', $this->notif());
         return $this->response->redirect(base_url('/ruang'));
     }
 }

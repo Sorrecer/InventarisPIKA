@@ -14,7 +14,8 @@ class JenisBarang extends BaseController
         B.jumlah_minimal
         FROM barang B
         LEFT JOIN kategori K
-        ON B.id_kategori = K.id_kategori;";
+        ON B.id_kategori = K.id_kategori
+        ORDER BY B.id_barang DESC;";
         $q = $db->query($sql);
         $hasil = $q->getResultArray();
 
@@ -22,7 +23,7 @@ class JenisBarang extends BaseController
 
         // kategori
         $KategoriModel = new KategoriModel();
-        $data['kategori'] = $KategoriModel->orderBy('id_kategori', 'nama_kategori')->findAll();
+        $data['kategori'] = $KategoriModel->orderBy('id_kategori', 'DESC')->findAll();
 
         return view('templates/jenis-barang', $data);
     }
@@ -63,6 +64,7 @@ class JenisBarang extends BaseController
         ];
 
         $BarangModel->insert($data);
+        session()->set('notif', $this->notif());
         return $this->response->redirect(base_url('/jenisbarang'));
     }
 
@@ -105,6 +107,7 @@ class JenisBarang extends BaseController
             'jumlah_minimal' => $this->request->getVar('jumlah_minimal')
         ];
         $BarangModel->update($id, $data);
+        session()->set('notif', $this->notif());
         return $this->response->redirect(base_url('/JenisBarang'));
     }
 
@@ -115,6 +118,7 @@ class JenisBarang extends BaseController
         session()->setFlashdata('swal_text', 'Data berhasil dihapus');
         $BarangModel = new BarangModel();
         $data['barang'] = $BarangModel->where('id_barang', $id_barang)->delete($id_barang);
+        session()->set('notif', $this->notif());
         return $this->response->redirect(base_url('/JenisBarang'));
     }
 }

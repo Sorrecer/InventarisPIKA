@@ -65,6 +65,7 @@ class BarangKeluar extends BaseController
         ];
 
         $BarangKeluarModel->insert($data);
+        session()->set('notif', $this->notif());
         return $this->response->redirect(base_url('/BarangKeluar'));
     }
 
@@ -93,6 +94,7 @@ class BarangKeluar extends BaseController
             'id_ruang' => $this->request->getVar('id_ruang')
         ];
         $BarangKeluarModel->update($id, $data);
+        session()->set('notif', $this->notif());
         return $this->response->redirect(base_url('/BarangKeluar'));
     }
 
@@ -103,6 +105,7 @@ class BarangKeluar extends BaseController
         session()->setFlashdata('swal_text', 'Data berhasil dihapus');
         $BarangKeluarModel = new BarangKeluarModel();
         $data['barang_keluar'] = $BarangKeluarModel->where('id_transaksi', $id_transaksi)->delete($id_transaksi);
+        session()->set('notif', $this->notif());
         return $this->response->redirect(base_url('/BarangKeluar'));
     }
 }

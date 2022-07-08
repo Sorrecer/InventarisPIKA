@@ -57,7 +57,7 @@
 
                     <!-- Page Heading -->
                     <div class="align-items-center text-center mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Tambah Barang Masuk</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Tambah Barang Keluar</h1>
                     </div>
 
                     <!-- Form tambah -->

@@ -78,6 +78,7 @@ class Login extends BaseController
                         session()->setFlashdata($sessError);
                         return redirect()->to(base_url('login/index'));
                     } else {
+                        session()->set('notif', $this->notif());
                         return $this->response->redirect(base_url('Home'));
                     }
 
