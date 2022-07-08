@@ -96,7 +96,7 @@
                                                         <a href="<?php echo base_url("barangmasuk/edit/" . $rowmasuk['id_transaksi']) ?>" class="btn btn-warning">
                                                             <span class="text">Edit</span>
                                                         </a>
-                                                        <a href="<?php echo base_url("hapus-barang-masuk/" . $rowmasuk['id_transaksi']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="btn btn-danger">Hapus</a>
+                                                        <a href="#" onclick="konfirmasi(<?php echo $rowmasuk['id_transaksi'] ?>)" class="btn btn-danger">Hapus</a>
                                                     </td>
                                                 </tr>
                                             <?php endforeach; ?>
@@ -134,70 +134,38 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Tambah barang masuk Modal-->
-    <div class="modal fade" id="barangMasukModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Input Barang Masuk</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Tanggal Masuk:</label>
-                            <input type="date" class="form-control" id="recipient-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Nama Barang:</label>
-                            <select name="Kategori" class="form-control" id="kategori">
-                                <option selected="selected">--Pilih barang--</option>
-                                <option value="Perabotan">Meja</option>
-                                <option value="Buku">Kursi</option>
-                                <option value="Buku">Alat Ketam Kayu</option>
-                                <option value="Buku">Sapu</option>
-                                <option value="ATK">Spidol</option>
-                                <option value="Buku">Lemari Buku</option>
-                                <option value="Buku">Laptop DELL</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Jumlah Barang:</label>
-                            <input type="text" class="form-control" id="recipient-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Jumlah Harga:</label>
-                            <input type="text" class="form-control" id="recipient-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Ruang:</label>
-                            <select name="Kategori" class="form-control" id="kategori">
-                                <option selected="selected">--Pilih Ruang--</option>
-                                <option value="Perabotan">Ruang A1</option>
-                                <option value="Buku">Ruang A2</option>
-                                <option value="Buku">Ruang B1</option>
-                                <option value="Buku">Ruang B2</option>
-                                <option value="ATK">Ruang C1</option>
-                                <option value="Buku">Ruang C2</option>
-                                <option value="Buku">Gudang D1</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary">Tambah</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <?php
     include('logoutModal.php');
     ?>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        <?php if (session()->getFlashdata('swal_icon')) { ?>
+            Swal.fire({
+                title: '<?php echo session()->getFlashdata('swal_title') ?>',
+                text: '<?php echo session()->getFlashdata('swal_text') ?>',
+                icon: '<?php echo session()->getFlashdata('swal_icon') ?>',
+                confirmButtonText: 'Ok'
+            })
+        <?php } ?>
+
+        function konfirmasi(id_transaksi) {
+            Swal.fire({
+                title: 'Hapus data',
+                text: "Anda yakin ingin menghapus data?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Hapus'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "<?php echo base_url('barangmasuk/delete') ?>/" +
+                        id_transaksi;
+                }
+            })
+        }
+    </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

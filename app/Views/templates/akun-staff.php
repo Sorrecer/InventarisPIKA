@@ -170,7 +170,7 @@
                                                         <a href="<?php echo base_url('akunstaff/edit/' . $rowstaff['id_user']); ?>" class="btn btn-warning">
                                                             <span class="text">Edit</span>
                                                         </a>
-                                                        <a href="<?php echo base_url("hapus-staff/" . $rowstaff['id_user']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data Ini?')" class="btn btn-danger">Hapus</a>
+                                                        <a href="#" onclick="konfirmasi(<?php echo $rowstaff['id_user'] ?>)" class="btn btn-danger">Hapus</a>
                                                     </td>
                                                 </tr>
                                             <?php endforeach; ?>
@@ -224,6 +224,34 @@
     include('logoutModal.php');
     ?>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        <?php if (session()->getFlashdata('swal_icon')) { ?>
+            Swal.fire({
+                title: '<?php echo session()->getFlashdata('swal_title') ?>',
+                text: '<?php echo session()->getFlashdata('swal_text') ?>',
+                icon: '<?php echo session()->getFlashdata('swal_icon') ?>',
+                confirmButtonText: 'Ok'
+            })
+        <?php } ?>
+
+        function konfirmasi(id_user) {
+            Swal.fire({
+                title: 'Hapus data',
+                text: "Anda yakin ingin menghapus data?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Hapus'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "<?php echo base_url('AkunStaff/delete') ?>/" +
+                        id_user;
+                }
+            })
+        }
+    </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

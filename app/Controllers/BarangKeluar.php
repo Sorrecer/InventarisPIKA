@@ -98,6 +98,9 @@ class BarangKeluar extends BaseController
 
     public function delete($id_transaksi = null)
     {
+        session()->setFlashdata('swal_icon', 'success');
+        session()->setFlashdata('swal_title', 'Berhasil');
+        session()->setFlashdata('swal_text', 'Data berhasil dihapus');
         $BarangKeluarModel = new BarangKeluarModel();
         $data['barang_keluar'] = $BarangKeluarModel->where('id_transaksi', $id_transaksi)->delete($id_transaksi);
         return $this->response->redirect(base_url('/BarangKeluar'));

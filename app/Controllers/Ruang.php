@@ -84,6 +84,9 @@ class Ruang extends BaseController
 
     public function delete($id_ruang = null)
     {
+        session()->setFlashdata('swal_icon', 'success');
+        session()->setFlashdata('swal_title', 'Berhasil');
+        session()->setFlashdata('swal_text', 'Data berhasil dihapus');
         $RuangModel = new RuangModel();
         $data['ruang'] = $RuangModel->where('id_ruang', $id_ruang)->delete($id_ruang);
         return $this->response->redirect(base_url('/ruang'));

@@ -91,7 +91,7 @@
                                                         <a href="<?php echo base_url("JenisBarang/edit/" . $rowbarang['id_barang']) ?>" class="btn btn-warning">
                                                             <span class="text">Edit</span>
                                                         </a>
-                                                        <a href="<?php echo base_url("hapus-jenis-barang/" . $rowbarang['id_barang']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="btn btn-danger">
+                                                        <a href="#" onclick="konfirmasi(<?php echo $rowbarang['id_barang'] ?>)" class="btn btn-danger">
                                                             Hapus
                                                         </a>
                                                     </td>
@@ -131,116 +131,38 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Tambah Data Modal-->
-    <div class="modal fade" id="tambahBarangModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Jenis Barang</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">ID Barang:</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="B00001" disabled>
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Nama Barang:</label>
-                            <input type="text" class="form-control" id="recipient-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Kategori:</label>
-                            <select name="Kategori" class="form-control" id="kategori">
-                                <option selected="selected">--Pilih kategori--</option>
-                                <option value="Perabotan">Perabotan</option>
-                                <option value="Buku">Buku</option>
-                                <option value="Buku">Alat furniture</option>
-                                <option value="Buku">Alat elektronik</option>
-                                <option value="ATK">ATK</option>
-                                <option value="Buku">Alat kebersihan</option>
-                                <option value="Buku">Perlengkapan UKS</option>
-                                <option value="Peralatan Furnitur">Peralatan Furnitur</option>
-                            </select>
-                        </div>
-                    </form>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Tambah</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- edit barang modal-->
-    <div class="modal fade" id="editBarangModal" tabindex="0" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editBarangModal">Edit Barang</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">ID Barang:</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="B00001" disabled>
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Nama Barang:</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="Nama Barang">
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Kategori:</label>
-                            <select name="Kategori" class="form-control" id="kategori">
-                                <option selected="selected">--Pilih kategori--</option>
-                                <option value="Perabotan">Perabotan</option>
-                                <option value="Buku">Buku</option>
-                                <option value="Buku">Alat furniture</option>
-                                <option value="Buku">Alat elektronik</option>
-                                <option value="ATK">ATK</option>
-                                <option value="Buku">Alat kebersihan</option>
-                                <option value="Buku">Perlengkapan UKS</option>
-                                <option value="Peralatan Furnitur">Peralatan Furnitur</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary">Tambah</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Delete Data Modal-->
-    <div class="modal fade" id="DeleteModal" tabindex="-2" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Hapus Data?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Hapus" untuk konfirmasi hapus data.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a class="btn btn-danger" data-dismiss="modal">Hapus</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <?php
     include('logoutModal.php');
     ?>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        <?php if (session()->getFlashdata('swal_icon')) { ?>
+            Swal.fire({
+                title: '<?php echo session()->getFlashdata('swal_title') ?>',
+                text: '<?php echo session()->getFlashdata('swal_text') ?>',
+                icon: '<?php echo session()->getFlashdata('swal_icon') ?>',
+                confirmButtonText: 'Ok'
+            })
+        <?php } ?>
+
+        function konfirmasi(id_barang) {
+            Swal.fire({
+                title: 'Hapus data',
+                text: "Anda yakin ingin menghapus data?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Hapus'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "<?php echo base_url('JenisBarang/delete') ?>/" +
+                        id_barang;
+                }
+            })
+        }
+    </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

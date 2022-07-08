@@ -110,6 +110,9 @@ class JenisBarang extends BaseController
 
     public function delete($id_barang = null)
     {
+        session()->setFlashdata('swal_icon', 'success');
+        session()->setFlashdata('swal_title', 'Berhasil');
+        session()->setFlashdata('swal_text', 'Data berhasil dihapus');
         $BarangModel = new BarangModel();
         $data['barang'] = $BarangModel->where('id_barang', $id_barang)->delete($id_barang);
         return $this->response->redirect(base_url('/JenisBarang'));

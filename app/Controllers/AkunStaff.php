@@ -99,6 +99,9 @@ class AkunStaff extends BaseController
 
     public function delete($id_user = null)
     {
+        session()->setFlashdata('swal_icon', 'success');
+        session()->setFlashdata('swal_title', 'Berhasil');
+        session()->setFlashdata('swal_text', 'Data berhasil dihapus');
         $StaffModel = new ModelLogin();
         $data['staff'] = $StaffModel->where('id_user', $id_user)->delete($id_user);
         return $this->response->redirect(base_url('/akunstaff'));

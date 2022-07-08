@@ -62,11 +62,11 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead class="thead-dark">
                                         <tr>
-                                            <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 40px;" aria-sort="ascending" aria-label="No.: activate to sort column descending">No.</th>
-                                            <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 300px;" aria-sort="ascending" aria-label="Nama Barang: activate to sort column descending">Nama Barang</th>
-                                            <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Kategori: activate to sort column descending">Kategori</th>
-                                            <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 80px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Stok</th>
-                                            <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="Stok: activate to sort column descending">Ruang</th>
+                                            <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 40px;" aria-sort="ascending">No.</th>
+                                            <th style="width: 300px;">Nama Barang</th>
+                                            <th style="width: 200px;">Kategori</th>
+                                            <th style="width: 80px;">Stok</th>
+                                            <th style="width: 150px;">Ruang</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -114,136 +114,19 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Tambah Data Modal-->
-    <div class="modal fade" id="tambahBarangModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Barang</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div>
-                    <h5 class="mx-3 my-2" style="color:red">Peringatan :</h5>
-                    <h5 class="mx-3"> penambahan barang melalui form ini tidak akan tercatat pada data barang masuk</h5>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">ID Barang:</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="B00001" disabled>
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Nama Barang:</label>
-                            <select name="Kategori" class="form-control" id="kategori">
-                                <option selected="selected">--Pilih barang--</option>
-                                <option value="Perabotan">Meja</option>
-                                <option value="Buku">Kursi</option>
-                                <option value="Buku">Alat Ketam Kayu</option>
-                                <option value="Buku">Sapu</option>
-                                <option value="ATK">Spidol</option>
-                                <option value="Buku">Lemari Buku</option>
-                                <option value="Buku">Laptop DELL</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Stok</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="Jumlah Stok">
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Ruang:</label>
-                            <select name="Kategori" class="form-control" id="kategori">
-                                <option selected="selected">--Pilih Ruang--</option>
-                                <option value="Perabotan">Ruang A1</option>
-                                <option value="Buku">Ruang A2</option>
-                                <option value="Buku">Ruang B1</option>
-                                <option value="Buku">Ruang B2</option>
-                                <option value="ATK">Ruang C1</option>
-                                <option value="Buku">Ruang C2</option>
-                                <option value="Buku">Gudang D1</option>
-                            </select>
-                        </div>
-                    </form>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Tambah</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- edit barang modal-->
-    <div class="modal fade" id="editBarangModal" tabindex="0" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editBarangModal">Edit Barang</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">ID Barang:</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="B00001" disabled>
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Nama Barang:</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="Nama Barang">
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Kategori:</label>
-                            <select name="Kategori" class="form-control" id="kategori">
-                                <option selected="selected">--Pilih kategori--</option>
-                                <option value="Perabotan">Perabotan</option>
-                                <option value="Buku">Buku</option>
-                                <option value="Buku">Alat furniture</option>
-                                <option value="Buku">Alat elektronik</option>
-                                <option value="ATK">ATK</option>
-                                <option value="Buku">Alat kebersihan</option>
-                                <option value="Buku">Perlengkapan UKS</option>
-                                <option value="Peralatan Furnitur">Peralatan Furnitur</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Stok</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="Jumlah Stok">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary">Tambah</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Delete Data Modal-->
-    <div class="modal fade" id="DeleteModal" tabindex="-2" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Hapus Data?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Hapus" untuk konfirmasi hapus data.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a class="btn btn-danger" data-dismiss="modal">Hapus</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <?php
     include('logoutModal.php');
     ?>
+
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        Swal.fire({
+            title: 'Error!',
+            text: 'Do you want to continue',
+            icon: 'error',
+            confirmButtonText: 'Cool'
+        })
+    </script> -->
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

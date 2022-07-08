@@ -85,95 +85,11 @@
                                                         <a href="<?php echo base_url("ruang/edit/" . $rowruang['id_ruang']) ?>" class="btn btn-warning">
                                                             <span class="text">Edit</span>
                                                         </a>
-                                                        <a href="<?php echo base_url("hapus-ruang/" . $rowruang['id_ruang']) ?>" onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" class="btn btn-danger">Hapus</a>
+                                                        <a href="#" onclick="konfirmasi(<?php echo $rowruang['id_ruang'] ?>)" class="btn btn-danger">Hapus</a>
                                                     </td>
                                                 </tr>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
-                                        <!-- <tr>
-                                        <td>1.</td>
-                                        <td>Ruang A1</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal"    >
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2.</td>
-                                        <td>Gedung B1</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" href="#" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3.</td>
-                                        <td>Gudang C3</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4.</td>
-                                        <td>Tanah D4</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>5.</td>
-                                        <td>Tanah E1</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>6.</td>
-                                        <td>Tanah A2</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>7.</td>
-                                        <td>Tanah B2</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editModal">
-                                            <span class="text">Edit</span>
-                                            </a>
-                                            <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
-                                            <span class="text">Hapus</span>
-                                            </a>
-                                        </td>
-                                    </tr> -->
                                     </tbody>
                                 </table>
                             </div>
@@ -207,96 +123,38 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
+    <?php
+    include('logoutModal.php');
+    ?>
 
-    <!-- Tambah Ruang Modal-->
-    <div class="modal fade" id="tambahRuangModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Ruang</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Nama Ruang:</label>
-                            <input type="text" class="form-control" id="recipient-name">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary">Tambah</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        <?php if (session()->getFlashdata('swal_icon')) { ?>
+            Swal.fire({
+                title: '<?php echo session()->getFlashdata('swal_title') ?>',
+                text: '<?php echo session()->getFlashdata('swal_text') ?>',
+                icon: '<?php echo session()->getFlashdata('swal_icon') ?>',
+                confirmButtonText: 'Ok'
+            })
+        <?php } ?>
 
-    <!-- Edit Ruang Modal-->
-    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Ruang</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Nama Ruang:</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="Nama Ruang Baru ">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary">Edit</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Delete Data Modal-->
-    <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Hapus Data?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Hapus" untuk konfirmasi hapus data.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a class="btn btn-danger" data-dismiss="modal">Hapus</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Keluar dari Akun?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Pilih "Logout" dibawah untuk keluar dari sesi.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a class="btn btn-primary" href="<?php echo base_url('login'); ?>">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+        function konfirmasi(id_ruang) {
+            Swal.fire({
+                title: 'Hapus data',
+                text: "Anda yakin ingin menghapus data?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Hapus'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "<?php echo base_url('ruang/delete') ?>/" +
+                        id_ruang;
+                }
+            })
+        }
+    </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
