@@ -114,10 +114,10 @@
                 <!-- End of Main Content -->
 
                 <!-- Footer -->
-                <footer class="sticky-footer bg-white" style="margin-top:50px">
+                <footer class="sticky-footer bg-white" style="margin-top:20%">
                     <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Inventaris PIKA 2022</span>
+                        <div class="copyright text-center my-auto ">
+                            <span>Copyright &copy; Inventaris PIKA 2022 </span>
                         </div>
                     </div>
                 </footer>

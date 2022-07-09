@@ -113,6 +113,18 @@
 
     </div>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        <?php if (session()->getFlashdata('swal_icon')) { ?>
+            Swal.fire({
+                title: '<?php echo session()->getFlashdata('swal_title') ?>',
+                text: '<?php echo session()->getFlashdata('swal_text') ?>',
+                icon: '<?php echo session()->getFlashdata('swal_icon') ?>',
+                confirmButtonText: 'Ok'
+            })
+        <?php } ?>
+    </script>
+
     <!-- Bootstrap core JavaScript-->
     <script src="<?php echo base_url() ?>/vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url() ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

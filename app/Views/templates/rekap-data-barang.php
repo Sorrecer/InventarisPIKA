@@ -50,8 +50,8 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Rekap Data Barang</h1>
                     </div>
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
+                    <!-- card rekap data -->
+                    <div class="card shadow mb-4 ">
                         <div class="card-header py-3">
                             <div class="row">
                                 <div class="col my-2">
@@ -248,7 +248,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class="sticky-footer bg-white" style="margin-top: 20%;">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Inventaris PIKA 2022</span>

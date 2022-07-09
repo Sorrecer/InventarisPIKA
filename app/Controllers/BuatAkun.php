@@ -41,6 +41,9 @@ class BuatAkun extends BaseController
         ];
 
         $StaffModel->insert($data);
+        session()->setFlashdata('swal_icon', 'warning');
+        session()->setFlashdata('swal_title', 'Perhatian!');
+        session()->setFlashdata('swal_text', 'Hubungi admin untuk mengaktifkan akun anda');
         return $this->response->redirect(base_url('/login'));
     }
 }
