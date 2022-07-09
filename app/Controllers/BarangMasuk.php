@@ -16,7 +16,8 @@ class BarangMasuk extends BaseController
         FROM barang_masuk M
         JOIN barang B, ruang R
         WHERE M.id_barang = B.id_barang
-        AND M.id_ruang = R.id_ruang;";
+        AND M.id_ruang = R.id_ruang
+        ORDER BY M.id_transaksi DESC;";
         $q = $db->query($sql);
         $hasil = $q->getResultArray();
 

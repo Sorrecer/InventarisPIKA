@@ -16,7 +16,8 @@ class BarangKeluar extends BaseController
         FROM barang_keluar K
         JOIN barang B, ruang R
         WHERE K.id_barang = B.id_barang
-        AND K.id_ruang = R.id_ruang;";
+        AND K.id_ruang = R.id_ruang
+        ORDER BY K.id_transaksi DESC;";
         $q = $db->query($sql);
         $hasil = $q->getResultArray();
 
