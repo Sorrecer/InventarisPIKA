@@ -16,7 +16,7 @@
 <?php if ($tipe == 1) : ?>
     <p style="text-align: center;"><strong>Data Barang Masuk</strong><br /><strong>pada tanggal <?= date('d-m-Y', strtotime($tanggalAwal)) ?> sampai tanggal <?= date('d-m-Y', strtotime($tanggalAkhir)) ?></strong></p>
     <p style="text-align: center;"><strong>tabel</strong></p>
-    <table style="border-collapse: collapse; width: 100%; height: 40px;" border="1">
+    <table style="border-collapse: collapse; width: 100%; height: 40px;" border="2">
         <thead class="justify-content-center my-auto">
             <tr style="height: 18px;">
                 <th style="width: 7.46309%; height: 56px;">
@@ -51,10 +51,19 @@
                         <td><?php echo $rowmasuk['tanggal_masuk']; ?></td>
                         <td><?php echo $rowmasuk['nama_barang']; ?></td>
                         <td><?php echo $rowmasuk['jumlah_barang']; ?></td>
-                        <td><?php echo $rowmasuk['jumlah_harga']; ?></td>
+                        <td><?php echo "Rp. " . number_format($rowmasuk['jumlah_harga']); ?></td>
                         <td><?php echo $rowmasuk['nama_ruang']; ?></td>
                     </tr>
                 <?php endforeach; ?>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>TOTAL</td>
+                    <td>total barang masuk</td>
+                    <td>total harga</td>
+                    <td></td>
+                </tr>
             <?php endif; ?>
         </tbody>
     </table>
@@ -62,7 +71,7 @@
 <?php if ($tipe == 2) : ?>
     <p style="text-align: center;"><strong>Data Barang Keluar</strong><br /><strong>pada tanggal <?= date('d-m-Y', strtotime($tanggalAwal)) ?> sampai tanggal <?= date('d-m-Y', strtotime($tanggalAkhir)) ?></strong></p>
     <p style="text-align: center;"><strong>tabel</strong></p>
-    <table style="border-collapse: collapse; width: 100%; height: 74px;" border="1">
+    <table style="border-collapse: collapse; width: 100%; height: 74px;" border="2">
         <thead>
             <tr style="height: 18px;">
                 <th style="width: 7.46309%; height: 56px;">
@@ -101,6 +110,15 @@
                         <td><?php echo $rowkeluar['nama_ruang']; ?></td>
                     </tr>
                 <?php endforeach; ?>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>TOTAL</td>
+                    <td>total barang keluar</td>
+                    <td></td>
+                    <td></td>
+                </tr>
             <?php endif; ?>
         </tbody>
     </table>
@@ -108,7 +126,7 @@
 <?php if ($tipe == 3) : ?>
     <p style="text-align: center;"><strong>Data Barang Total</strong><br /><strong>pada tanggal <?= date('d-m-Y', strtotime($tanggalAwal)) ?> sampai tanggal <?= date('d-m-Y', strtotime($tanggalAkhir)) ?></strong></p>
     <p style="text-align: center;"><strong>tabel</strong></p>
-    <table style="border-collapse: collapse; width: 100%; height: 74px;" border="1">
+    <table style="border-collapse: collapse; width: 100%; height: 74px" border="2">
         <thead>
             <tr style="height: 18px;">
                 <th style="width: 7.46309%; height: 56px;">
@@ -140,6 +158,13 @@
                         <td><?php echo $rowbarang['nama_ruang']; ?></td>
                     </tr>
                 <?php endforeach; ?>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>TOTAL</td>
+                    <td>total barang</td>
+                    <td></td>
+                </tr>
             <?php endif; ?>
         </tbody>
     </table>
