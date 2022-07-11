@@ -102,14 +102,22 @@
                                         <?= $validation->getError('jumlah_barang'); ?>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="jumlah_harga" class="col-form-label">Jumlah harga</label>
-                                    <input type="number" class="form-control <?= ($validation->hasError('jumlah_harga')) ?
+
+                                <label for="jumlah_harga" class="col-form-label">Jumlah harga</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Rp.</span>
+                                    </div>
+                                    <input type="number" class="form-control  <?= ($validation->hasError('jumlah_harga')) ?
                                                                                     'is-invalid' : '' ?>" id="jumlah_harga" name="jumlah_harga">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">.00</span>
+                                    </div>
                                     <div class="invalid-feedback">
                                         <?= $validation->getError('jumlah_harga'); ?>
                                     </div>
                                 </div>
+
                                 <div class="form-group">
                                     <label for="id_ruang" class="col-form-label">Nama ruang</label>
                                     <select class="form-control <?= ($validation->hasError('id_ruang')) ?
