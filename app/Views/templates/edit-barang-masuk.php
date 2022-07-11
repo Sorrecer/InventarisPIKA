@@ -71,9 +71,6 @@
                         </div>
                         <div class="card-body">
                             <form action="/barangmasuk/update" method="POST">
-                                <?php //dd($barang) 
-                                ?>
-
                                 <input type="hidden" name="id_transaksi" id="id_transaksi" value="<?php echo $barang_masuk['id_transaksi']; ?>">
                                 <div class="form-group">
                                     <label for="tanggal_masuk" class="col-form-label">Tanggal masuk</label>

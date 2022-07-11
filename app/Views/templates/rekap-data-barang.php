@@ -47,62 +47,56 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Rekap Data Barang</h1>
+                    <div class="d-sm-flex text-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800 mx-auto">Rekap Data Barang</h1>
                     </div>
                     <!-- card rekap data -->
-                    <div class="card shadow mb-4 ">
+                    <div class="card shadow mb-4 mx-auto" style="width:50%">
                         <div class="card-header py-3">
                             <div class="row">
                                 <div class="col my-2">
-                                    <h6 class="m-0 font-weight-bold text-primary">Melihat data barang masuk atau keluar dalam rentang tanggal tertentu</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Melihat data barang dalam rentang tanggal tertentu</h6>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
                             <form action="/rekap/print" method="POST">
-                                <div class="row">
-                                    <div class="col">
-                                        <p>Jenis Laporan :</p>
-                                        <!-- radiobutton untuk jenis laporan -->
-                                        <input type="radio" checked id="tipe" name="tipe" value="1">
-                                        <label for="barang-masuk">Barang masuk</label><br>
-                                        <input type="radio" id="tipe" name="tipe" value="2">
-                                        <label for="barang-keluar">Barang keluar</label><br>
-                                        <input type="radio" id="tipe" name="tipe" value="3">
-                                        <label for="selisih">Selisih masuk - keluar</label>
+                                <div class="col">
+                                    <p>Jenis Laporan :</p>
+                                    <!-- radiobutton untuk jenis laporan -->
+                                    <input type="radio" checked id="tipe" name="tipe" value="1">
+                                    <label for="barang-masuk">Barang masuk</label><br>
+                                    <input type="radio" id="tipe" name="tipe" value="2">
+                                    <label for="barang-keluar">Barang keluar</label><br>
+                                    <input type="radio" id="tipe" name="tipe" value="3">
+                                    <label for="selisih">Selisih masuk - keluar</label>
+                                </div>
+                                <hr class="sidebar-divider">
+                                <div class="col my-4">
+                                    <p>Rentang Tanggal :</p>
+                                    <input for="tanggal-awal" type="date" class="form-control  <?= ($validation->hasError('tanggal-awal')) ?
+                                                                                                    'is-invalid' : '' ?>" id="tanggal-awal" name="tanggal-awal">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('tanggal-awal'); ?>
                                     </div>
-                                    <div class="col">
-                                        <p>Rentang Tanggal :</p>
-                                        <input for="tanggal-awal" type="date" class="form-control  <?= ($validation->hasError('tanggal-awal')) ?
-                                                                                                        'is-invalid' : '' ?>" id="tanggal-awal" name="tanggal-awal">
-                                        <div class="invalid-feedback">
-                                            <?= $validation->getError('tanggal-awal'); ?>
-                                        </div>
-                                        <p class="my-2">Sampai dengan</p>
-                                        <input for="tanggal-akhir" type="date" class="form-control <?= ($validation->hasError('tanggal-akhir') || isset($tanggalAkhirError)) ?
-                                                                                                        'is-invalid' : '' ?>" id="tanggal-akhir" name="tanggal-akhir">
-                                        <div class="invalid-feedback">
-                                            <?= $validation->getError('tanggal-akhir') . ($tanggalAkhirError ?? '') ?>
-                                        </div>
+                                    <p class="my-2">Sampai dengan</p>
+                                    <input for="tanggal-akhir" type="date" class="form-control <?= ($validation->hasError('tanggal-akhir') || isset($tanggalAkhirError)) ?
+                                                                                                    'is-invalid' : '' ?>" id="tanggal-akhir" name="tanggal-akhir">
+                                    <div class="invalid-feedback">
+                                        <?= $validation->getError('tanggal-akhir') . ($tanggalAkhirError ?? '') ?>
                                     </div>
-                                    <div class="col text-center">
-                                        <!-- <a href="<?php echo base_url('Rekap/cari'); ?>" class="btn btn-warning btn-icon-split" style="padding: 20px">
+                                </div>
+                                <div class="col text-center">
+                                    <hr class="sidebar-divider">
+                                    <div class="my-3">
+                                        <button type="submit" class="btn btn-primary btn-icon-split" style="padding: 20px">
                                             <span class="icon text-white-50">
-                                                <i class="fas fa-search"></i>
+                                                <i class="fas fa-print"></i>
                                             </span>
-                                            <span class="text">CARI</span>
-                                        </a> -->
-                                        <br>
-                                        <div class="my-3">
-                                            <button type="submit" class="btn btn-primary btn-icon-split" style="padding: 20px">
-                                                <span class="icon text-white-50">
-                                                    <i class="fas fa-print"></i>
-                                                </span>
-                                                <span class="text">CETAK</span>
-                                            </button>
-                                        </div>
+                                            <span class="text">CETAK</span>
+                                        </button>
                                     </div>
+                                </div>
                             </form>
                             <div class="table-responsive" style="font-size:12px">
                                 <!-- tabel -->

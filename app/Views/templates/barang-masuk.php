@@ -71,11 +71,11 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead class="thead-dark">
                                         <tr>
-                                            <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 40px;" aria-sort="ascending" aria-label="No.: activate to sort column descending">No.</th>
-                                            <th style="width: 100px;">ID Transaksi</th>
-                                            <th style="width: 150px;">Tanggal Masuk</th>
+                                            <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 20px;" aria-sort="ascending" aria-label="No.: activate to sort column descending">No.</th>
+                                            <th style="width: 150px;">ID Transaksi</th>
+                                            <th style="width: 180px;">Tanggal Masuk</th>
                                             <th style="width: 200px;">Nama Barang</th>
-                                            <th style="width: 180px;">Jumlah Barang</th>
+                                            <th style="width: 170px;">Jumlah Barang</th>
                                             <th style="width: 150px;">Jumlah Harga</th>
                                             <th style="width: 50px;">Ruang</th>
                                             <th style="width: 150px;">Pengaturan</th>
@@ -86,7 +86,7 @@
                                             <?php foreach ($barang_masuk as $i => $rowmasuk) : ?>
                                                 <tr>
                                                     <td><?php echo $i + 1 . '.'; ?></td>
-                                                    <td><?php echo $rowmasuk['id_transaksi']; ?></td>
+                                                    <td><?php echo "M" . $rowmasuk['id_transaksi']; ?></td>
                                                     <td><?php echo $rowmasuk['tanggal_masuk']; ?></td>
                                                     <td><?php echo $rowmasuk['nama_barang']; ?></td>
                                                     <td><?php echo $rowmasuk['jumlah_barang']; ?></td>

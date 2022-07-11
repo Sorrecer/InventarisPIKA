@@ -43,7 +43,9 @@
             </tr>
         </thead>
         <tbody>
-            <?php if ($databarang) : ?>
+            <?php $totalmasuk = 0;
+            $hargamasuk = 0;
+            if ($databarang) : ?>
                 <?php foreach ($databarang as $i => $rowmasuk) : ?>
                     <tr>
                         <td><?php echo $i + 1 . '.'; ?></td>
@@ -53,6 +55,9 @@
                         <td><?php echo $rowmasuk['jumlah_barang']; ?></td>
                         <td><?php echo "Rp. " . number_format($rowmasuk['jumlah_harga']); ?></td>
                         <td><?php echo $rowmasuk['nama_ruang']; ?></td>
+                        <!-- kalkulasi jumlah total dan harga total -->
+                        <?php $totalmasuk = $totalmasuk + $rowmasuk['jumlah_barang']; ?>
+                        <?php $hargamasuk = $hargamasuk + $rowmasuk['jumlah_harga']; ?>
                     </tr>
                 <?php endforeach; ?>
                 <tr>
@@ -60,8 +65,8 @@
                     <td></td>
                     <td></td>
                     <td>TOTAL</td>
-                    <td>total barang masuk</td>
-                    <td>total harga</td>
+                    <td><?= $totalmasuk; ?></td>
+                    <td><?= "Rp. " .  number_format($hargamasuk); ?></td>
                     <td></td>
                 </tr>
             <?php endif; ?>
@@ -98,7 +103,8 @@
             </tr>
         </thead>
         <tbody>
-            <?php if ($databarang) : ?>
+            <?php $totalkeluar = 0;
+            if ($databarang) : ?>
                 <?php foreach ($databarang as $i => $rowkeluar) : ?>
                     <tr>
                         <td><?php echo $i + 1 . '.'; ?></td>
@@ -108,6 +114,7 @@
                         <td><?php echo $rowkeluar['jumlah_barang']; ?></td>
                         <td><?php echo $rowkeluar['keterangan']; ?></td>
                         <td><?php echo $rowkeluar['nama_ruang']; ?></td>
+                        <?php $totalkeluar = $totalkeluar + $rowkeluar['jumlah_barang']; ?>
                     </tr>
                 <?php endforeach; ?>
                 <tr>
@@ -115,7 +122,7 @@
                     <td></td>
                     <td></td>
                     <td>TOTAL</td>
-                    <td>total barang keluar</td>
+                    <td><?= $totalkeluar ?></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -148,7 +155,8 @@
             </tr>
         </thead>
         <tbody>
-            <?php if ($databarang) : ?>
+            <?php $totalselisih = 0;
+            if ($databarang) : ?>
                 <?php foreach ($databarang as $i => $rowbarang) : ?>
                     <tr>
                         <td><?php echo $i + 1 . '.'; ?></td>
@@ -156,13 +164,14 @@
                         <td><?php echo $rowbarang['nama_kategori']; ?></td>
                         <td><?php echo $rowbarang['Jumlah']; ?></td>
                         <td><?php echo $rowbarang['nama_ruang']; ?></td>
+                        <?php $totalselisih = $totalselisih + $rowbarang['Jumlah']; ?>
                     </tr>
                 <?php endforeach; ?>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>TOTAL</td>
-                    <td>total barang</td>
+                    <td><?= $totalselisih ?></td>
                     <td></td>
                 </tr>
             <?php endif; ?>

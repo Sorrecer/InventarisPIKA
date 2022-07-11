@@ -71,11 +71,11 @@
                                     <thead class="thead-dark">
                                         <tr>
                                             <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 40px;" aria-sort="ascending" aria-label="No.: activate to sort column descending">No.</th>
-                                            <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 100px;" aria-sort="ascending" aria-label="ID Barang: activate to sort column descending">ID Barang</th>
-                                            <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 400px;" aria-sort="ascending" aria-label="Nama Barang: activate to sort column descending">Nama Barang</th>
-                                            <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Kategori: activate to sort column descending">Kategori</th>
-                                            <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Kategori: activate to sort column descending">Stok Minimal</th>
-                                            <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Pengaturan: activate to sort column descending">Pengaturan</th>
+                                            <th>ID Barang</th>
+                                            <th>Nama Barang</th>
+                                            <th>Kategori</th>
+                                            <th>Stok Minimal</th>
+                                            <th>Pengaturan</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -83,7 +83,7 @@
                                             <?php foreach ($barang as $i => $rowbarang) : ?>
                                                 <tr>
                                                     <td><?php echo $i + 1 . '.'; ?></td>
-                                                    <td><?php echo $rowbarang['id_barang']; ?></td>
+                                                    <td><?php echo "B" . $rowbarang['id_barang']; ?></td>
                                                     <td><?php echo $rowbarang['nama_barang']; ?></td>
                                                     <td><?php echo $rowbarang['nama_kategori']; ?></td>
                                                     <td><?php echo $rowbarang['jumlah_minimal']; ?></td>

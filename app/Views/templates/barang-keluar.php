@@ -88,7 +88,7 @@
                                             <?php foreach ($barang_keluar as $i => $rowkeluar) : ?>
                                                 <tr>
                                                     <td><?php echo $i + 1 . '.'; ?></td>
-                                                    <td><?php echo $rowkeluar['id_transaksi']; ?></td>
+                                                    <td><?php echo "K" . $rowkeluar['id_transaksi']; ?></td>
                                                     <td><?php echo $rowkeluar['tanggal_keluar']; ?></td>
                                                     <td><?php echo $rowkeluar['nama_barang']; ?></td>
                                                     <td><?php echo $rowkeluar['jumlah_barang']; ?></td>
