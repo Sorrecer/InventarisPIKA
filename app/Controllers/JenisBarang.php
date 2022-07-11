@@ -25,6 +25,7 @@ class JenisBarang extends BaseController
         $KategoriModel = new KategoriModel();
         $data['kategori'] = $KategoriModel->orderBy('id_kategori', 'DESC')->findAll();
 
+        session()->setFlashdata('id_sidebar', '5');
         return view('templates/jenis-barang', $data);
     }
 

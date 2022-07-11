@@ -22,6 +22,7 @@ class BarangMasuk extends BaseController
         $hasil = $q->getResultArray();
 
         $data['barang_masuk'] = $hasil;
+        session()->setFlashdata('id_sidebar', '6');
         return view('templates/barang-masuk', $data);
     }
 

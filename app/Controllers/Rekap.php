@@ -12,6 +12,7 @@ class Rekap extends BaseController
             'tanggalAkhir' => $this->request->getVar('tanggal-akhir')
         ];
         $data['validation'] = \Config\Services::validation();
+        session()->setFlashdata('id_sidebar', '8');
         return view('templates/rekap-data-barang', $data);
     }
 

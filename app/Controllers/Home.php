@@ -19,6 +19,7 @@ class Home extends BaseController
         $data['barangmasuk'] = $BarangMasukModel->builder()->select('SUM(jumlah_barang) as j')->get()->getRowArray()['j'];
         $data['barangkeluar'] = $BarangKeluarModel->builder()->select('SUM(jumlah_barang) as j')->get()->getRowArray()['j'];
         $data['frekuensi'] = $BarangMasukModel->builder()->select('MONTH(tanggal_masuk) AS bulan, SUM(jumlah_barang) AS jumlah')->where('YEAR(tanggal_masuk) = YEAR(NOW())')->groupBy('bulan')->get()->getResultArray();
+        session()->setFlashdata('id_sidebar', '1');
         return view('templates/index', $data);
     }
 }

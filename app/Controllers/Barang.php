@@ -42,6 +42,7 @@ class Barang extends BaseController
         $hasil = $q->getResultArray();
 
         $data['databarang'] = $hasil;
+        session()->setFlashdata('id_sidebar', '2');
         return view('templates/data-barang', $data);
     }
 }

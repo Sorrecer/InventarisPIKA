@@ -11,6 +11,7 @@ class Ruang extends BaseController
         // return view('templates/ruang');
         $RuangModel = new RuangModel();
         $data['ruang'] = $RuangModel->orderBy('id_ruang', 'DESC')->findAll();
+        session()->setFlashdata('id_sidebar', '3');
         return view('templates/ruang', $data);
     }
 

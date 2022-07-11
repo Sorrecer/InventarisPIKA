@@ -22,6 +22,7 @@ class BarangKeluar extends BaseController
         $hasil = $q->getResultArray();
 
         $data['barang_keluar'] = $hasil;
+        session()->setFlashdata('id_sidebar', '7');
         return view('templates/barang-keluar', $data);
     }
 

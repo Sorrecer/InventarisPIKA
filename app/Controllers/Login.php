@@ -79,6 +79,7 @@ class Login extends BaseController
                         return redirect()->to(base_url('login/index'));
                     } else {
                         session()->set('notif', $this->notif());
+                        session()->set('id_sidebar', '1');
                         return $this->response->redirect(base_url('Home'));
                     }
 

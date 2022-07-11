@@ -11,6 +11,7 @@ class Kategori extends BaseController
 
         $KategoriModel = new KategoriModel();
         $data['kategori'] = $KategoriModel->orderBy('id_kategori', 'nama_kategori')->findAll();
+        session()->setFlashdata('id_sidebar', '4');
         return view('templates/kategori', $data);
     }
 

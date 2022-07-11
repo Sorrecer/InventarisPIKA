@@ -22,7 +22,7 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item">
+    <li class="nav-item  <?php if (session()->id_sidebar == 1) : ?> active <?php endif ?>">
         <a class="nav-link" href="<?php echo base_url('Home'); ?>">
             <i class="fas fa-fw fa-chart-line"></i>
             <span>Dashboard</span></a>
@@ -37,37 +37,37 @@
     </div>
 
     <!-- Barang Masuk -->
-    <li class="nav-item">
+    <li class="nav-item <?php if (session()->id_sidebar == 2) : ?> active <?php endif ?>">
         <a class="nav-link" href="<?php echo base_url('barang'); ?>">
             <i class="fas fa-fw fa-boxes"></i>
             <span>Data Barang</span></a>
     </li>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
+    <li class="nav-item  <?php if (session()->id_sidebar == 3 || session()->id_sidebar ==  4 || session()->id_sidebar ==  5) : ?> active <?php endif ?>">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-box"></i>
             <span>Kelola Jenis Data</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseTwo" class="collapse  <?php if (session()->id_sidebar == 3 || session()->id_sidebar ==  4 || session()->id_sidebar ==  5) : ?> show <?php endif ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Jenis data:</h6>
-                <a class="collapse-item" href="<?php echo base_url('ruang'); ?>">Nama Ruang</a>
-                <a class="collapse-item" href="<?php echo base_url('kategori'); ?>">Nama Kategori</a>
-                <a class="collapse-item" href="<?php echo base_url('jenisBarang'); ?>">Nama Barang</a>
+                <a class="collapse-item  <?php if (session()->id_sidebar == 3) : ?> active <?php endif ?>" href="<?php echo base_url('ruang'); ?>">Nama Ruang</a>
+                <a class="collapse-item  <?php if (session()->id_sidebar == 4) : ?> active <?php endif ?>" href="<?php echo base_url('kategori'); ?>">Nama Kategori</a>
+                <a class="collapse-item  <?php if (session()->id_sidebar == 5) : ?> active <?php endif ?>" href="<?php echo base_url('jenisBarang'); ?>">Nama Barang</a>
             </div>
         </div>
     </li>
 
     <!-- Barang Masuk -->
-    <li class="nav-item">
+    <li class="nav-item <?php if (session()->id_sidebar == 6) : ?> active <?php endif ?>">
         <a class="nav-link" href="<?php echo base_url('barang-masuk'); ?>">
             <i class="fas fa-fw fa-check"></i>
             <span>Barang Masuk</span></a>
     </li>
 
     <!-- Barang Keluar -->
-    <li class="nav-item">
+    <li class="nav-item <?php if (session()->id_sidebar == 7) : ?> active <?php endif ?>">
         <a class="nav-link" href="<?php echo base_url('barang-keluar'); ?>">
             <i class="fas fa-fw fa-times"></i>
             <span>Barang Keluar</span></a>
@@ -81,7 +81,7 @@
         Laporan
     </div>
 
-    <li class="nav-item">
+    <li class="nav-item <?php if (session()->id_sidebar == 8) : ?> active <?php endif ?>">
         <a class="nav-link" href="<?php echo base_url('rekap-data-barang'); ?>">
             <i class="fas fa-fw fa-clipboard-list"></i>
             <span>Rekap Data Barang</span></a>
@@ -95,7 +95,7 @@
         Akun
     </div>
 
-    <li class="nav-item">
+    <li class="nav-item <?php if (session()->id_sidebar == 9) : ?> active <?php endif ?>">
         <a class="nav-link" href="<?php echo base_url('pengaturan-akun'); ?>">
             <i class="fas fa-fw fa-user"></i>
             <span>Pengaturan Akun</span></a>
@@ -103,7 +103,7 @@
 
     <?php if (session()->id_level == 1) : ?>
 
-        <li class="nav-item">
+        <li class="nav-item <?php if (session()->id_sidebar == 10) : ?> active <?php endif ?>">
             <a class="nav-link" href="<?php echo base_url('akunstaff'); ?>">
                 <i class="fas fa-fw fa-users"></i>
                 <span>Akun Staff</span></a>

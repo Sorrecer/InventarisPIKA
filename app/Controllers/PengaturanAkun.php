@@ -11,6 +11,7 @@ class PengaturanAkun extends BaseController
     {
         $AkunModel = new ModelLogin();
         $data['admin'] = $AkunModel->orderBy('id_user', 'username', 'email', 'telepon', 'password')->findAll();
+        session()->setFlashdata('id_sidebar', '9');
         return view('templates/pengaturan-akun', $data);
     }
 
