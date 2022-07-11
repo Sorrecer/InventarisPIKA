@@ -72,13 +72,13 @@
                                     <thead class="thead-dark">
                                         <tr>
                                             <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 40px;" aria-sort="ascending" aria-label="No.: activate to sort column descending">No.</th>
-                                            <th class="sorting sorting_asc" tabindex="1" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 100px;" aria-sort="ascending" aria-label="ID Transaksi: activate to sort column descending">ID Transaksi</th>
-                                            <th class="sorting sorting_asc" tabindex="2" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="Tanggal Masuk: activate to sort column descending">Tanggal Masuk</th>
-                                            <th class="sorting sorting_asc" tabindex="3" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 200px;" aria-sort="ascending" aria-label="Nama Barang: activate to sort column descending">Nama Barang</th>
-                                            <th class="sorting sorting_asc" tabindex="4" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 180px;" aria-sort="ascending" aria-label="Jumlah Barang: activate to sort column descending">Jumlah Barang</th>
-                                            <th class="sorting sorting_asc" tabindex="5" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="Jumlah Harga: activate to sort column descending">Jumlah Harga</th>
-                                            <th class="sorting sorting_asc" tabindex="6" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 50px;" aria-sort="ascending" aria-label="Ruang: activate to sort column descending">Ruang</th>
-                                            <th class="sorting sorting_asc" tabindex="7" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 150px;" aria-sort="ascending" aria-label="Pengaturan: activate to sort column descending">Pengaturan</th>
+                                            <th style="width: 100px;">ID Transaksi</th>
+                                            <th style="width: 150px;">Tanggal Masuk</th>
+                                            <th style="width: 200px;">Nama Barang</th>
+                                            <th style="width: 180px;">Jumlah Barang</th>
+                                            <th style="width: 150px;">Jumlah Harga</th>
+                                            <th style="width: 50px;">Ruang</th>
+                                            <th style="width: 150px;">Pengaturan</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -90,7 +90,7 @@
                                                     <td><?php echo $rowmasuk['tanggal_masuk']; ?></td>
                                                     <td><?php echo $rowmasuk['nama_barang']; ?></td>
                                                     <td><?php echo $rowmasuk['jumlah_barang']; ?></td>
-                                                    <td><?php echo $rowmasuk['jumlah_harga']; ?></td>
+                                                    <td><?php echo "Rp. " . number_format($rowmasuk['jumlah_harga']); ?></td>
                                                     <td><?php echo $rowmasuk['nama_ruang']; ?></td>
                                                     <td>
                                                         <a href="<?php echo base_url("barangmasuk/edit/" . $rowmasuk['id_transaksi']) ?>" class="btn btn-warning">
