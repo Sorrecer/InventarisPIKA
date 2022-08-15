@@ -9,8 +9,12 @@ class Login extends BaseController
 {
     public function index()
     {
-        $data['validation'] = \Config\Services::validation();
-        return view('templates/login', $data);
+        if (session()->get('id_user')) {
+            return $this->response->redirect(base_url('Home'));;
+        } else {
+            $data['validation'] = \Config\Services::validation();
+            return view('templates/login', $data);
+        }
     }
 
     //validasi login
