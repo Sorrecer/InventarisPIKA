@@ -283,7 +283,7 @@
                     yAxes: [{
                         ticks: {
                             min: 0,
-                            max: <?= $barmasuk[0]['jumlah'] = null ? 0 : $barmasuk[0]['jumlah'] ?> + 20,
+                            max: <?= $barmasuk[0]['jumlah'] ?? 0 ?> + 20,
                             maxTicksLimit: 10,
                             padding: 10,
                             // Include a dollar sign in the ticks
@@ -368,7 +368,7 @@
                     yAxes: [{
                         ticks: {
                             min: 0,
-                            max: <?= $barkeluar[0]['jumlah'] = null ? 0 : $barkeluar[0]['jumlah'] ?> + 10,
+                            max: <?= $barkeluar[0]['jumlah'] ?? 0 ?> + 10,
                             maxTicksLimit: 10,
                             padding: 10,
                             // Include a dollar sign in the ticks

@@ -147,7 +147,7 @@
                     <div class="modal-body">Pilih "Logout" dibawah untuk keluar dari sesi.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                        <a class="btn btn-primary" href="<?php echo base_url('login'); ?>">Logout</a>
+                        <a class="btn btn-primary" href="<?php echo base_url('login/keluar'); ?>">Logout</a>
                     </div>
                 </div>
             </div>
