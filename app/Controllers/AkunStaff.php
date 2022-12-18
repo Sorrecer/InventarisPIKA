@@ -12,13 +12,15 @@ class AkunStaff extends BaseController
         $db = \Config\Database::connect();
         $sql = "SELECT id_user, username, email, telepon, password, aktif
         FROM users
-        WHERE username != 'admin'";
+        WHERE id_level != 1";
         $q = $db->query($sql);
         $hasil = $q->getResultArray();
 
         $data['staff'] = $hasil;
         session()->setFlashdata('id_sidebar', '10');
-        return view('templates/akun-staff', $data);
+        if (session()->id_level != 2) {
+            return view('templates/akun-staff', $data);
+        }
     }
 
     public function edit($id_user)
