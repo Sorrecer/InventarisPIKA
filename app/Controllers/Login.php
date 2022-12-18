@@ -9,8 +9,8 @@ class Login extends BaseController
 {
     public function index()
     {
-        if (session()->get('id_user')) {
-            return $this->response->redirect(base_url('Home'));;
+        if (session()->get('id_user') && (session()->aktif == 1)) {
+            return $this->response->redirect(base_url('Home'));
         } else {
             $data['validation'] = \Config\Services::validation();
             return view('templates/login', $data);
@@ -66,7 +66,7 @@ class Login extends BaseController
                     //jika password benar, simpan sesi dan masuk home
                     $id_level = $cekUserLogin[0]['id_level'];
                     $simpan_session = [
-                        'id_user' => $id_user,
+                        'id_user' => $id_user['id_user'],
                         'username' => $cekUserLogin[0]['username'],
                         'email' => $cekUserLogin[0]['email'],
                         'telepon' => $cekUserLogin[0]['telepon'],
@@ -74,8 +74,7 @@ class Login extends BaseController
                         'aktif' => $cekUserLogin[0]['aktif']
                     ];
                     session()->set($simpan_session);
-
-                    if (session()->aktif == '0') {
+                    if (session()->aktif == 0) {
                         $sessError = [
                             'errIdUser' => 'Silahkan hubungi admin untuk mengaktifkan akun anda'
                         ];

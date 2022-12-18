@@ -12,6 +12,7 @@ class PengaturanAkun extends BaseController
         $AkunModel = new ModelLogin();
         $data['admin'] = $AkunModel->orderBy('id_user', 'username', 'email', 'telepon', 'password')->findAll();
         session()->setFlashdata('id_sidebar', '9');
+
         return view('templates/pengaturan-akun', $data);
     }
 
@@ -36,7 +37,7 @@ class PengaturanAkun extends BaseController
             $validation = $this->validator;
             $AkunModel = new ModelLogin();
             $data['validation'] = \Config\Services::validation();
-            $data['admin'] = $AkunModel->where('id_user', $id_user)->first();
+            $data['admin'] = $AkunModel->where('id_user', $id_user);
             $data['id_user'] = $id_user;
             return view('templates/edit-akun', $data);
         }

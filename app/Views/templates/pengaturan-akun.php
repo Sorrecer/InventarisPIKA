@@ -83,7 +83,7 @@
                             <hr class="sidebar-divider">
                             <div class="row" style="justify-content: flex-end">
                                 <div style="padding:10px">
-                                    <a href="<?php echo base_url('PengaturanAkun/edit/' . $admin[0]['id_user']); ?>" class="btn btn-warning btn-icon-split">
+                                    <a href="<?php echo base_url('PengaturanAkun/edit/' . session()->id_user); ?>" class="btn btn-warning btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-cog"></i>
                                         </span>
