@@ -1,0 +1,16 @@
+CRITICAL - 2023-11-01 09:21:11 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 D:\xampp\htdocs\InventarisPIKA\spark(45): require('D:\\xampp\\htdocs...')
+#2 {main}
+CRITICAL - 2023-11-01 09:21:56 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 D:\xampp\htdocs\InventarisPIKA\spark(45): require('D:\\xampp\\htdocs...')
+#2 {main}
+CRITICAL - 2023-11-01 09:25:19 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 D:\xampp\htdocs\InventarisPIKA\spark(45): require('D:\\xampp\\htdocs...')
+#2 {main}
+CRITICAL - 2023-11-01 09:25:47 --> Call to undefined function CodeIgniter\locale_set_default()
+#0 D:\xampp\htdocs\InventarisPIKA\vendor\codeigniter4\framework\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#1 D:\xampp\htdocs\InventarisPIKA\spark(45): require('D:\\xampp\\htdocs...')
+#2 {main}

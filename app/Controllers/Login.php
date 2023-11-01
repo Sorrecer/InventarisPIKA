@@ -79,6 +79,7 @@ class Login extends BaseController
                             'errIdUser' => 'Silahkan hubungi admin untuk mengaktifkan akun anda'
                         ];
                         session()->setFlashdata($sessError);
+
                         return redirect()->to(base_url('login/index'));
                     } else {
                         session()->set('notif', $this->notif());
